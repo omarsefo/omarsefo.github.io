@@ -100,7 +100,7 @@ card3.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/coder/')
 });
 card4.addEventListener('click',()=>{
-    window.open('http://omarsefo.github.io/portfolio/')
+    window.open('http://omarsefo.github.io/profile/')
 });
 card5.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/ar-en/')
