@@ -1,0 +1,720 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999999999999;
+  background-color: #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.maxw {
+  padding: 0 30px;
+  margin: 0 60px;
+}
+.navbars {
+  width: 100%;
+  padding: 30px 0;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+.navbars.sticky {
+  padding: 10px 0;
+  background: #ffcd28;
+}
+.menu {
+  margin: 0;
+}
+.navbars .maxw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbars .logo a {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navbars .logo a span {
+  color: #ffcd28;
+}
+.navbars.sticky .logo a span {
+  color: #5e5e5e;
+}
+.navbars .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbars .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: all 0.3s ease;
+}
+.navbars .menu li a:hover {
+  color: #ffcd28;
+}
+.navbars.sticky .menu li a {
+  color: #fff;
+}
+.navbars.sticky .menu li a:hover {
+  color: #5e5e5e;
+}
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.menu-btn i{
+  color: #fff;
+}
+.close-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.scroll-up{
+  position: fixed;
+  height: 45px;
+  width: 45px;
+  background: #ffcd28;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.act{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up .fas{
+  padding-right: 0 !important;
+  color: #fff;
+}
+
+/* home */
+.home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(../img/image1.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  min-height: 520px;
+  color: #fff;
+  font-family: "ubuntu", sans-serif;
+}
+
+.home .maxw {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.home .home-container {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 50%;
+  font-size: 25px;
+  color: white;
+  font-family: "poppins", sans-serif;
+}
+
+.home .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.home .image-container img {
+  width: 300px;
+  height: 300px;
+  object-fit:cover;
+  border-radius: 50%;
+}
+.home .maxw .home-container .text-1 {
+  font-size: 27px;
+}
+.home .maxw .home-container .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .maxw .home-container .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+.home .maxw .home-container .text-3 span {
+  color: #ffcd28;
+  font-size: 500;
+}
+
+/* article  */
+
+
+
+.skills .colume {
+  width: calc(50% - 30px);
+}
+.skills .content .left {
+  width: 45%;
+  color: #5e5e5e;
+  font-size: 25px;
+  font-family: "poppins", sans-serif;
+}
+.skills .content .rigth {
+  width: 55%;
+  font-family: "poppins", sans-serif;
+}
+.skills .content .left .texts {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #5e5e5e;
+  font-size: 35px;
+}
+.skills .content .left .spa {
+  color: #ffcd28;
+  font-size: 30px;
+}
+.skills .content .left .texts span {
+  color: #ffcd28;
+  font-weight: 600;
+  font-size: 40px;
+}
+.skills .content .rigth .bars {
+  margin-bottom: 15px;
+}
+.skills .content .rigth span {
+  color: #5e5e5e;
+}
+.skills .content .left p {
+  margin-bottom: 0;
+}
+/* same thing */
+
+.skills,
+.projects,
+.contact {
+  font-family: "poppins", sans-serif;
+  padding: 100px 0;
+}
+.skills .content,
+.projects .countainer,
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.projects .text,
+.skills .text,
+.contact .text {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: "ubuntu", sans-serif;
+}
+.projects .text::before,
+.skills .text::before,
+.contact .text::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  background: #111;
+  transform: translateX(-50%);
+}
+.projects .text::after,
+.skills .text::after,
+.contact .text::after {
+  content: "What I Know";
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  font-size: 20px;
+  color: #ffcd28;
+  padding: 5px;
+  border-radius: 55px;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+
+/* project */
+
+.fas,
+.fab {
+  padding-right: 10px !important;
+  color: #ffcd28;
+}
+.projects {
+  color: #fff;
+  background: #111;
+}
+.projects .text::after {
+  content: "MY JOB";
+  background: #111;
+}
+.projects .text::before {
+  background: #fff;
+}
+.projects .countainer .card {
+  width: calc(33% - 20px);
+  background-color: #333;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+.projects .countainer .card:hover {
+  background-color: #ffcd28;
+  color: #333;
+}
+.projects .countainer .card .imgbx {
+  transition: all 0.3 ease-in;
+}
+.projects .countainer .card i {
+  font-size: 50px;
+  color: #ffcd28;
+}
+.projects .countainer .card .content i{
+  font-size: 19px;
+}
+.projects .countainer .card:hover i {
+  color: #333;
+  transform: rotate(350deg);
+  transition: all 0.8s ease-in;
+}
+.projects .countainer .card:hover .imgbx {
+  transform: scale(1.0);
+}
+.projects .countainer .card .tex {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+/* contact */
+
+.contact .text::after{
+  content: 'Get In Touch';
+}
+.contact .content .colume {
+  width: calc(50% - 30px);
+}
+.contact .content .textx, .text1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .content .left .icons {
+  margin: 10px 0;
+}
+.contact .content .left .ico{
+  margin-left: 50px;
+}
+.contact .content .left .ico a{
+  margin-top: 10px;
+  margin-left: 4px;
+  font-size: 33px;
+  text-decoration: none;
+}
+.contact .content .left .ico a:hover{
+  transform: rotate(7deg);
+  transition: all 0.2s ease;
+}
+.contact .content .left .ico .f1:hover{
+color: rgb(0, 179, 170);
+}
+.contact .content .left .ico .f2:hover{
+  color: rgb(0, 140, 255);
+  }
+  .contact .content .left .ico .f3:hover{
+  color: rgb(255, 0, 55);
+  }
+    .contact .content .left .ico .f4:hover{
+      color: rgb(0, 78, 141);
+      }
+      .contact .content .left .ico .f5:hover{
+        color: rgb(240, 0, 0);
+        }
+        .contact .content .left .ico .f6:hover{
+          color: #333;
+          }
+.contact .content .rows {
+  display:flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .content .rows .info{
+  margin-left: 30px;
+}
+.contact .content .info .head{
+font-weight: 500;
+font-family: 'ubuntu', sans-serif;
+}
+.contact .content .info .sub-title{
+color: #333;
+}
+.contact .content .info .w{
+  text-decoration: none;
+  cursor: pointer;
+  user-zoom:unset;
+  user-select:all;
+}
+.contact .content .info .w:hover{
+font-size: 16.2px;
+color: #ffcd28;
+}
+.contact .content .info .w::selection{
+background: transparent;
+}
+.contact .content i{
+font-size: 25px;
+color: #ffcd28;
+}
+.contact .rigth form .field{
+display: flex;
+}
+.contact .rigth form .name{
+  margin-right: 10px;
+}
+.contact .rigth form .email{
+  margin-left: 10px;
+}
+
+.contact .rigth form .field,
+.contact .rigth form .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .rigth form .textaria{
+  height: 100px;
+  width: 100%;
+}
+.contact .rigth form .field input,
+.contact .rigth form .textaria textarea
+  {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ffcd28;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'ubuntu' ,sans-serif;
+}
+.contact .rigth form .textaria textarea{
+  padding-top: 10px;
+  resize: none;
+  height: 100px;
+}
+.contact .rigth form .buttons{
+  height: 47px;
+  width: 170px;
+}
+.contact .rigth form .buttons button{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.contact .rigth form .buttons button:hover{
+  background: none;
+  border: 2px solid #ffc400;
+  color: #e9b200;
+}
+footer{
+  font-family: 'poppins' ,sans-serif;
+  text-align: center;
+  background: #111;
+  padding: 20px 25px;
+  color: #fff;
+}
+footer span a{
+  color: #ffcd28;
+  text-decoration: none;
+}
+footer span a:hover{
+  color: #eee;
+text-decoration: underline;
+}
+
+
+
+
+
+
+@media (max-width: 1240px) {
+  .home .maxw .home-container .text-1 {
+    font-size: 27px;
+    margin-left: 30px;
+  }
+  .home .maxw .home-container .text-2 {
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: 30px;
+  }
+  .home .maxw .home-container .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+    margin-left: 30px;
+  }
+  .maxw {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .maxw {
+    padding: 0 40px;
+    margin: auto;
+  }
+  .navbar {
+    padding: 0 50px;
+  }
+  .navbars .logo a {
+    font-size: 30px;
+  }
+  .navbars .maxw {
+    padding: 0 40px;
+  }
+  .navbars .menu {
+    padding-left: 20px;
+    position: fixed;
+    background: #555;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 70px;
+    transition: left 0.4s ease;
+  }
+  .navbars.sticky .menu li a {
+    color: #fff;
+  }
+  .navbars.sticky .menu li a:hover {
+    color: #ffcd28;
+  }
+  .navbars .menu li {
+    display: block;
+    padding: 30px 0;
+  }
+  .navbars .menu li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
+    transition:all 0.3s ease;
+  }
+  .navbars .menu.active {
+    left: 0;
+    background-color: #ffcd28;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 37px;
+    right: 43px;
+  }
+  .home .image-container {
+    width: 100%;
+    margin-top: 100px;
+    order: 1;
+    width: 250px;
+    height: 250px;
+  }
+  .home .image-container img {
+    width: 250px;
+    height: 250px;
+  }
+  .home .home-container {
+    width: 100%;
+    order: 2;
+    text-align: center;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  .home .maxw {
+    width: 100%;
+    height: 100%;
+  }
+  .home .maxw .home-container .text-1 {
+    font-size: 27px;
+    margin: 0;
+  }
+  .home .maxw .home-container .text-2 {
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .home .maxw .home-container .text-3 {
+    font-size: 35px;
+    margin: 5px 0;
+    margin: 0;
+  }
+  .skills .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .skills .colume,
+  .contact .content .colume {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  .skills .content .left {
+    width: 80%;
+    order: 1;
+    font-size: 25px;
+    padding-bottom: 0px;
+    font-family: "poppins", sans-serif;
+  }
+  .skills .content .rigth {
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+    order: 2;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .bars {
+    margin-bottom: 7px !important;
+  }
+  .skills .content .left .text {
+    margin-bottom: 15px;
+  }
+  .projects .countainer .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  .contact .content .left .ico{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+}
+@media (max-width: 690px) {
+  .projects .countainer .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 538px) {
+  .maxw {
+    margin: auto;
+  }
+  .home .maxw .home-container .text-1 {
+    font-size: 23px;
+    margin: 0;
+  }
+  .home .maxw .home-container .text-2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .home .maxw .home-container .text-3 {
+    font-size: 30px;
+    margin: 0;
+  }
+  .home .home-container {
+    margin: 0;
+    padding-top: 20px;
+  }
+  .skills .content {
+    width: 100%;
+  }
+  .skills .colume {
+    width: 100%;
+    margin: 0;
+  }
+  .skills .content .left {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 0;
+  }
+  .skills .content .rigth {
+    width: 100%;
+    padding-top: 0;
+  }
+  .skills .content .left .text {
+    margin-bottom: 15px;
+  }
+  .skills .content .left .spa {
+    font-size: 25px;
+  }
+  .skills .content .left .text {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 359px) {
+  .maxw {
+    margin: auto;
+  }
+  .home .maxw .home-container .text-1 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .home .maxw .home-container .text-2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .home .maxw .home-container .text-3 {
+    font-size: 25px;
+    margin: 0;
+  }
+  .skills .content .left .text {
+    margin-bottom: 5px;
+  }
+}
