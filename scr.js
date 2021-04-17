@@ -12,6 +12,7 @@ window.addEventListener("load", ()=> {
     window.scrollTo(0,0);
    }
 });
+window.addEventListener('load',close);
 //nav
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
@@ -39,8 +40,7 @@ var as2 =document.getElementsByTagName('a')[2];
 var as3 =document.getElementsByTagName('a')[3];
 var as4 =document.getElementsByTagName('a')[4];
 
-sc.addEventListener('click', close);
-window.addEventListener('load', close);
+sc.addEventListener('click',close);
 openp.addEventListener('click',show);
 closep.addEventListener('click',close);
     as1.addEventListener('click',close);
@@ -64,7 +64,6 @@ var card4 = document.getElementById("card4");
 var card5 = document.getElementById("card5");
 var card6 = document.getElementById("card6");
 
-
 card1.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/1profile/omarsifo.html')
 });
@@ -84,12 +83,16 @@ card6.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/shefra/')
 });
 
+
+// copy 
 var nu = document.getElementById("ef");
 nu.addEventListener('click', ()=>{
     document.execCommand("copy");
     alert("The Number is Copyed")
 });
 
+
+// type 
 var typed=new Typed(".typee", {
     strings: ["Front end Developer", "Developer", "Freelancer", "and will be", "Android Developer"],
     typeSpeed:100,
@@ -102,3 +105,32 @@ var typed=new Typed(".type2", {
     backSpeed:60,
     loop:true
 });
+
+let dar =localStorage.getItem('darkm')
+var icon =document.getElementById("ico");
+
+const enable =()=>{
+    document.body.classList.add("darkt");
+    localStorage.setItem("darkm", "enabled");
+    icon.classList.add("fa-moon");
+    icon.classList.remove("fa-sun");
+}
+const disenable =()=>{
+    document.body.classList.remove("darkt");
+    localStorage.setItem("darkm", null);
+    icon.classList.add("fa-sun");
+    icon.classList.remove("fa-moon");
+
+}
+if (dar === "enabled") {
+    enable();
+}
+icon.addEventListener('click',()=>{
+    dar = localStorage.getItem("darkm");
+    if (dar !== "enabled") {
+        enable();
+    }else{
+        disenable();
+    }
+})
+

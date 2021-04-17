@@ -15,7 +15,7 @@ html {
   right: 0;
   bottom: 0;
   z-index: 999999999999999;
-  background-color: #383838;
+  background-color: var(--first-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +61,7 @@ html {
   display: inline-block;
 }
 .navbars .menu li a {
-  color: #fff;
+  color:  #fff;
   text-decoration: none;
   font-size: 22px;
   font-weight: 500;
@@ -71,26 +71,29 @@ html {
 .navbars .menu li a:hover {
   color: #ffcd28;
 }
+.navbars .menu{
+  flex: 1;
+  text-align: right;
+}
 .navbars.sticky .menu li a {
-  color: #fff;
+  color:  var(--first-color);
 }
 .navbars.sticky .menu li a:hover {
-  color: #5e5e5e;
+  color:  var(--secon-color);
 }
 .menu-btn {
-  color: #fff;
   font-size: 23px;
   cursor: pointer;
   display: none;
 }
 .menu-btn i{
-  color: #fff;
+  color:  #fff;
 }
 .close-menu {
   display: none;
   cursor: pointer;
-  font-size: 1.4rem;
-  color: #fff;
+  font-size: 30px;
+  color:  var(--secon-color);
 }
 .scroll-up{
   position: fixed;
@@ -101,7 +104,6 @@ html {
   bottom: 10px;
   text-align: center;
   line-height: 44px;
-  color: #fff;
   z-index: 9999;
   font-size: 30px;
   border-radius: 50%;
@@ -110,6 +112,7 @@ html {
   pointer-events: none;
   transition: all 0.3s ease;
 }
+
 .act{
   bottom: 30px;
   opacity: 1;
@@ -117,19 +120,55 @@ html {
 }
 .scroll-up .fas{
   padding-right: 0 !important;
-  color: #fff;
+  color: var(--first-color);
 }
+.navbars .maxw .ic{
+  padding-right: 0 !important;
+  color: var(--sun-color);
+}
+
+.navbars .maxw .ic{
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 30px;
+}
+:root{
+  --first-color: #fff;
+  --secon-color: #4b4b4b;
+  --sun-color:rgb(255, 251, 0);
+  --f1-color:rgb(0, 179, 170);
+  --f2-color:rgb(0, 140, 255);
+  --f3-color:rgb(255, 0, 55);
+  --f4-color:rgb(0, 78, 141);
+  --f5-color:rgb(240, 0, 0);
+  --f6-color:#333;
+
+}
+.darkt{
+  --first-color: #333;
+  --secon-color: #fff;
+  --sun-color:#000;
+  --f1-color:rgb(0, 179, 170);
+  --f2-color:rgb(0, 153, 255);
+  --f3-color:rgb(255, 0, 98);
+  --f4-color:rgb(0, 116, 211);
+  --f5-color:rgb(255, 47, 47);
+  --f6-color:#fff;
+}
+
 
 /* home */
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url(../img/image1.jpg) no-repeat center center fixed;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   width: 100%;
   display: flex;
   height: 100vh;
   min-height: 520px;
-  color: #fff;
   font-family: "ubuntu", sans-serif;
 }
 
@@ -148,7 +187,7 @@ html {
   align-items: center;
   width: 50%;
   font-size: 25px;
-  color: white;
+  color:  #fff;
   font-family: "poppins", sans-serif;
 }
 
@@ -184,13 +223,16 @@ html {
 /* article  */
 
 
-
+.skills,
+.contact{
+  background: var(--first-color);
+}
 .skills .colume {
   width: calc(50% - 30px);
 }
 .skills .content .left {
   width: 45%;
-  color: #5e5e5e;
+  color: var(--secon-color);
   font-size: 25px;
   font-family: "poppins", sans-serif;
 }
@@ -202,7 +244,7 @@ html {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 30px;
-  color: #5e5e5e;
+  color: var(--secon-color);
   font-size: 35px;
 }
 .skills .content .left .spa {
@@ -218,7 +260,7 @@ html {
   margin-bottom: 15px;
 }
 .skills .content .rigth span {
-  color: #5e5e5e;
+  color: var(--secon-color);
 }
 .skills .content .left p {
   margin-bottom: 0;
@@ -248,6 +290,7 @@ html {
   font-weight: 500;
   margin-bottom: 60px;
   padding-bottom: 20px;
+  color: var(--secon-color);
   font-family: "ubuntu", sans-serif;
 }
 .projects .text::before,
@@ -273,7 +316,7 @@ html {
   color: #ffcd28;
   padding: 5px;
   border-radius: 55px;
-  background-color: #fff;
+  background-color:  var(--first-color);
   transform: translateX(-50%);
 }
 
@@ -285,15 +328,18 @@ html {
   color: #ffcd28;
 }
 .projects {
-  color: #fff;
+  color:  #fff;
   background: #111;
+}
+.projects .text{
+  color: #fff;
 }
 .projects .text::after {
   content: "MY JOB";
   background: #111;
 }
 .projects .text::before {
-  background: #fff;
+  background:  #fff;
 }
 .projects .countainer .card {
   width: calc(33% - 20px);
@@ -322,7 +368,7 @@ html {
 .projects .countainer .card:hover i {
   color: #333;
   transform: rotate(350deg);
-  transition: all 0.8s ease-in;
+  transition: all 0.8s ease;
 }
 .projects .countainer .card:hover .imgbx {
   transform: scale(1.0);
@@ -344,6 +390,7 @@ html {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: var(--secon-color);
 }
 .contact .content .left .icons {
   margin: 10px 0;
@@ -362,22 +409,22 @@ html {
   transition: all 0.2s ease;
 }
 .contact .content .left .ico .f1:hover{
-color: rgb(0, 179, 170);
+color:var(--f1-color);
 }
 .contact .content .left .ico .f2:hover{
-  color: rgb(0, 140, 255);
+  color:var(--f2-color);
   }
   .contact .content .left .ico .f3:hover{
-  color: rgb(255, 0, 55);
+    color:var(--f3-color);
   }
     .contact .content .left .ico .f4:hover{
-      color: rgb(0, 78, 141);
+      color:var(--f4-color);
       }
       .contact .content .left .ico .f5:hover{
-        color: rgb(240, 0, 0);
+        color:var(--f5-color);
         }
         .contact .content .left .ico .f6:hover{
-          color: #333;
+          color:var(--f6-color);
           }
 .contact .content .rows {
   display:flex;
@@ -390,9 +437,10 @@ color: rgb(0, 179, 170);
 .contact .content .info .head{
 font-weight: 500;
 font-family: 'ubuntu', sans-serif;
+color: var(--secon-color);
 }
 .contact .content .info .sub-title{
-color: #333;
+color: var(--secon-color);
 }
 .contact .content .info .w{
   text-decoration: none;
@@ -436,7 +484,7 @@ display: flex;
   {
   height: 100%;
   width: 100%;
-  border: 1px solid #ffcd28;
+  border: 2px solid #ffcd28;
   border-radius: 6px;
   outline: none;
   padding: 0 15px;
@@ -455,7 +503,7 @@ display: flex;
 .contact .rigth form .buttons button{
   width: 100%;
   height: 100%;
-  color: #fff;
+  color:  var(--first-color);
 }
 .contact .rigth form .buttons button:hover{
   background: none;
@@ -465,9 +513,9 @@ display: flex;
 footer{
   font-family: 'poppins' ,sans-serif;
   text-align: center;
-  background: #111;
+  background: #262626;
   padding: 20px 25px;
-  color: #fff;
+  color:  #fff;
 }
 footer span a{
   color: #ffcd28;
@@ -486,17 +534,14 @@ text-decoration: underline;
 @media (max-width: 1240px) {
   .home .maxw .home-container .text-1 {
     font-size: 27px;
-    margin-left: 30px;
   }
   .home .maxw .home-container .text-2 {
     font-size: 70px;
     font-weight: 600;
-    margin-left: 30px;
   }
   .home .maxw .home-container .text-3 {
     font-size: 40px;
     margin: 5px 0;
-    margin-left: 30px;
   }
   .maxw {
     padding: 0 10px;
@@ -520,7 +565,7 @@ text-decoration: underline;
   .navbars .menu {
     padding-left: 20px;
     position: fixed;
-    background: #555;
+    background: var(--first-color);
     height: 100vh;
     width: 100%;
     top: 0;
@@ -531,7 +576,7 @@ text-decoration: underline;
     transition: left 0.4s ease;
   }
   .navbars.sticky .menu li a {
-    color: #fff;
+    color:  var(--secon-color);
   }
   .navbars.sticky .menu li a:hover {
     color: #ffcd28;
@@ -542,7 +587,7 @@ text-decoration: underline;
   }
   .navbars .menu li a {
     display: inline-block;
-    color: #fff;
+    color:  var(--secon-color);
     text-decoration: none;
     margin: 0;
     font-size: 25px;
@@ -556,15 +601,20 @@ text-decoration: underline;
   .menu-btn {
     display: block;
   }
+  .navbars .maxw .ic{
+    flex: 1;
+    margin-right: 30px;
+    text-align: right;
+  }
   .close-menu {
     display: block;
     position: absolute;
-    top: 37px;
-    right: 43px;
+    top:10px;
+    right: 45px;
   }
   .home .image-container {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 80px;
     order: 1;
     width: 250px;
     height: 250px;
@@ -578,7 +628,7 @@ text-decoration: underline;
     order: 2;
     text-align: center;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 10px;
   }
   .home .maxw {
@@ -653,6 +703,9 @@ text-decoration: underline;
 @media (max-width: 538px) {
   .maxw {
     margin: auto;
+  }
+  html {
+    scroll-behavior:auto;
   }
   .home .maxw .home-container .text-1 {
     font-size: 23px;
