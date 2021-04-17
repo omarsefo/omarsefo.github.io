@@ -1,28 +1,3 @@
-// var span = document.getElementById("s");
-// var a1 = document.getElementsByTagName("a")[1];
-// var a2 = document.getElementsByTagName("a")[2];
-// var a3 = document.getElementsByTagName("a")[3];
-// var a4 = document.getElementsByTagName("a")[4];
-// let val
-// window.addEventListener("scroll", ()=> {
-//     val = window.scrollY;
-//     if (val > 24) {
-//         nav.classList.add('sticky');
-//         span.classList.add('nev');
-//         a1.classList.add('neve');
-//         a2.classList.add('neve');
-//         a3.classList.add('neve');
-//         a4.classList.add('neve');
-
-//     }else{
-//         nav.classList.remove('sticky');
-//         span.classList.remove('nev');
-//         a1.classList.remove('neve');
-//         a2.classList.remove('neve');
-//         a3.classList.remove('neve');
-//         a4.classList.remove('neve');
-//     }
-// })
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         document.querySelector(".spinner").style.display = "none";
