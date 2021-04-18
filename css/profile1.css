@@ -439,6 +439,9 @@ font-weight: 500;
 font-family: 'ubuntu', sans-serif;
 color: var(--secon-color);
 }
+.contact .content .info .head small{
+color: #ffcd28;
+}
 .contact .content .info .sub-title{
 color: var(--secon-color);
 }
