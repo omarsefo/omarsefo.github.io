@@ -12,8 +12,8 @@ window.addEventListener("load", ()=> {
     window.scrollTo(0,0);
    }
 });
-window.addEventListener('load',close);
-//nav
+  window.addEventListener('load',close);
+///nav
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
 nav.classList.toggle("sticky", window.scrollY > 24);
