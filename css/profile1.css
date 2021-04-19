@@ -8,6 +8,9 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  transition: color 0.2s linear !important;
+}
 .spinner {
   position: fixed;
   top: 0;
@@ -131,6 +134,7 @@ html {
   padding-left: 30px;
   cursor: pointer;
   font-size: 30px;
+  transition: color 0.2s linear;
 }
 :root{
   --first-color: #fff;
@@ -159,7 +163,7 @@ html {
 
 /* home */
 .home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
     url(../img/image1.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -223,10 +227,7 @@ html {
 /* article  */
 
 
-.skills,
-.contact{
-  background: var(--first-color);
-}
+
 .skills .colume {
   width: calc(50% - 30px);
 }
@@ -267,6 +268,11 @@ html {
 }
 /* same thing */
 
+.skills,
+.contact{
+  background: var(--first-color);
+  transition: color 0.4s linear !important;
+}
 .skills,
 .projects,
 .contact {
@@ -322,20 +328,20 @@ html {
 
 /* project */
 .img , .img2{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-  url(../img/background4.jpg) no-repeat center center fixed;
+  background: 
+  url(../img/back1.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-width: 100%;
-display: flex;
-height: 400px;
-max-height: 520px;
+  width: 100%;
+  display: flex;
+  height: 400px;
+  max-height: 520px;
 }
 .img2{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
-  url(../img/background12.jpg) no-repeat center center fixed;
+  background:
+  url(../img/back2.jpg) no-repeat center center fixed;
 }
 
 

@@ -86,9 +86,13 @@ card6.addEventListener('click',()=>{
 
 // copy 
 var nu = document.getElementById("ef");
+var small =document.querySelector('small');
 nu.addEventListener('click', ()=>{
     document.execCommand("copy");
-    alert("The Number is Copyed")
+    small.innerHTML="(The Number is Copyed)";
+    setTimeout(()=>{
+    small.innerHTML="(Click To Copy)";
+    },2000)
 });
 
 
@@ -109,18 +113,18 @@ var typed=new Typed(".type2", {
 let dar =localStorage.getItem('darkm')
 var icon =document.getElementById("ico");
 
+
 const enable =()=>{
     document.body.classList.add("darkt");
     localStorage.setItem("darkm", "enabled");
-    icon.classList.add("fa-moon");
     icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
 }
 const disenable =()=>{
     document.body.classList.remove("darkt");
     localStorage.setItem("darkm", null);
     icon.classList.add("fa-sun");
     icon.classList.remove("fa-moon");
-
 }
 if (dar === "enabled") {
     enable();
