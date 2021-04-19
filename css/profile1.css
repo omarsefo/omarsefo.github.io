@@ -165,9 +165,6 @@ body{
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
     url(../img/image1.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
   width: 100%;
   display: flex;
@@ -330,9 +327,6 @@ body{
 .img , .img2{
   background: 
   url(../img/back1.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   width: 100%;
   display: flex;
@@ -342,6 +336,7 @@ body{
 .img2{
   background:
   url(../img/back2.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
 
 
