@@ -340,6 +340,8 @@ body{
 }
 
 
+
+
 .fas,
 .fab {
   padding-right: 10px !important;
@@ -372,6 +374,12 @@ body{
 .projects .countainer .card:hover {
   background-color: #ffcd28;
   color: #333;
+}
+.projects .countainer .card:hover .b{
+  color: #262626;
+}
+.b{
+  color: #ffcd28;
 }
 .projects .countainer .card .imgbx {
   transition: all 0.3 ease-in;

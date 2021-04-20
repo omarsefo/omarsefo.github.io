@@ -92,7 +92,7 @@ nu.addEventListener('click', ()=>{
     small.innerHTML="(The Number is Copyed)";
     setTimeout(()=>{
     small.innerHTML="(Click To Copy)";
-    },2000)
+    },3000)
 });
 
 
