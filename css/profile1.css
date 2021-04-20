@@ -8,9 +8,6 @@
 html {
   scroll-behavior: smooth;
 }
-body{
-  transition: color 0.2s linear !important;
-}
 .spinner {
   position: fixed;
   top: 0;
