@@ -17,6 +17,7 @@ window.addEventListener("load", ()=> {
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
 nav.classList.toggle("sticky", window.scrollY > 24);
+document.body.style.scrollBehavior="smooth";
 });
 //button top
 window.addEventListener("scroll",()=>{
@@ -98,7 +99,7 @@ nu.addEventListener('click', ()=>{
 
 // type 
 var typed=new Typed(".typee", {
-    strings: ["Front end Developer", "Developer", "Freelancer", "and will be", "Android Developer"],
+    strings: ["Front end Developer", "Freelancer", "Android Developer"],
     typeSpeed:100,
     backSpeed:60,
     loop:true
@@ -136,5 +137,9 @@ icon.addEventListener('click',()=>{
     }else{
         disenable();
     }
+});
+var btn = document.querySelector('.btn');
+btn.addEventListener('click',()=>{
+   alert("sorry this side is not work now it will work soon");
 })
 
