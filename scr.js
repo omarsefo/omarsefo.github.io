@@ -66,7 +66,7 @@ var card5 = document.getElementById("card5");
 var card6 = document.getElementById("card6");
 
 card1.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/1profile/omarsifo.html')
+    window.open('http://omarsefo.github.io/icecream/')
 });
 card2.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/bird/')
@@ -78,7 +78,7 @@ card4.addEventListener('click',()=>{
     window.open('http://omarsefo.github.io/profile/')
 });
 card5.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/ar-en/')
+    window.open('https://omarsefo.github.io/cream/')
 });
 card6.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/shefra/')
@@ -99,7 +99,7 @@ nu.addEventListener('click', ()=>{
 
 // type 
 var typed=new Typed(".typee", {
-    strings: ["Front end Developer", "Freelancer", "Android Developer"],
+    strings: ["Front end Developer", "Freelancer"],
     typeSpeed:100,
     backSpeed:60,
     loop:true

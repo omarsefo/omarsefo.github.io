@@ -167,7 +167,7 @@ html {
   display: flex;
   height: 100vh;
   min-height: 520px;
-  font-family: "ubuntu", sans-serif;
+  font-family: 'ubuntu', sans-serif;
 }
 
 .home .maxw {
