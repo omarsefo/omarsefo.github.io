@@ -44,11 +44,26 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+.navbars .logo{
+  animation: lefts 0.5s linear forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
 .navbars .logo a {
   color: #fff;
   font-size: 40px;
   font-weight: 600;
   text-decoration: none;
+}
+@keyframes lefts{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 .navbars .logo a span {
   color: #ffcd28;
@@ -60,6 +75,17 @@ html {
   list-style: none;
   display: inline-block;
 }
+@keyframes ups{
+  0%{
+    transform: translateY(100px) !important;
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 .navbars .menu li a {
   color:  #fff;
   text-decoration: none;
@@ -67,6 +93,9 @@ html {
   font-weight: 500;
   margin-left: 40px;
   transition: all 0.3s ease;
+  animation: in 0.5s linear forwards;
+  animation-delay: 2.2s;
+  opacity: 0;
 }
 .navbars .menu li a:hover {
   color: #ffcd28;
@@ -132,6 +161,9 @@ html {
   cursor: pointer;
   font-size: 30px;
   transition: color 0.2s linear;
+  animation: in 0.5s linear forwards;
+  animation-delay: 2.2s;
+  opacity: 0;
 }
 :root{
   --first-color: #fff;
@@ -188,7 +220,6 @@ html {
   color:  #fff;
   font-family: "poppins", sans-serif;
 }
-
 .home .image-container {
   display: flex;
   justify-content: center;
@@ -200,18 +231,38 @@ html {
   height: 300px;
   object-fit:cover;
   border-radius: 50%;
+  opacity: 0;
+  animation: in 0.5s linear forwards;
+  animation-delay: 3.3s;
+}
+@keyframes in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 .home .maxw .home-container .text-1 {
   font-size: 27px;
+  animation: lefts 0.5s linear forwards;
+  animation-delay: 2.4s;
+  opacity: 0;
 }
 .home .maxw .home-container .text-2 {
   font-size: 75px;
   font-weight: 600;
   margin-left: -3px;
+  opacity: 0;
+  animation: lefts 0.5s linear forwards;
+  animation-delay: 2.7s;
 }
 .home .maxw .home-container .text-3 {
   font-size: 40px;
   margin: 5px 0;
+  opacity: 0;
+  animation: lefts 0.5s linear forwards;
+  animation-delay: 2.9s;
 }
 .home .maxw .home-container .text-3 span {
   color: #ffcd28;
