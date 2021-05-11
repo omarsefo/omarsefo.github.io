@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         document.querySelector(".spinner").style.display = "none";
+        document.querySelector(".loading").style.display = "none";
     },2000)
 });
 
@@ -71,8 +72,8 @@ card1.addEventListener('click',()=>{
 card2.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/bird/')
 });
-card3.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/coder/')
+card6.addEventListener('click',()=>{
+    window.open('http://omarsefo.github.io/be-real/')
 });
 card4.addEventListener('click',()=>{
     window.open('http://omarsefo.github.io/profile/')
@@ -80,8 +81,9 @@ card4.addEventListener('click',()=>{
 card5.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/cream/')
 });
-card6.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/shefra/')
+
+card3.addEventListener('click',()=>{
+    window.open('http://omarsefo.epizy.com/coder/')
 });
 
 

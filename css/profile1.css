@@ -8,7 +8,7 @@
 html {
   scroll-behavior: smooth;
 }
-.spinner {
+.loading {
   position: fixed;
   top: 0;
   left: 0;
@@ -20,6 +20,43 @@ html {
   justify-content: center;
   align-items: center;
 }
+.spinner{
+  position: relative;
+  background-color: #ffcd28;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  background: conic-gradient(#ffcd28, transparent);
+  animation: rotate 1s linear infinite;
+}
+
+.spinner:before,
+.spinner:after{
+  content:"";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.spinner:before{
+  width: 120px;
+  height: 120px;
+  top:10px;
+  left: 10px;
+  background-color: var(--first-color);
+}
+
+.spinner:after{
+  height: 10px;
+  width: 15px;
+  background-color: #ffcd28;
+  top:0;
+  left: 45px;
+}
+@keyframes rotate{
+  from{ transform: rotateZ(0); }
+  to{ transform: rotateZ(360deg); }
+}
+
 .maxw {
   padding: 0 30px;
   margin: 0 60px;
