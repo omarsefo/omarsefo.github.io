@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         document.querySelector(".spinner").style.display = "none";
-        document.querySelector(".loading").style.display = "none";
+        // document.querySelector(".loading").style.display = "none";
     },2000)
 });
 
@@ -13,7 +13,6 @@ window.addEventListener("load", ()=> {
     window.scrollTo(0,0);
    }
 });
-  window.addEventListener('load',close);
 ///nav
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
@@ -42,6 +41,8 @@ var as2 =document.getElementsByTagName('a')[2];
 var as3 =document.getElementsByTagName('a')[3];
 var as4 =document.getElementsByTagName('a')[4];
 
+menup.addEventListener('load',close);
+window.addEventListener('load',close);
 sc.addEventListener('click',close);
 openp.addEventListener('click',show);
 closep.addEventListener('click',close);
@@ -51,10 +52,10 @@ closep.addEventListener('click',close);
     as4.addEventListener('click',close);
 function show() {
     menup.style.display ='block';
-    menup.style.left ='0';
+    menup.style.top ='0';
 }
 function close() {
-    menup.style.left ='-100%';
+    menup.style.top ='-100%';
 }
 
 
