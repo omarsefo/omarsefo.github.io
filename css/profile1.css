@@ -8,6 +8,17 @@
 html {
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  width: 16px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--first-color);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #ffcd28;
+  /* border: solid var(--first-color);
+  border-width: 0 2px; */
+}
 .spinner {
   position: fixed;
   top: 0;
@@ -122,7 +133,6 @@ html {
     opacity: 1;
   }
 }
-
 .navbars .menu li a {
   color:  #fff;
   text-decoration: none;
@@ -130,7 +140,7 @@ html {
   font-weight: 500;
   margin-left: 40px;
   transition: all 0.3s ease;
-  animation: in 0.5s linear forwards;
+  animation: ups 0.5s ease-in-out forwards;
   animation-delay: 2.2s;
   opacity: 0;
 }
@@ -205,6 +215,7 @@ html {
 :root{
   --first-color: #fff;
   --secon-color: #4b4b4b;
+  --menu:#000000;
   --sun-color:rgb(255, 251, 0);
   --f1-color:rgb(0, 179, 170);
   --f2-color:rgb(0, 140, 255);
@@ -216,6 +227,7 @@ html {
 .darkt{
   --first-color: #333;
   --secon-color: #fff;
+  --menu:#fff;
   --sun-color:#000;
   --f1-color:rgb(0, 179, 170);
   --f2-color:rgb(0, 153, 255);
@@ -684,12 +696,13 @@ text-decoration: underline;
     opacity: 0.9;
     height: 100vh;
     width: 100%;
-    bottom: 0;
+    top:0;
     left: 0;
     text-align: center;
     padding-left: 0;
-    padding-top: 70px;
-    transition:all 0.5s ease-in-out;
+    padding-top: 60px;
+    border: 2px solid var(--menu);
+    transition:all 0.7s ease-in-out;
     z-index: 9999;
   }
   .navbars.sticky .menu li a {
@@ -700,7 +713,7 @@ text-decoration: underline;
   }
   .navbars .menu li {
     display: block;
-    padding: 30px 0;
+    padding: 25px 0;
   }
   .navbars .menu li a {
     display: inline-block;
@@ -710,6 +723,7 @@ text-decoration: underline;
     font-size: 25px;
     font-weight: 500;
     transition:all 0.3s ease;
+    opacity: 1;
   }
   .navbars .menu.active {
     left: 0;

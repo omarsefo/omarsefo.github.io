@@ -52,10 +52,10 @@ closep.addEventListener('click',close);
     as4.addEventListener('click',close);
 function show() {
     menup.style.display ='block';
-    menup.style.top ='0';
+    menup.style.left ='0';
 }
 function close() {
-    menup.style.top ='-100%';
+    menup.style.left ='-200%';
 }
 
 
