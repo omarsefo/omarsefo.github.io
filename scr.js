@@ -1,10 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        document.querySelector(".spinner").style.display = "none";
-        // document.querySelector(".loading").style.display = "none";
-    },2000)
-});
+document.addEventListener("DOMContentLoaded", logo());
 
+function logo(){
+    document.getElementById("spinner").style.animation='logo 1.5s 6s forwards ease-in-out';
+    setTimeout(()=>{
+        document.getElementById("spinner").style.display='none';
+    },7700);
+}
 
 //up
 window.addEventListener("load", ()=> {
@@ -41,6 +42,7 @@ var as2 =document.getElementsByTagName('a')[2];
 var as3 =document.getElementsByTagName('a')[3];
 var as4 =document.getElementsByTagName('a')[4];
 
+document.addEventListener("DOMContentLoaded",close);
 menup.addEventListener('load',close);
 window.addEventListener('load',close);
 sc.addEventListener('click',close);

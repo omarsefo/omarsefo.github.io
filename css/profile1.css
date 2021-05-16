@@ -8,6 +8,9 @@
 html {
   scroll-behavior: smooth;
 }
+body{
+  overflow-y: scroll;
+}
 body::-webkit-scrollbar {
   width: 16px;
 }
@@ -16,58 +19,87 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
   background-color: #ffcd28;
-  /* border: solid var(--first-color);
-  border-width: 0 2px; */
 }
 .spinner {
+  background-image:repeating-linear-gradient(60deg, #000, #333, #000 4px);
+  color: #eee;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 999999999999999;
-  background-color: var(--first-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: all 0.5s ease-out;
 }
-/* .spinner{
-  position: relative;
-  background-color: #ffcd28;
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-  background: conic-gradient(#ffcd28, transparent);
-  animation: rotate 1s linear infinite;
-}
-
-.spinner:before,
-.spinner:after{
-  content:"";
+.top_logo {
   position: absolute;
-  border-radius: 50%;
+  top: 44%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  fill: transparent;
+  width:400px;
+  height:321px;
+  stroke: #fff;
+  stroke-width: 2px;
+  line-height: 0.2;
+  opacity: 0;
+  stroke-dasharray: 1135;
+  stroke-dashoffset: 1135;
+  animation: logoStroke 1.5s 1s forwards, logoFill 1.5s 2s forwards;
 }
-
-.spinner:before{
-  width: 120px;
-  height: 120px;
-  top:10px;
-  left: 10px;
-  background-color: var(--first-color);
+.top_name {
+  font-family: "Gochi Hand", cursive;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  font-size: 5em;
+  font-weight: normal;
+  line-height: 0.8;
+  text-align: center;
+  transform: translate(calc(-50% + 0.8em), 0.75em);
+  filter: drop-shadow(2px 2px 4px #000);
+  z-index: 2;
+  opacity: 0;
+  width: 400px;
+  animation: nameOpacity 2.5s 3s forwards;
 }
-
-.spinner:after{
-  height: 10px;
-  width: 15px;
-  background-color: #ffcd28;
-  top:0;
-  left: 45px;
+@keyframes scrolls {
+  0%{
+    background-color: #000;
+  }
+  100% {
+    background-color: #000;
+  }
 }
-@keyframes rotate{
-  from{ transform: rotateZ(0); }
-  to{ transform: rotateZ(360deg); }
-} */
-
+@keyframes logo {
+  0%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes logoStroke {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  }
+  @keyframes logoFill {
+  to {
+    fill: #fff;
+    stroke: transparent;
+    transform: translate(calc(-50% - 3em), -50%);
+  }
+}
+@keyframes nameOpacity {
+to {
+  opacity: 1;
+}
+}
 .maxw {
   padding: 0 30px;
   margin: 0 60px;
@@ -94,7 +126,7 @@ body::-webkit-scrollbar-thumb {
 }
 .navbars .logo{
   animation: lefts 0.5s linear forwards;
-  animation-delay: 2s;
+  animation-delay: 7.8s;
   opacity: 0;
 }
 .navbars .logo a {
@@ -123,7 +155,7 @@ body::-webkit-scrollbar-thumb {
   list-style: none;
   display: inline-block;
 }
-@keyframes ups{
+/* @keyframes ups{
   0%{
     transform: translateY(100px) !important;
     opacity: 0;
@@ -132,7 +164,7 @@ body::-webkit-scrollbar-thumb {
     transform: translateY(0px);
     opacity: 1;
   }
-}
+} */
 .navbars .menu li a {
   color:  #fff;
   text-decoration: none;
@@ -140,8 +172,8 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   margin-left: 40px;
   transition: all 0.3s ease;
-  animation: ups 0.5s ease-in-out forwards;
-  animation-delay: 2.2s;
+  animation: ins 0.5s ease-in-out forwards;
+  animation-delay: 8.1s;
   opacity: 0;
 }
 .navbars .menu li a:hover {
@@ -207,8 +239,8 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   font-size: 30px;
   transition: color 0.2s linear;
-  animation: in 0.5s linear forwards;
-  animation-delay: 2.2s;
+  animation: ins 0.5s linear forwards;
+  animation-delay: 8.4s;
   opacity: 0;
   z-index: 1;
 }
@@ -280,10 +312,10 @@ body::-webkit-scrollbar-thumb {
   object-fit:cover;
   border-radius: 50%;
   opacity: 0;
-  animation: in 0.5s linear forwards;
-  animation-delay: 3.3s;
+  animation: ins 0.5s linear forwards;
+  animation-delay: 9.5s;
 }
-@keyframes in{
+@keyframes ins{
   0%{
     opacity: 0;
   }
@@ -294,7 +326,7 @@ body::-webkit-scrollbar-thumb {
 .home .maxw .home-container .text-1 {
   font-size: 27px;
   animation: lefts 0.5s linear forwards;
-  animation-delay: 2.4s;
+  animation-delay: 8.6s;
   opacity: 0;
 }
 .home .maxw .home-container .text-2 {
@@ -303,14 +335,14 @@ body::-webkit-scrollbar-thumb {
   margin-left: -3px;
   opacity: 0;
   animation: lefts 0.5s linear forwards;
-  animation-delay: 2.7s;
+  animation-delay: 8.9s;
 }
 .home .maxw .home-container .text-3 {
   font-size: 40px;
   margin: 5px 0;
   opacity: 0;
   animation: lefts 0.5s linear forwards;
-  animation-delay: 2.9s;
+  animation-delay: 9s;
 }
 .home .maxw .home-container .text-3 span {
   color: #ffcd28;
@@ -651,12 +683,6 @@ footer span a:hover{
   color: #eee;
 text-decoration: underline;
 }
-
-
-
-
-
-
 @media (max-width: 1240px) {
   .home .maxw .home-container .text-1 {
     font-size: 27px;
