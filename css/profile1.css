@@ -28,6 +28,7 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   right: 0;
   bottom: 0;
+  min-height: 100vh;
   z-index: 999999999999999;
   transition: all 0.5s ease-out;
 }
@@ -49,7 +50,7 @@ body::-webkit-scrollbar-thumb {
   animation: logoStroke 1.5s 1s forwards, logoFill 1.5s 2s forwards;
 }
 .top_name {
-  font-family: "Gochi Hand", cursive;
+  font-family: cursive;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -704,6 +705,13 @@ text-decoration: underline;
   .maxw {
     padding: 0 40px;
     margin: auto;
+  }
+  .top_logo{
+    width:200px;
+  }
+  .top_name{
+    width: 200px;
+    font-size: 4em;
   }
   .navbar {
     padding: 0 50px;

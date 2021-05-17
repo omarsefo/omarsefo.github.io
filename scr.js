@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", logo());
+document.addEventListener('loadeddata', logo());
 
 function logo(){
     document.getElementById("spinner").style.animation='logo 1.5s 6s forwards ease-in-out';
@@ -12,8 +13,10 @@ window.addEventListener("load", ()=> {
     val = window.scrollY;
    if (val > 0) {
     window.scrollTo(0,0);
+    document.getElementById("spinner").scrollTo(0,0);
    }
 });
+
 ///nav
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
