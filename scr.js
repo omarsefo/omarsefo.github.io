@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", logo());
-document.addEventListener('loadeddata', logo());
+document.addEventListener("DOMContentLoaded", logo);
+document.addEventListener('loadeddata', logo);
 
 function logo(){
     document.getElementById("spinner").style.animation='logo 1.5s 6s forwards ease-in-out';
@@ -45,6 +45,7 @@ var as2 =document.getElementsByTagName('a')[2];
 var as3 =document.getElementsByTagName('a')[3];
 var as4 =document.getElementsByTagName('a')[4];
 
+document.addEventListener('loadeddata',close);
 document.addEventListener("DOMContentLoaded",close);
 menup.addEventListener('load',close);
 window.addEventListener('load',close);
@@ -58,6 +59,7 @@ closep.addEventListener('click',close);
 function show() {
     menup.style.display ='block';
     menup.style.left ='0';
+    menup.style.transition='all 0.7s ease-in-out';
 }
 function close() {
     menup.style.left ='-200%';
