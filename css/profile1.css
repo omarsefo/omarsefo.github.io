@@ -41,13 +41,19 @@ body::-webkit-scrollbar-thumb {
   fill: transparent;
   width:400px;
   height:321px;
-  stroke: #fff;
-  stroke-width: 2px;
+  stroke: #dddddd;
+  stroke-width: 16px;
   line-height: 0.2;
   opacity: 0;
-  stroke-dasharray: 1135;
-  stroke-dashoffset: 1135;
-  animation: logoStroke 1.5s 1s forwards, logoFill 1.5s 2s forwards;
+  stroke-dasharray: 3150;
+  stroke-dashoffset: 3150;
+  animation: logoStroke 2s forwards, logoFill 2s 2s forwards;
+}
+@keyframes logoStroke {
+  to {
+    stroke-dashoffset:6300;
+    opacity: 1;
+  }
 }
 .top_name {
   font-family: cursive;
@@ -63,15 +69,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
   opacity: 0;
   width: 400px;
-  animation: nameOpacity 2.5s 3s forwards;
-}
-@keyframes scrolls {
-  0%{
-    background-color: #000;
-  }
-  100% {
-    background-color: #000;
-  }
+  animation: nameOpacity 3.3s 3.3s forwards;
 }
 @keyframes logo {
   0%{
@@ -81,17 +79,9 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
   }
 }
-@keyframes logoStroke {
-  0%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-  }
   @keyframes logoFill {
   to {
-    fill: #fff;
+    fill: #ffcd28;
     stroke: transparent;
     transform: translate(calc(-50% - 3em), -50%);
   }
