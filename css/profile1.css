@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 2;
   opacity: 0;
   width: 400px;
-  animation: nameOpacity 3.3s 3.3s forwards;
+  animation: nameOpacity 3.3s 3s forwards;
 }
 @keyframes logo {
   0%{
@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
   to {
     fill: #ffcd28;
     stroke: transparent;
-    transform: translate(calc(-50% - 3em), -50%);
+    transform: translate(calc(-50% - 2.5em), -50%);
   }
 }
 @keyframes nameOpacity {
@@ -240,7 +240,7 @@ to {
   --secon-color: #4b4b4b;
   --menu:#000000;
   --sun-color:rgb(255, 251, 0);
-  --f1-color:rgb(0, 179, 170);
+  --f1-color:#dd4b39;
   --f2-color:rgb(0, 140, 255);
   --f3-color:rgb(255, 0, 55);
   --f4-color:rgb(0, 78, 141);
@@ -252,7 +252,7 @@ to {
   --secon-color: #fff;
   --menu:#fff;
   --sun-color:#000;
-  --f1-color:rgb(0, 179, 170);
+  --f1-color:#dd4b39;
   --f2-color:rgb(0, 153, 255);
   --f3-color:rgb(255, 0, 98);
   --f4-color:rgb(0, 116, 211);
@@ -303,6 +303,8 @@ to {
   object-fit:cover;
   border-radius: 50%;
   opacity: 0;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6),
+              1px 1px 20px rgba(0, 0, 0, 0.6);
   animation: ins 0.5s linear forwards;
   animation-delay: 9.5s;
 }

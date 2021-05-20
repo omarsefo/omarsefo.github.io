@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", logo);
-document.addEventListener('loadeddata', logo);
+document.addEventListener('load', logo);
 
 function logo(){
     document.getElementById("spinner").style.animation='logo 1.5s 6s forwards ease-in-out';
