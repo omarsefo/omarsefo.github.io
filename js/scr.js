@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", logo);
 document.addEventListener('load', logo);
 
 function logo(){
-    document.getElementById("spinner").style.animation='logo 1.5s 6s forwards ease-in-out';
+    document.getElementById("spinner").style.animation='logo 0.5s 6s forwards ease-in-out';
     setTimeout(()=>{
         document.getElementById("spinner").style.display='none';
-    },7700);
+    },7000);
 }
 
 //up
@@ -73,26 +73,40 @@ var card3 = document.getElementById("card3");
 var card4 = document.getElementById("card4");
 var card5 = document.getElementById("card5");
 var card6 = document.getElementById("card6");
+var card7 = document.getElementById("card7");
+var card8 = document.getElementById("card8");
+var card9 = document.getElementById("card9");
 
 card1.addEventListener('click',()=>{
     window.open('http://omarsefo.github.io/icecream/')
 });
 card2.addEventListener('click',()=>{
-    window.open('https://omarsefo.github.io/bird/')
-});
-card6.addEventListener('click',()=>{
     window.open('http://omarsefo.github.io/be-real/')
 });
-card4.addEventListener('click',()=>{
-    window.open('http://omarsefo.github.io/profile/')
+card3.addEventListener('click',()=>{
+    window.open('https://omarsefo.github.io/bird/')
 });
-card5.addEventListener('click',()=>{
+card4.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/cream/')
 });
-
-card3.addEventListener('click',()=>{
+card5.addEventListener('click',()=>{
+    window.open('https://omarsefo.github.io/ballspinner/')
+});
+card6.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/coder/')
 });
+card7.addEventListener('click',()=>{
+    window.open('https://omarsefo.github.io/moon/')
+});
+card8.addEventListener('click',()=>{
+    window.open('https://omarsefo.github.io/music/')
+});
+card9.addEventListener('click',()=>{
+    window.open('http://omarsefo.epizy.com/shefra/')
+});
+
+
+
 
 
 // copy 
@@ -121,9 +135,33 @@ var typed=new Typed(".type2", {
     loop:true
 });
 
+// projectslide
+$(document).ready(function(){
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0:{
+                items:1,
+                nav: false
+            },
+            600:{
+                items:2,
+                nav: false
+            },
+            1000:{
+                items:3,
+                nav: false
+            }
+        }
+    });
+});
+
+
 let dar =localStorage.getItem('darkm')
 var icon =document.getElementById("ico");
-
 
 const enable =()=>{
     document.body.classList.add("darkt");
@@ -151,5 +189,11 @@ icon.addEventListener('click',()=>{
 var btn = document.querySelector('.btn');
 btn.addEventListener('click',()=>{
    alert("sorry this side is not work now it will work soon");
-})
+});
+
+// Image
+VanillaTilt.init(document.getElementById("img"), {
+    max: 10,
+    speed: 400
+});
 

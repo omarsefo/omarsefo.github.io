@@ -415,7 +415,7 @@ to {
   margin-bottom: 60px;
   padding-bottom: 20px;
   color: var(--secon-color);
-  font-family: "ubuntu", sans-serif;
+  font-family: 'ubuntu', sans-serif;
 }
 .projects .text::before,
 .skills .text::before,
@@ -490,7 +490,6 @@ to {
   padding: 20px 25px;
   margin-bottom: 12px;
   cursor: pointer;
-  transition: all 0.3 ease;
 }
 .projects .countainer .card:hover {
   background-color: #ffcd28;
@@ -503,7 +502,7 @@ to {
   color: #ffcd28;
 }
 .projects .countainer .card .imgbx {
-  transition: all 0.3 ease-in;
+  transition: all 0.3s ease;
 }
 .projects .countainer .card i {
   font-size: 50px;
@@ -518,13 +517,95 @@ to {
   transition: all 0.8s ease;
 }
 .projects .countainer .card:hover .imgbx {
-  transform: scale(1.0);
+  transform: scale(1.05);
 }
 .projects .countainer .card .tex {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+.tex2{
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-family: 'poppins',sans-serif;
+  font-size: 20px;
+  padding: 5px 0;
+  border-radius: 55px;
+  color: #111;
+  background: #ffcd28;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+/* projectall */
+
+
+.projects .carousel .cardb{
+  background-color: #333;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor:grab;
+}
+.projects .carousel .cardb:active{
+  cursor:grabbing;
+}
+.projects .carousel .cardb:hover {
+  background-color: #ffcd28;
+  color: #333;
+}
+.projects .carousel .cardb .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.projects .carousel .cardb:hover .box {
+  transform: scale(1.05);
+}
+.projects .carousel .cardb:hover .b{
+  color: #262626;
+}
+.b{
+  color: #ffcd28;
+}
+.projects .carousel .cardb .textn{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.projects .carousel .cardb i{
+  font-size: 50px;
+  color: #ffcd28;
+}
+.projects .carousel .cardb:hover i {
+  color: #333;
+  transform: rotate(350deg);
+  transition: all 0.8s ease;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #ffcd28 !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #ffcd28 !important;
+}
+
 /* contact */
 
 

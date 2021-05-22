@@ -2,19 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="img/wolg-svg-gold.svg" />
-    <link rel="stylesheet" href="css/all.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/profile1.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <meta name="description" content="Welcome To My Portfolio" />
     <meta name="keywords" content="omarsefo,portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/wolg-svg-gold.svg" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/profile1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>Omar Sefo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
   </head>
   <body>
     <div class="spinner" id="spinner">
@@ -216,7 +223,14 @@
           </div>
         </div>
         <div class="image-container">
-          <img data-tilt data-tilt-scale="1.02" src="img/omar1.jpg" alt="omar" />
+          <img
+            data-tilt
+            data-tilt-scale="1.03"
+            data-tilt-reverse="true"
+            id="img"
+            src="img/omar1.jpg"
+            alt="omar"
+          />
         </div>
       </div>
     </section>
@@ -372,36 +386,37 @@
           >
             <div class="imgbx">
               <i class="fas fa-ice-cream"></i>
-            </div>
-            <div class="content">
-              <div class="tex">
-                <i class="far fa-star"></i> Icecream <i class="far fa-star"></i>
+              <div class="content">
+                <div class="tex">
+                  <i class="far fa-star"></i> Icecream
+                  <i class="far fa-star"></i>
+                </div>
+                <p>
+                  This is page to icecream market click buy button
+                  <b class="b">Click To Show.</b>
+                </p>
               </div>
-              <p>
-                This is page to icecream show click buy button
-                <b class="b">Click To Show.</b>
-              </p>
             </div>
           </div>
           <div
             data-aos="zoom-in-up"
-            data-aos-delay="350"
+            data-aos-delay="300"
             data-aos-offset="220"
             class="card"
             id="card2"
           >
             <div class="imgbx">
-              <i class="fas fa-dove"></i>
-            </div>
-            <div class="content">
-              <div class="tex">
-                <i class="far fa-star"></i> Bird Restaurant
-                <i class="far fa-star"></i>
+              <i class="fas fa-glasses"></i>
+              <div class="content">
+                <div class="tex">
+                  <i class="far fa-star"></i> Be Real
+                  <i class="far fa-star"></i>
+                </div>
+                <p>
+                  This page to show VR and you can see the reall one on click
+                  buy button <b class="b"> Click To Show.</b>
+                </p>
               </div>
-              <p>
-                it's a page for a restaurant that has pizzas,sandwiches and
-                fruit salad .
-              </p>
             </div>
           </div>
           <div
@@ -409,73 +424,125 @@
             data-aos-delay="200"
             data-aos-offset="200"
             class="card"
-            id="card6"
+            id="card3"
           >
             <div class="imgbx">
-              <i class="fas fa-glasses"></i>
-            </div>
-            <div class="content">
-              <div class="tex">Be Real</div>
-              <p>
-                This page to show VR and you can see the reall one on click buy
-                button <b class="b"> Click To Show.</b>
-              </p>
+              <i class="fas fa-dove"></i>
+
+              <div class="content">
+                <div class="tex">
+                  <i class="far fa-star"></i> Bird Restaurant
+                  <i class="far fa-star"></i>
+                </div>
+                <p>
+                  it's a page for a restaurant that has pizzas,sandwiches and
+                  fruit salad .
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+        <div data-aos="zoom-in-up" data-aos-delay="280" data-aos-offset="200" class="tex2">Swap For More</div>
+        <div class="carousel owl-carousel">
           <div
-            data-aos="zoom-in-right"
-            data-aos-delay="350"
-            data-aos-offset="230"
-            class="card"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            data-aos-offset="220"
+            class="cardb"
             id="card4"
           >
-            <div class="imgbx">
-              <i class="far fa-id-badge"></i>
-            </div>
-            <div class="content">
-              <div class="tex">
-                <i class="far fa-star"></i> Seconde Profile
-                <i class="far fa-star"></i>
-              </div>
+            <div class="box">
+              <i class="fas fa-ice-cream"></i>
+              <div class="textn">cream</div>
               <p>
-                This is My seconde profile it's better than the first one
-                <b class="b">Click To Show.</b>
+                This page is to icecream market just in pc screen show
+                <b class="b"> Click To Show.</b>
               </p>
             </div>
           </div>
           <div
             data-aos="zoom-in-up"
-            data-aos-delay="450"
-            data-aos-offset="250"
-            class="card"
+            data-aos-delay="300"
+            data-aos-offset="220"
+            class="cardb"
             id="card5"
           >
-            <div class="imgbx">
-              <i class="fas fa-ice-cream"></i>
-            </div>
-            <div class="content">
-              <div class="tex">cream</div>
+            <div class="box">
+              <i class="fas fa-spinner"></i>
+              <div class="textn">My ball spinner</div>
               <p>
-                This page is to icecream market just in pc screen show
-                <b class="b">Click To Show.</b>
+                this my ball jumping to put in spinner page<b class="b">
+                  Click To Show.</b
+                >
               </p>
             </div>
           </div>
           <div
-            data-aos="zoom-in-left"
-            data-aos-delay="350"
-            data-aos-offset="230"
-            class="card"
-            id="card3"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            data-aos-offset="220"
+            class="cardb"
+            id="card6"
           >
-            <div class="imgbx">
-              <i class="far fa-file-code"></i>
-            </div>
-            <div class="content">
-              <div class="tex">My Simple Coder</div>
+            <div class="box">
+              <i class="fas fa-laptop-code"></i>
+              <div class="textn">My Simple Coder</div>
               <p>
                 This is My Fist coder app in web I start codeing
-                <b class="b">Click To Show.</b>
+                <b class="b"> Click To Show.</b>
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            data-aos-offset="220"
+            class="cardb"
+            id="card7"
+          >
+            <div class="box">
+              <i class="far fa-moon"></i>
+              <div class="textn">My moon page</div>
+              <p>
+                this page show anmation of moon and stars<b class="b">
+                  Click To Show.</b
+                >
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            data-aos-offset="220"
+            class="cardb"
+            id="card8"
+          >
+            <div class="box">
+              <i class="fas fa-music"></i>
+              <div class="textn">Sia Music</div>
+              <p>
+                it's a page have some music to sia, it's slowly<br /><b
+                  class="b"
+                >
+                  Click To Show.</b
+                >
+              </p>
+            </div>
+          </div>
+          <div
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            data-aos-offset="220"
+            class="cardb"
+            id="card9"
+          >
+            <div class="box">
+              <i class="far fa-file-code"></i>
+              <div class="textn">encrypt page</div>
+              <p>
+                Page to encrypt and decrypt any text you want<br /><b class="b">
+                  Click To Show.</b
+                >
               </p>
             </div>
           </div>
@@ -604,13 +671,12 @@
       >
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript">
       AOS.init();
     </script>
-    <script src="js/scr.js"></script>
     <script src="js/vanilla-tilt.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scr.js"></script>
   </body>
 </html>
