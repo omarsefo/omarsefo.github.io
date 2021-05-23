@@ -158,14 +158,25 @@ to {
 } */
 .navbars .menu li a {
   color:  #fff;
+  display: inline-block;
   text-decoration: none;
   font-size: 22px;
   font-weight: 500;
   margin-left: 40px;
   transition: all 0.3s ease;
-  animation: ins 0.5s ease-in-out forwards;
+  animation: ups 0.5s ease-in-out forwards;
   animation-delay: 8.1s;
   opacity: 0;
+}
+@keyframes ups{
+  0%{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 .navbars .menu li a:hover {
   color: #ffcd28;
@@ -807,7 +818,7 @@ text-decoration: underline;
     left: 0;
     text-align: center;
     padding-left: 0;
-    padding-top: 60px;
+    padding-top: 70px;
     border: 2px solid var(--menu);
     transition:all 0.7s ease-in-out;
     z-index: 9999;
@@ -821,6 +832,7 @@ text-decoration: underline;
   .navbars .menu li {
     display: block;
     padding: 25px 0;
+    border-bottom: 2px solid var(--menu);
   }
   .navbars .menu li a {
     display: inline-block;

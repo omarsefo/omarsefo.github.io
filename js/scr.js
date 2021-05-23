@@ -37,7 +37,7 @@ sc.addEventListener("click", ()=> {
 
 //menu
 
-const menup = document.querySelector('.menu');
+const menup = document.getElementById('menu');
 const closep = document.querySelector('.close-menu');
 const openp = document.querySelector('.menu-btn');
 var as1 =document.getElementsByTagName('a')[1];
@@ -57,9 +57,8 @@ closep.addEventListener('click',close);
     as3.addEventListener('click',close);
     as4.addEventListener('click',close);
 function show() {
-    menup.style.display ='block';
-    menup.style.left ='0';
-    menup.style.transition='all 0.7s ease-in-out';
+    menup.style.display ='inline-block';
+    menup.style.left ='0px';
 }
 function close() {
     menup.style.left ='-200%';
