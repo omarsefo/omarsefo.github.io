@@ -8,7 +8,7 @@ function logo(){
     },7000);
 }
 
-//up
+// up
 window.addEventListener("load", ()=> {
     val = window.scrollY;
    if (val > 0) {
@@ -64,7 +64,6 @@ function close() {
     menup.style.left ='-200%';
 }
 
-
 //web
 var card1 = document.getElementById("card1");
 var card2 = document.getElementById("card2");
@@ -95,7 +94,7 @@ card6.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/coder/')
 });
 card7.addEventListener('click',()=>{
-    window.open('https://omarsefo.github.io/moon/')
+    window.open('https://omarsefo.github.io/moon/moon.html')
 });
 card8.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/music/')
