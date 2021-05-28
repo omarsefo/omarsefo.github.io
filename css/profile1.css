@@ -308,6 +308,10 @@ to {
               1px 1px 20px rgba(0, 0, 0, 0.6);
   animation: ins 0.5s linear forwards;
   animation-delay: 9.5s;
+  transition-property: transform;
+  transition-duration: 1000ms;
+  transform-origin: center center;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 @keyframes ins{
   0%{
@@ -638,6 +642,7 @@ to {
   text-decoration: none;
 }
 .contact .content .left .ico a:hover{
+  transform: translateX(-2);
   transform: rotate(7deg);
   transition: all 0.2s ease;
 }

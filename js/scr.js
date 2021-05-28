@@ -23,20 +23,15 @@ window.addEventListener("scroll", function(){
 nav.classList.toggle("sticky", window.scrollY > 24);
 document.body.style.scrollBehavior="smooth";
 });
+
 //button top
 window.addEventListener("scroll",()=>{
  sc.classList.toggle("act", window.scrollY > 500);
 });
 var sc =document.querySelector('.scroll-up');
-sc.addEventListener("click", ()=> {
-    val = window.scrollY;
-   if (val > 0) {
-    window.scrollTo(0,0);
-   }
-});
+
 
 //menu
-
 const menup = document.getElementById('menu');
 const closep = document.querySelector('.close-menu');
 const openp = document.querySelector('.menu-btn');
@@ -190,8 +185,8 @@ btn.addEventListener('click',()=>{
 });
 
 // Image
-VanillaTilt.init(document.getElementById("img"), {
+VanillaTilt.init(document.getElementById("img1"), {
     max: 10,
-    speed: 400
+    speed: 100
 });
 
