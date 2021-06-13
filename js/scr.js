@@ -35,10 +35,10 @@ var sc =document.querySelector('.scroll-up');
 const menup = document.getElementById('menu');
 const closep = document.querySelector('.close-menu');
 const openp = document.querySelector('.menu-btn');
-var as1 =document.getElementsByTagName('a')[1];
-var as2 =document.getElementsByTagName('a')[2];
-var as3 =document.getElementsByTagName('a')[3];
-var as4 =document.getElementsByTagName('a')[4];
+var as1 =document.getElementsByTagName('a')[2];
+var as2 =document.getElementsByTagName('a')[3];
+var as3 =document.getElementsByTagName('a')[4];
+var as4 =document.getElementsByTagName('a')[5];
 
 document.addEventListener('loadeddata',close);
 document.addEventListener("DOMContentLoaded",close);
@@ -51,8 +51,9 @@ closep.addEventListener('click',close);
     as2.addEventListener('click',close);
     as3.addEventListener('click',close);
     as4.addEventListener('click',close);
+
 function show() {
-    menup.style.display ='inline-block';
+    menup.style.display ='block';
     menup.style.left ='0px';
 }
 function close() {

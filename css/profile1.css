@@ -18,7 +18,7 @@ body::-webkit-scrollbar-track {
   background: var(--first-color);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #ffcd28;
+  background-color: var(--orange);
 }
 .spinner {
   background-image:repeating-linear-gradient(60deg, #000, #333, #000 4px);
@@ -81,7 +81,7 @@ body::-webkit-scrollbar-thumb {
 }
   @keyframes logoFill {
   to {
-    fill: #ffcd28;
+    fill: var(--orange);
     stroke: transparent;
     transform: translate(calc(-50% - 2.4em), -50%);
   }
@@ -105,7 +105,7 @@ to {
 }
 .navbars.sticky {
   padding: 10px 0;
-  background: #ffcd28;
+  background: var(--orange);
 }
 .menu {
   margin: 0;
@@ -137,7 +137,7 @@ to {
   }
 }
 .navbars .logo a span {
-  color: #ffcd28;
+  color: var(--orange);
 }
 .navbars.sticky .logo a span {
   color: #5e5e5e;
@@ -169,7 +169,7 @@ to {
   }
 }
 .navbars .menu li a:hover {
-  color: #ffcd28;
+  color: var(--orange);
 }
 .navbars .menu{
   flex: 1;
@@ -199,7 +199,7 @@ to {
   position: fixed;
   height: 45px;
   width: 45px;
-  background: #ffcd28;
+  background: var(--orange);
   right: 30px;
   bottom: 10px;
   text-align: center;
@@ -237,6 +237,7 @@ to {
   z-index: 1;
 }
 :root{
+  --orange:#ffcd28;
   --first-color: #fff;
   --secon-color: #4b4b4b;
   --menu:#000000;
@@ -343,7 +344,7 @@ to {
   animation-delay: 9s;
 }
 .home .maxw .home-container .text-3 span {
-  color: #ffcd28;
+  color: var(--orange);
   font-size: 500;
 }
 
@@ -372,11 +373,11 @@ to {
   font-size: 35px;
 }
 .skills .content .left .spa {
-  color: #ffcd28;
+  color: var(--orange);
   font-size: 30px;
 }
 .skills .content .left .texts span {
-  color: #ffcd28;
+  color: var(--orange);
   font-weight: 600;
   font-size: 40px;
 }
@@ -442,7 +443,7 @@ to {
   bottom: -16px;
   left: 50%;
   font-size: 20px;
-  color: #ffcd28;
+  color: var(--orange);
   padding: 5px;
   border-radius: 55px;
   background-color:  var(--first-color);
@@ -456,13 +457,37 @@ to {
   background-size: cover;
   width: 100%;
   display: flex;
-  height: 400px;
+  height: 450px;
   max-height: 520px;
+  position: relative;
 }
 .img2{
   background:
   url(../img/back2.jpg) no-repeat center center fixed;
   background-size: cover;
+}
+.custom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom svg {
+  position: relative;
+  display: block;
+  width: calc(135% + 1.3px);
+  height: 124px;
+}
+
+.custom .shape-fill {
+  fill: var(--first-color);
+}
+.custom .shape-fil {
+  fill: #111;
 }
 
 
@@ -471,7 +496,7 @@ to {
 .fas,
 .fab {
   padding-right: 10px !important;
-  color: #ffcd28;
+  color: var(--orange);
 }
 .projects {
   color:  #fff;
@@ -497,21 +522,21 @@ to {
   cursor: pointer;
 }
 .projects .countainer .card:hover {
-  background-color: #ffcd28;
+  background-color: var(--orange);
   color: #333;
 }
 .projects .countainer .card:hover .b{
   color: #262626;
 }
 .b{
-  color: #ffcd28;
+  color: var(--orange);
 }
 .projects .countainer .card .imgbx {
   transition: all 0.3s ease;
 }
 .projects .countainer .card i {
   font-size: 50px;
-  color: #ffcd28;
+  color: var(--orange);
 }
 .projects .countainer .card .content i{
   font-size: 19px;
@@ -538,7 +563,7 @@ to {
   padding: 5px 0;
   border-radius: 55px;
   color: #111;
-  background: #ffcd28;
+  background: var(--orange);
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -556,7 +581,7 @@ to {
   cursor:grabbing;
 }
 .projects .carousel .cardb:hover {
-  background-color: #ffcd28;
+  background-color: var(--orange);
   color: #333;
 }
 .projects .carousel .cardb .box{
@@ -573,7 +598,7 @@ to {
   color: #262626;
 }
 .b{
-  color: #ffcd28;
+  color: var(--orange);
 }
 .projects .carousel .cardb .textn{
   font-size: 25px;
@@ -585,7 +610,7 @@ to {
 }
 .projects .carousel .cardb i{
   font-size: 50px;
-  color: #ffcd28;
+  color: var(--orange);
 }
 .projects .carousel .cardb:hover i {
   color: #333;
@@ -602,7 +627,7 @@ to {
   margin: 0 5px;
   outline: none !important;
   border-radius: 50%;
-  border: 2px solid #ffcd28 !important;
+  border: 2px solid var(--orange) !important;
   transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -611,7 +636,7 @@ to {
 }
 .owl-dot.active,
 .owl-dot:hover{
-  background: #ffcd28 !important;
+  background: var(--orange) !important;
 }
 
 /* contact */
@@ -678,7 +703,7 @@ font-family: 'ubuntu', sans-serif;
 color: var(--secon-color);
 }
 .contact .content .info .head small{
-color: #ffcd28;
+color: var(--orange);
 }
 .contact .content .info .sub-title{
 color: var(--secon-color);
@@ -691,14 +716,14 @@ color: var(--secon-color);
 }
 .contact .content .info .w:hover{
 font-size: 16.2px;
-color: #ffcd28;
+color: var(--orange);
 }
 .contact .content .info .w::selection{
 background: transparent;
 }
 .contact .content i{
 font-size: 25px;
-color: #ffcd28;
+color: var(--orange);
 }
 .contact .rigth form .field{
 display: flex;
@@ -725,7 +750,7 @@ display: flex;
   {
   height: 100%;
   width: 100%;
-  border: 2px solid #ffcd28;
+  border: 2px solid var(--orange);
   border-radius: 6px;
   outline: none;
   padding: 0 15px;
@@ -759,7 +784,7 @@ footer{
   color:  #fff;
 }
 footer span a{
-  color: #ffcd28;
+  color: var(--orange);
   text-decoration: none;
 }
 footer span a:hover{
@@ -818,14 +843,14 @@ text-decoration: underline;
     padding-left: 0;
     padding-top: 70px;
     border: 2px solid var(--menu);
-    transition:all 0.7s ease-in-out;
+    transition:all 0.8s ease;
     z-index: 9999;
   }
   .navbars.sticky .menu li a {
     color:  var(--secon-color);
   }
   .navbars.sticky .menu li a:hover {
-    color: #ffcd28;
+    color: var(--orange);
   }
   .navbars .menu li {
     display: block;
@@ -843,7 +868,7 @@ text-decoration: underline;
   }
   .navbars .menu.active {
     left: 0;
-    background-color: #ffcd28;
+    background-color: var(--orange);
   }
   .menu-btn {
     display: block;
