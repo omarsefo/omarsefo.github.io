@@ -102,6 +102,7 @@ to {
   position: fixed;
   z-index: 10;
   transition: all 0.3s ease;
+  border-radius:0 0 15px 15px;
 }
 .navbars.sticky {
   padding: 10px 0;
@@ -475,7 +476,22 @@ to {
   line-height: 0;
   transform: rotate(180deg);
 }
-
+.ani2{
+  animation: wave 50s linear infinite;
+}
+@keyframes wave {
+  50%{
+    transform: translateX(-400px);
+  }
+}
+.ani1{
+  animation: wave1 50s linear infinite;
+}
+@keyframes wave1 {
+  50%{
+    transform: translateX(400px);
+  }
+}
 .custom svg {
   position: relative;
   display: block;
@@ -528,6 +544,12 @@ to {
 .projects .countainer .card:hover .b{
   color: #262626;
 }
+.projects .countainer .card:active{
+  color: #000;
+  background-color: #ffca2c;
+  border-color: #ffc720;
+  box-shadow: 0 0 0 0.25rem rgba(217, 164, 6, 0.5);
+}
 .b{
   color: var(--orange);
 }
@@ -540,11 +562,15 @@ to {
 }
 .projects .countainer .card .content i{
   font-size: 19px;
+  animation: rot 2.5s linear infinite;
+}
+@keyframes rot {
+to{
+  transform: rotate(360deg);
+}
 }
 .projects .countainer .card:hover i {
   color: #333;
-  transform: rotate(350deg);
-  transition: all 0.8s ease;
 }
 .projects .countainer .card:hover .imgbx {
   transform: scale(1.05);
@@ -606,7 +632,20 @@ to {
   margin: 10px 0 7px 0;
 }
 .err{
-  color: #ee442d;
+  /* color: #ee442d; */
+  animation: clo 4s linear infinite;
+}
+@keyframes clo {
+  0% ,100%{
+    color: #ff2002;
+  }
+  20%{
+    color: #ff7575;
+  }
+  50%{
+    color: #ffc5c5;
+  }
+
 }
 .projects .carousel .cardb i{
   font-size: 50px;
