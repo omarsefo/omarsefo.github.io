@@ -275,7 +275,6 @@ to {
   min-height: 520px;
   font-family: 'ubuntu', sans-serif;
 }
-
 .home .maxw {
   position: relative;
   z-index: 1;
@@ -352,7 +351,52 @@ to {
 /* article  */
 
 
-
+.skills{
+  position: relative;
+}
+.effect-wrap .effect{
+  position: absolute;
+  z-index: 0;
+}
+.effect-1{
+  width: 30px;
+  height: 30px;
+  border: 4px solid var(--orange);
+  top: 15%;
+  right: 10%;
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.effect-2{
+  left: 30%;
+  top: 23%;
+  width: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  animation: topb 3s ease-in-out infinite;
+}
+@keyframes topb {
+  0%,100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(25px);
+  }
+}
+.effect-2 div{
+  height: 3px;
+  width: 3px;
+  background: var(--orange);
+  margin: 0 3px 8px;
+}
 .skills .colume {
   width: calc(50% - 30px);
 }
@@ -770,10 +814,79 @@ display: flex;
 .contact .rigth form .name{
   margin-right: 10px;
 }
-.contact .rigth form .email{
+.contact .rigth form .buttons button span:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right,#fff2c7,#ffcd28);
+  animation: input1 2s linear infinite;
+}
+@keyframes input1 {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+.contact .rigth form .buttons button span:nth-child(2){
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom,#fff2c7,#ffcd28);
+  animation: input2 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes input2 {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
+.contact .rigth form .buttons button span:nth-child(3){
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left,#fff2c7,#ffcd28);
+  animation: input3 2s linear infinite;
+}
+@keyframes input3 {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.contact .rigth form .buttons button span:nth-child(4){
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top,#fff2c7,#ffcd28);
+  animation: input4 2s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes input4 {
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+.contact .rigth form .subject{
   margin-left: 10px;
 }
-
 .contact .rigth form .field,
 .contact .rigth form .fields .field{
   height: 45px;
@@ -808,11 +921,15 @@ display: flex;
 .contact .rigth form .buttons button{
   width: 100%;
   height: 100%;
-  color:  var(--first-color);
+  outline: 0;
+  border: 0;
+  background: var(--first-color);
+  color:  var(--secon-color);
+  position: relative;
+  overflow: hidden;
+  transition:all 0.3s ease;
 }
 .contact .rigth form .buttons button:hover{
-  background: none;
-  border: 2px solid #ffc400;
   color: #e9b200;
 }
 footer{

@@ -5,17 +5,17 @@ function logo(){
     document.getElementById("spinner").style.animation='logo 0.5s 6s forwards ease-in-out';
     setTimeout(()=>{
         document.getElementById("spinner").style.display='none';
-    },7000);
+    },000);
 }
 
 // up
-window.addEventListener("load", ()=> {
-    val = window.scrollY;
-   if (val > 0) {
-    window.scrollTo(0,0);
-    document.getElementById("spinner").scrollTo(0,0);
-   }
-});
+// window.addEventListener("load", ()=> {
+//     val = window.scrollY;
+//    if (val > 0) {
+//     window.scrollTo(0,0);
+//     document.getElementById("spinner").scrollTo(0,0);
+//    }
+// });
 
 ///nav
 window.addEventListener("scroll", function(){
