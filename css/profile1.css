@@ -1142,13 +1142,26 @@ text-decoration: underline;
     padding: 0 40px;
     margin: auto;
   }
-  .effect-1-1,
-  .effect-5-1,
-  .effect-7-1,
-  .effect-8-1,
-  .effect-8-2{
-    display: none;
+  .effect-1-1{
+    top: 25%;
+    right: 25%;
   }
+  .effect-5-1{
+    top: 40%;
+    right: 20%;
+  }
+  .effect-7-1{
+    right: 60%;
+    top: 42%;
+  }
+  .effect-8-1{
+  right: 35%;
+  top: 49%;
+}
+.effect-8-2{
+  right: 60%;
+  top: 25%;
+}
   .top_logo{
     width:200px;
   }
@@ -1178,9 +1191,12 @@ text-decoration: underline;
     text-align: center;
     padding-left: 0;
     padding-top: 70px;
+    border-radius: 10px;
     border: 2px solid var(--menu);
     transition:all 0.8s ease;
     z-index: 9999;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5),
+                  1px 1px 20px rgba(0, 0, 0, 0.5);
   }
   .navbars.sticky .menu li a {
     color:  var(--secon-color);
