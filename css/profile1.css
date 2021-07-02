@@ -361,6 +361,7 @@ to {
 @keyframes imgout {
   0%{
     transform: rotate(120deg);
+    opacity: 0;
   }
   50%{
     opacity: 0.8;
@@ -385,7 +386,7 @@ to {
 }
 @keyframes imgin {
   0%{
-    opacity: 1;
+    opacity: 0;
   }
   50%{
     opacity: 0.5;
@@ -399,6 +400,7 @@ to {
 @keyframes imgout2 {
   0%{
     transform: rotate(120deg);
+    opacity: 0;
   }
   50%{
     opacity: 0.8;
