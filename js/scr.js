@@ -70,6 +70,8 @@ var card6 = document.getElementById("card6");
 var card7 = document.getElementById("card7");
 var card8 = document.getElementById("card8");
 var card9 = document.getElementById("card9");
+var card9 = document.getElementById("card10");
+
 
 card1.addEventListener('click',()=>{
     window.open('http://omarsefo.github.io/icecream/')
@@ -87,7 +89,7 @@ card5.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/ballspinner/')
 });
 card6.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/coder/')
+    window.open('https://omarsefo.github.io/norway/')
 });
 card7.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/moon/moon.html')
@@ -98,7 +100,9 @@ card8.addEventListener('click',()=>{
 card9.addEventListener('click',()=>{
     window.open('http://omarsefo.epizy.com/shefra/')
 });
-
+card10.addEventListener('click',()=>{
+    window.open('http://omarsefo.epizy.com/coder/')
+});
 
 
 
