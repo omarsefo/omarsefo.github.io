@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", logo);
+document.addEventListener("DOMContentLoaded", imgb);
 document.addEventListener('load', logo);
 
 function logo(){
@@ -7,7 +8,14 @@ function logo(){
     setTimeout(()=>{
         document.getElementById("spinner").style.display='none';
         document.body.style.overflowY="scroll";
+        val = window.scrollY;
+        if (val > 0) {
+         window.scrollTo(0,0);
+         document.getElementById("spinner").scrollTo(0,0);
+        }
     },7000);
+}
+function imgb() {
     setTimeout( ()=>{
         document.getElementById("img").style.display="flex";
     },14000);
@@ -16,16 +24,6 @@ function logo(){
     },19000);
 }
 
-
-// up
-window.addEventListener("load", ()=> {
-    val = window.scrollY;
-   if (val > 0) {
-    window.scrollTo(0,0);
-    document.getElementById("spinner").scrollTo(0,0);
-    location("#Home");
-   }
-});
 
 ///nav
 window.addEventListener("scroll", function(){
