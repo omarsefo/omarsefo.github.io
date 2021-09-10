@@ -3,10 +3,19 @@ document.addEventListener('load', logo);
 
 function logo(){
     document.getElementById("spinner").style.animation='logo 0.5s 6s forwards ease-in-out';
+    document.body.style.overflowY="hidden";
     setTimeout(()=>{
         document.getElementById("spinner").style.display='none';
+        document.body.style.overflowY="scroll";
     },7000);
+    setTimeout( ()=>{
+        document.getElementById("img").style.display="flex";
+    },14000);
+    setTimeout( ()=>{
+        document.getElementById("img2").style.display="flex";
+    },19000);
 }
+
 
 // up
 window.addEventListener("load", ()=> {
@@ -14,6 +23,7 @@ window.addEventListener("load", ()=> {
    if (val > 0) {
     window.scrollTo(0,0);
     document.getElementById("spinner").scrollTo(0,0);
+    window.open("https://omarsefo.github.io/portfolio/#Home");
    }
 });
 
@@ -53,7 +63,7 @@ closep.addEventListener('click',close);
     as4.addEventListener('click',close);
 
 function show() {
-    menup.style.display ='block';
+    menup.style.display ='inline-block';
     menup.style.left ='0px';
 }
 function close() {
@@ -185,10 +195,11 @@ icon.addEventListener('click',()=>{
     }
 });
 
-var btn = document.querySelector('.button');
-btn.addEventListener('click',()=>{
-   alert("sorry this side is not work now it will work soon");
-});
+// var btn = document.querySelector('.button');
+// btn.addEventListener('click',()=>{
+// //    alert("sorry this side is not work now it will work soon");
+//    alert("thanks you for sending a message");
+// });
 
 // Image
 VanillaTilt.init(document.getElementById("img1"), {

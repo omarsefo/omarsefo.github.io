@@ -230,6 +230,7 @@
             data-tilt-reverse="true"
             id="img1"
             src="img/omar1.jpg"
+            loading="lazy"
             alt="omar"
           />
           <div class="effect effect-1-1"></div>
@@ -303,7 +304,7 @@
               ></div>
             </div>
             <span>javaScript</span>
-            <span>60%</span>
+            <span>65%</span>
             <div class="bars progress">
               <div
                 class="
@@ -311,14 +312,14 @@
                   bg-warning
                 "
                 role="progressbar"
-                style="width: 60%"
+                style="width: 65%"
                 aria-valuenow="75"
                 aria-valuemin="0"
                 aria-valuemax="100"
               ></div>
             </div>
             <span>php</span>
-            <span>30%</span>
+            <span>40%</span>
             <div class="bars progress">
               <div
                 class="
@@ -326,7 +327,7 @@
                   bg-warning
                 "
                 role="progressbar"
-                style="width: 30%"
+                style="width: 40%"
                 aria-valuenow="75"
                 aria-valuemin="0"
                 aria-valuemax="100"
@@ -383,7 +384,7 @@
     </section>
 
     <section>
-      <div class="img">
+      <div id="img" class="img">
         <div class="custom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".45" class="ani1 shape-fil"></path>
@@ -468,7 +469,8 @@
             </div>
           </div>
         </div>
-        <div data-aos="zoom-in-up" data-aos-delay="280" data-aos-offset="200" class="tex2">Swap For More</div>
+        <div data-aos="zoom-in-up" data-aos-delay="280" data-aos-offset="200" class="tex2 progress-bar progress-bar-animated progress-bar-striped
+        bg-warning">Swap For More</div>
         <div class="carousel owl-carousel">
           <div
             data-aos="zoom-in-up"
@@ -481,7 +483,7 @@
               <i class="fas fa-ice-cream"></i>
               <div class="textn">cream</div>
               <p>
-                This page is to icecream market <span class="err"> not for mobile scrren</span>
+                This page is to icecream market  <br><span class="err"> not for mobile scrren</span>
                 <b class="b"> Click To Show.</b>
               </p>
             </div>
@@ -594,7 +596,7 @@
     </section>
 
     <section>
-      <div class="img2">
+      <div id="img2" class="img2">
         <div class="custom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="ani1 shape-fill"></path>
@@ -685,28 +687,29 @@
             class="colume rigth"
           >
             <div class="text1">Message Me</div>
-            <form method="POST">
+            <form method="POST" action="mail.php">
               <div class="field">
                 <div class="field name">
-                  <input type="text" placeholder="Name" required />
+                  <input type="text" name="name" placeholder="Name" required />
                 </div>
-                <div class="field subject">
+                <!-- <div class="field subject">
                   <input id="sub" type="text" placeholder="subject (Not Required)" />
-                </div>
+                </div> -->
               </div>
               <div class="field email">
-                <input type="email" placeholder="Email" required />
+                <input type="email" name="email" placeholder="Email" required />
               </div>
               <div class="field textaria">
                 <textarea
                   cols="30"
                   rows="10"
+                  name="message"
                   required
                   placeholder="type something"
                 ></textarea>
               </div>
               <div class="buttons">
-                <button class="button" type="submit">
+                <button class="button" name="sendf" type="submit">
                   <span></span>
                   <span></span>
                   <span></span>
