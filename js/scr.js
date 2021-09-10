@@ -23,7 +23,7 @@ window.addEventListener("load", ()=> {
    if (val > 0) {
     window.scrollTo(0,0);
     document.getElementById("spinner").scrollTo(0,0);
-    location("https://omarsefo.github.io/portfolio/#Home");
+    location("#Home");
    }
 });
 
