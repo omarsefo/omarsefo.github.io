@@ -337,6 +337,7 @@ to {
   border-radius: 50%;
   opacity: 0;
   user-select: none;
+  cursor:pointer;
   /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6),
               1px 1px 20px rgba(0, 0, 0, 0.6); */
   animation: ins 0.5s linear forwards, at-ripple .6s linear infinite;

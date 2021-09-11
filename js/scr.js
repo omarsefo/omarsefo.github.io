@@ -5,6 +5,7 @@ document.addEventListener('load', logo);
 function logo(){
     document.getElementById("spinner").style.animation='logo 0.5s 6s forwards ease-in-out';
     document.body.style.overflowY="hidden";
+    document.getElementById("spinner").style.cursor="wait";
     setTimeout(()=>{
         document.getElementById("spinner").style.display='none';
         document.body.style.overflowY="scroll";
