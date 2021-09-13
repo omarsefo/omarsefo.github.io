@@ -13,5 +13,5 @@ if (isset($_POST["submit"])){
       mail($to,$subject,$tXt,$headers);
    }
 }
-     header("Location:omarsefo.github.io/portfolio/index.html");
+     header("Location:index.html");
 ?>
