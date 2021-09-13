@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['sendf'])){
+if (isset($_POST["submit"])){
    $name= filter_var( $_POST['name'],FILTER_SANITIZE_STRING);
    $email = filter_var( $_POST['email'] ,FILTER_SANITIZE_EMAIL) ;
    $message =filter_var( $_POST['message'] ,FILTER_SANITIZE_STRING) ;
@@ -13,5 +13,5 @@ if (isset($_POST['sendf'])){
       mail($to,$subject,$tXt,$headers);
    }
 }
-     header("Location:omarsefo.github.io/portfolio/");
+     header("Location:omarsefo.github.io/portfolio/index.html");
 ?>
