@@ -29,5 +29,5 @@ if(isset($_POST['sub'])){
     $mail->Body    ="Name =". $name . "\r\n Email = ". $email . "\r\n Message = ". $message;
     $mail->send();
     }
-    header("Location:index.html");
+    header("Location:omarsefo.github.io/portfolio/");
 ?>
