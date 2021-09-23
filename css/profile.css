@@ -38,6 +38,7 @@ html {
 body{
   overflow-x: hidden;
   overflow-y: scroll;
+  cursor: url(../img/Danger\ Basic.cur),auto;
 }
 body::-webkit-scrollbar {
   width: 16px;
@@ -120,6 +121,21 @@ to {
   opacity: 1;
 }
 }
+#message{
+  width: 300px;
+  height: 70px;
+  background-color: rgb(9, 161, 17);
+  color: #fff;
+  position: fixed;
+  font-size: 15px;
+  left: -500px;
+  bottom: 25px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 70px;
+  z-index: 9;
+  transition: all 0.3s ease;
+}
 .maxw {
   padding: 0 30px;
   margin: 0 60px;
@@ -157,7 +173,7 @@ to {
   text-decoration: none;
   user-select: none;
   filter: drop-shadow(1px 3px 1px #4b4b4b);
-
+  cursor: url(../img/aero_link_glow.cur),auto;
 }
 @keyframes lefts{
   0%{
@@ -192,6 +208,7 @@ to {
   opacity: 0;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
   user-select: none;
+  cursor: url(../img/aero_link_glow.cur),auto;
 }
 @keyframes ups{
   0%{
@@ -215,6 +232,7 @@ to {
   position: relative;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
   user-select: none;
+  cursor: url(../img/aero_link_glow.cur),auto;
 }
 /* .navbars.sticky .menu li a:hover {
   color:  var(--secon-color);
@@ -239,7 +257,7 @@ to {
 }
 .menu-btn {
   font-size: 23px;
-  cursor: pointer;
+  cursor: url(../img/aero_link_glow.cur),auto;
   display:none ;
 }
 .menu-btn i{
@@ -248,7 +266,7 @@ to {
 }
 .close-menu {
   display: none;
-  cursor: pointer;
+  cursor: url(../img/aero_link_glow.cur),auto;
   font-size: 30px;
   color:  var(--secon-color);
 }
@@ -264,7 +282,7 @@ to {
   z-index: 9;
   font-size: 30px;
   border-radius: 50%;
-  cursor: pointer;
+  cursor: url(../img/aero_link_glow.cur),auto;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -281,7 +299,7 @@ to {
 }
 .navbars .maxw .ic{
   padding-left: 30px;
-  cursor: pointer;
+  cursor: url(../img/aero_link_glow.cur),auto;
   font-size: 30px;
   transition: color 0.2s linear;
   animation: ins 0.5s linear forwards;
@@ -337,7 +355,7 @@ to {
   border-radius: 50%;
   opacity: 0;
   user-select: none;
-  cursor:pointer;
+  cursor: url(../img/aero_link_glow.cur),auto;
   /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6),
               1px 1px 20px rgba(0, 0, 0, 0.6); */
   animation: ins 0.5s linear forwards, at-ripple .6s linear infinite;
@@ -795,7 +813,7 @@ to {
   border-radius: 6px;
   padding: 20px 25px;
   margin-bottom: 12px;
-  cursor: pointer;
+  cursor: url(../img/aero_link_glow.cur),auto;
 }
 .projects .countainer .card:hover {
   background-color: var(--orange);
@@ -862,7 +880,7 @@ to{
     transparent) !important;
   margin-bottom: 20px;
   margin-top: 10px;
-  cursor: pointer;
+  cursor: url(../img/Danger\ Basic.cur),auto;
   user-select: none;
   animation: light 4s linear infinite;
 }
@@ -886,11 +904,11 @@ to{
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
-  cursor:grab;
+  cursor: url(../img/D\ Move\ 2.cur),auto;
 }
 
 .projects .carousel .cardb:active{
-  cursor:grabbing;
+  cursor: url(../img/aero_link_glow.cur),auto;
 }
 .projects .carousel .cardb:hover {
   background-color: var(--orange);
@@ -950,6 +968,7 @@ to{
   border-radius: 50%;
   border: 2px solid var(--orange) !important;
   transition: all 0.3s ease;
+  cursor: url(../img/aero_link_glow.cur),auto !important;
 }
 .owl-dot.active{
   width: 35px;
@@ -987,6 +1006,8 @@ to{
   margin-left: 4px;
   font-size: 33px;
   text-decoration: none;
+  cursor: url(../img/aero_link_glow.cur),auto;
+
 }
 .contact .content .left .ico a:hover{
   transform: translateX(-2);
@@ -1033,7 +1054,7 @@ color: var(--secon-color);
 }
 .contact .content .info .w{
   text-decoration: none;
-  cursor: pointer;
+  cursor: url(../img/aero_link_glow.cur),auto;
   user-zoom:unset;
   user-select:all;
   transition: all 0.1s ease-out;
@@ -1058,6 +1079,7 @@ user-select: none;
 } */
 .contact .rigth form .buttons button{
   user-select: none;
+  cursor: url(../img/aero_link_glow.cur),auto;
 }
 .contact .rigth form .buttons button span:nth-child(1){
   position: absolute;
@@ -1192,6 +1214,7 @@ footer span a{
 footer span a:hover{
   color: #eee;
 text-decoration: underline;
+cursor: url(../img/aero_link_glow.cur),auto;
 }
 @media (max-width: 1240px) {
   .home .maxw .home-container .text-1 {

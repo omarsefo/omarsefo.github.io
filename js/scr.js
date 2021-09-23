@@ -30,7 +30,7 @@ function imgb() {
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
 nav.classList.toggle("sticky", window.scrollY > 24);
-document.body.style.scrollBehavior="smooth";
+// document.body.style.scrollBehavior="smooth";
 });
 
 //button top
@@ -195,9 +195,10 @@ icon.addEventListener('click',()=>{
 });
 
 // var btn = document.querySelector('.button');
+// var message = document.getElementById('message');
 // btn.addEventListener('click',()=>{
-// //    alert("sorry this side is not work now it will work soon");
-//    alert("thanks you for sending a message");
+//     document.body.style.cursor="progress";
+//     message.style.left="20px";
 // });
 
 // Image
