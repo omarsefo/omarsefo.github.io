@@ -1,4 +1,5 @@
 <?php
+header("Location:https://omarsefo.github.io/portfolio/");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -29,5 +30,4 @@ if(isset($_POST['sub'])){
     $mail->Body    ="Name =". $name . "\r\n Email = ". $email . "\r\n Message = ". $message;
     $mail->send();
     }
-    header("Location:https://omarsefo.github.io/portfolio/");
 ?>
