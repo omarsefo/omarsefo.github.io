@@ -107,10 +107,10 @@ card8.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/music/')
 });
 card9.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/shefra/')
+    window.open('https://omarsefo.github.io/shefra/')
 });
 card10.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/coder/')
+    window.open('https://omarsefo.github.io/code/')
 });
 
 

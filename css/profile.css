@@ -41,13 +41,16 @@ body{
   cursor: url(../img/Danger\ Basic.cur),auto;
 }
 body::-webkit-scrollbar {
-  width: 16px;
+  width: 12px;
+  cursor: url(../img/Danger\ Basic.cur),auto;
 }
 body::-webkit-scrollbar-track {
   background: var(--first-color);
+  cursor: url(../img/Danger\ Basic.cur),auto;
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--orange);
+  cursor: url(../img/Danger\ Basic.cur),auto;
 }
 .spinner {
   background-image:repeating-linear-gradient(60deg, #000, #333, #000 4px);
