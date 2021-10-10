@@ -38,19 +38,16 @@ html {
 body{
   overflow-x: hidden;
   overflow-y: scroll;
-  cursor: url(../img/Danger\ Basic.cur),auto;
+  transition: all .3s;
 }
 body::-webkit-scrollbar {
-  width: 12px;
-  cursor: url(../img/Danger\ Basic.cur),auto;
+  width: 16px;
 }
 body::-webkit-scrollbar-track {
   background: var(--first-color);
-  cursor: url(../img/Danger\ Basic.cur),auto;
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--orange);
-  cursor: url(../img/Danger\ Basic.cur),auto;
 }
 .spinner {
   background-image:repeating-linear-gradient(60deg, #000, #333, #000 4px);
@@ -124,21 +121,6 @@ to {
   opacity: 1;
 }
 }
-/* #message{
-  width: 300px;
-  height: 70px;
-  background-color: rgb(9, 161, 17);
-  color: #fff;
-  position: fixed;
-  font-size: 15px;
-  left: -500px;
-  bottom: 25px;
-  border-radius: 15px;
-  text-align: center;
-  line-height: 70px;
-  z-index: 9;
-  transition: all 0.3s ease;
-} */
 .maxw {
   padding: 0 30px;
   margin: 0 60px;
@@ -161,8 +143,7 @@ to {
 }
 .navbars .maxw {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+
 }
 .navbars .logo{
   animation: lefts 0.5s linear forwards;
@@ -176,7 +157,7 @@ to {
   text-decoration: none;
   user-select: none;
   filter: drop-shadow(1px 3px 1px #4b4b4b);
-  cursor: url(../img/aero_link_glow.cur),auto;
+
 }
 @keyframes lefts{
   0%{
@@ -194,24 +175,28 @@ to {
 .navbars.sticky .logo a span {
   color: #5e5e5e;
 }
+.navbars .menu{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex: 1 1 100%;
+}
 .navbars .menu li {
   list-style: none;
-  display: inline-block;
 }
 .navbars .menu li a {
   color:  #fff;
-  display: inline-block;
   text-decoration: none;
   font-size: 22px;
   font-weight: 500;
-  margin-left: 40px;
+  padding: 5px 3px;
+  margin: 5px 25px;
   transition: all 0.3s ease;
   animation: ups 0.5s ease-in-out forwards;
   animation-delay: 8.1s;
   opacity: 0;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
   user-select: none;
-  cursor: url(../img/aero_link_glow.cur),auto;
 }
 @keyframes ups{
   0%{
@@ -226,16 +211,11 @@ to {
 .navbars .menu li a:hover {
   color: var(--orange);
 }
-.navbars .menu{
-  flex: 1;
-  text-align: right;
-}
 .navbars.sticky .menu li a {
   color:  var(--first-color);
   position: relative;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
   user-select: none;
-  cursor: url(../img/aero_link_glow.cur),auto;
 }
 /* .navbars.sticky .menu li a:hover {
   color:  var(--secon-color);
@@ -260,18 +240,34 @@ to {
 }
 .menu-btn {
   font-size: 23px;
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor: pointer;
   display:none ;
+  animation: ins 0.5s linear forwards;
+  animation-delay: 8.6s;
+  opacity: 0;
 }
 .menu-btn i{
   color:  #fff;
+  line-height:43px;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
 }
 .close-menu {
   display: none;
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor: pointer;
   font-size: 30px;
   color:  var(--secon-color);
+}
+.wolf{
+  width: 130px;
+  margin-left: 74px;
+}
+.close{
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 0 0 10px;
+}
+#close{
+  padding: 10px;
 }
 .scroll-up{
   position: fixed;
@@ -285,7 +281,7 @@ to {
   z-index: 9;
   font-size: 30px;
   border-radius: 50%;
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor: pointer;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -300,13 +296,21 @@ to {
   padding-right: 0 !important;
   color: var(--first-color);
 }
+.navbars .maxw .i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .navbars .maxw .ic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-left: 30px;
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor: pointer;
   font-size: 30px;
   transition: color 0.2s linear;
   animation: ins 0.5s linear forwards;
-  animation-delay: 8.4s;
+  animation-delay: 8.2s;
   opacity: 0;
   z-index: 1;
   padding-right: 0 !important;
@@ -358,7 +362,7 @@ to {
   border-radius: 50%;
   opacity: 0;
   user-select: none;
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor:pointer;
   /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6),
               1px 1px 20px rgba(0, 0, 0, 0.6); */
   animation: ins 0.5s linear forwards, at-ripple .6s linear infinite;
@@ -816,7 +820,7 @@ to {
   border-radius: 6px;
   padding: 20px 25px;
   margin-bottom: 12px;
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor: pointer;
 }
 .projects .countainer .card:hover {
   background-color: var(--orange);
@@ -883,7 +887,7 @@ to{
     transparent) !important;
   margin-bottom: 20px;
   margin-top: 10px;
-  cursor: url(../img/Danger\ Basic.cur),auto;
+  cursor: pointer;
   user-select: none;
   animation: light 4s linear infinite;
 }
@@ -907,11 +911,11 @@ to{
   text-align: center;
   border-radius: 6px;
   padding: 20px 25px;
-  cursor: url(../img/D\ Move\ 2.cur),auto;
+  cursor:grab;
 }
 
 .projects .carousel .cardb:active{
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor:grabbing;
 }
 .projects .carousel .cardb:hover {
   background-color: var(--orange);
@@ -971,7 +975,6 @@ to{
   border-radius: 50%;
   border: 2px solid var(--orange) !important;
   transition: all 0.3s ease;
-  cursor: url(../img/aero_link_glow.cur),auto !important;
 }
 .owl-dot.active{
   width: 35px;
@@ -1009,8 +1012,6 @@ to{
   margin-left: 4px;
   font-size: 33px;
   text-decoration: none;
-  cursor: url(../img/aero_link_glow.cur),auto;
-
 }
 .contact .content .left .ico a:hover{
   transform: translateX(-2);
@@ -1057,7 +1058,7 @@ color: var(--secon-color);
 }
 .contact .content .info .w{
   text-decoration: none;
-  cursor: url(../img/aero_link_glow.cur),auto;
+  cursor: pointer;
   user-zoom:unset;
   user-select:all;
   transition: all 0.1s ease-out;
@@ -1082,7 +1083,6 @@ user-select: none;
 } */
 .contact .rigth form .buttons button{
   user-select: none;
-  cursor: url(../img/aero_link_glow.cur),auto;
 }
 .contact .rigth form .buttons button span:nth-child(1){
   position: absolute;
@@ -1217,7 +1217,6 @@ footer span a{
 footer span a:hover{
   color: #eee;
 text-decoration: underline;
-cursor: url(../img/aero_link_glow.cur),auto;
 }
 @media (max-width: 1240px) {
   .home .maxw .home-container .text-1 {
@@ -1282,62 +1281,80 @@ cursor: url(../img/aero_link_glow.cur),auto;
     padding: 0 40px;
   }
   .navbars .menu {
-    padding-left: 20px;
     position: fixed;
-    display: none;
     background: var(--first-color);
-    opacity: 0.9;
     height: 100vh;
-    width: 100%;
+    width: 70%;
     top:0;
-    left: 0;
+    right: 0;
     text-align: center;
     padding-left: 0;
-    padding-top: 70px;
     border-radius: 10px;
-    border: 2px solid var(--menu);
     transition:all 0.8s ease;
-    z-index: 9999;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5),
-                  1px 1px 20px rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
+                1px 1px 10px rgba(0, 0, 0, 0.5);
   }
-  .navbars.sticky .menu li a {
+  .navbars.sticky .menu li a,
+  .navbars .menu li a:hover,
+  .navbars .menu li a.activ,
+  .navbars .menu li a {
     color:  var(--secon-color);
+    padding: 15px 0;
   }
-  .navbars.sticky .menu li a:hover {
-    color: var(--orange);
+  .navbars.sticky .menu li a:hover,
+  .navbars.sticky .menu li a.activ,
+  .navbars .menu li a:hover,
+  .navbars .menu li a.activ {
+    color: #fff;
+    background-color: #646464;
+    padding: 15px 0;
+  }
+  .line{
+    width: 100%;
+    height: 15px;
   }
   .navbars .menu li {
-    display: block;
-    padding: 25px 0;
+    align-items: center;
+    display: flex;
+    flex: 1 1 100%;
+    letter-spacing: normal
   }
   .navbars .menu li a {
     display: inline-block;
-    color:  var(--secon-color);
     text-decoration: none;
     margin: 0;
+    width: 100%;
+    max-height: 60px;
     font-size: 25px;
     font-weight: 500;
     transition:all 0.3s ease;
     opacity: 1;
   }
-  .navbars .menu.active {
+  .navbars.sticky .menu li a::after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: var(--first-color);
+    bottom: 0;
     left: 0;
-    background-color: var(--orange);
+    opacity: 0;
+    transition: all 0.3s .1s ease;
   }
   .menu-btn {
     display: block;
   }
   .navbars .maxw .ic{
-    flex: 1;
-    margin-right: 30px;
-    text-align: right;
+    margin-left: 40px;
+    padding-left: 0px;
+  }
+  .navbars .maxw .i{
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
   }
   .close-menu {
-    display: block;
-    position: absolute;
-    top:30px;
-    right: 49px;
+    display:grid
   }
   .home .image-container {
     width: 100%;

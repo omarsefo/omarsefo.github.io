@@ -30,7 +30,7 @@ function imgb() {
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
 nav.classList.toggle("sticky", window.scrollY > 24);
-// document.body.style.scrollBehavior="smooth";
+document.body.style.scrollBehavior="smooth";
 });
 
 //button top
@@ -42,7 +42,7 @@ var sc =document.querySelector('.scroll-up');
 
 //menu
 const menup = document.getElementById('menu');
-const closep = document.querySelector('.close-menu');
+const closep = document.getElementById('close');
 const openp = document.querySelector('.menu-btn');
 var as1 =document.getElementsByTagName('a')[2];
 var as2 =document.getElementsByTagName('a')[3];
@@ -63,11 +63,20 @@ closep.addEventListener('click',close);
 
 function show() {
     menup.style.display ='inline-block';
-    menup.style.left ='0px';
+    menup.style.right ='0px';
 }
 function close() {
-    menup.style.left ='-200%';
+    menup.style.right ='-200%';
 }
+men = document.querySelector('.menu').querySelectorAll('a');
+
+men.forEach(element => {
+    element.addEventListener("click",function(){
+        men.forEach(nav=>nav.classList.remove("activ"));
+        this.classList.add("activ");
+    })
+});
+
 
 //web
 var card1 = document.getElementById("card1");
@@ -107,10 +116,10 @@ card8.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/music/')
 });
 card9.addEventListener('click',()=>{
-    window.open('https://omarsefo.github.io/shefra/')
+    window.open('http://omarsefo.epizy.com/shefra/')
 });
 card10.addEventListener('click',()=>{
-    window.open('https://omarsefo.github.io/code/')
+    window.open('http://omarsefo.epizy.com/coder/')
 });
 
 
@@ -195,10 +204,9 @@ icon.addEventListener('click',()=>{
 });
 
 // var btn = document.querySelector('.button');
-// var message = document.getElementById('message');
 // btn.addEventListener('click',()=>{
-//     document.body.style.cursor="progress";
-//     message.style.left="20px";
+// //    alert("sorry this side is not work now it will work soon");
+//    alert("thanks you for sending a message");
 // });
 
 // Image
