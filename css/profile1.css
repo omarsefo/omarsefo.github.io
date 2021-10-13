@@ -1036,6 +1036,9 @@ color:var(--f1-color);
         .contact .content .left .ico .f6:hover{
           color:var(--f6-color);
           }
+.shake{
+  display: inline-block !important;
+}
 .contact .content .rows {
   display:flex;
   height: 65px;
@@ -1062,6 +1065,7 @@ color: var(--secon-color);
   user-zoom:unset;
   user-select:all;
   transition: all 0.1s ease-out;
+  filter: drop-shadow(0.5px 1px 0.5px #000);
 }
 .contact .content .info .w:hover{
 font-size: 16.2px;
@@ -1290,7 +1294,7 @@ text-decoration: underline;
     text-align: center;
     padding-left: 0;
     border-radius: 10px;
-    transition:all 0.8s ease;
+    transition:all .6s ease-in-out;
     z-index: 999999;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
                 1px 1px 10px rgba(0, 0, 0, 0.5);
