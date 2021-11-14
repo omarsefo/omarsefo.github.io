@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>Omar Sefo</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -683,30 +684,33 @@
             data-aos-offset="190"
             class="colume rigth"
           >
-            <div class="text1">Message Me</div>
-            <form method="POST" action="mail.php">
+            <div class="text1">Message Me <span id="ok" class="ok"> </span></div>
+            <form id="form">
               <div class="field">
                 <div class="field name">
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input type="text" id="name" name="name" placeholder="Name" required />
                 </div>
                 <!-- <div class="field subject">
                   <input id="sub" type="text" placeholder="subject (Not Required)" />
                 </div> -->
               </div>
               <div class="field email">
-                <input type="email" name="email" placeholder="Email" required />
+                <input type="email" id="email" placeholder="Email" required />
               </div>
               <div class="field textaria">
                 <textarea
                   cols="30"
                   rows="10"
-                  name="message"
+                  id="message"
                   required
                   placeholder="type something"
                 ></textarea>
+                <!-- <div class="hide">
+                  <input type="text" id="hidden" required>
+                </div> -->
               </div>
               <div class="buttons">
-                <button class="button" name="submit" type="submit">
+                <button type="button" class="button" id="button">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -734,6 +738,12 @@
     <script type="text/javascript">
       AOS.init();
     </script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function() {
+emailjs.init("user_q4aPrEItXKVXlcHgVMIEP");
+})();
+</script>
     <script src="js/vanilla-tilt.js"></script>
     <script src="js/scr.js"></script>
   </body>

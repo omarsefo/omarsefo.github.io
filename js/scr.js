@@ -30,7 +30,7 @@ function imgb() {
 window.addEventListener("scroll", function(){
     var nav = document.querySelector("nav");
 nav.classList.toggle("sticky", window.scrollY > 24);
-document.body.style.scrollBehavior="smooth";
+// document.body.style.scrollBehavior="smooth";
 });
 
 //button top
@@ -203,11 +203,6 @@ icon.addEventListener('click',()=>{
     }
 });
 
-// var btn = document.querySelector('.button');
-// btn.addEventListener('click',()=>{
-// //    alert("sorry this side is not work now it will work soon");
-//    alert("thanks you for sending a message");
-// });
 
 // Image
 VanillaTilt.init(document.getElementById("img1"), {
@@ -215,3 +210,58 @@ VanillaTilt.init(document.getElementById("img1"), {
     speed: 100
 });
 
+var button =document.getElementById('button');
+var email =document.getElementById('email');
+var vname =document.getElementById('name');
+var messag =document.getElementById('message');
+
+button.addEventListener("click",onmail);
+
+function onmail() {
+    var Vemail = email.value.trim();
+    var Vname = vname.value.trim();
+    var Vmessage = messag.value.trim();
+
+    if (Vemail === '') {
+        email.style.border="2px solid red";
+    }else{
+        email.style.border="2px solid green";
+    }
+    if (Vname === '') {
+        vname.style.border="2px solid red";
+    }else{
+        vname.style.border="2px solid green";
+    }
+    if (Vmessage === '') {
+        messag.style.border="2px solid red";
+    }else{
+        messag.style.border="2px solid green";
+    }
+    if (Vmessage !== '' && Vname !== '' && Vemail !== '') {
+        sendMail();
+    }
+}
+var ok = document.getElementById("ok");
+function sendMail() {
+    var tempParms ={
+        from_name:document.getElementById("email").value,
+        ename:document.getElementById("name").value,
+        to_name:"omarsefo7@gmail.com",
+        message:document.getElementById("message").value,
+    }
+    emailjs.send('service_s33uz3j','template_43vqktk',tempParms)
+    .then(function(res){
+        console.log("success", res.status);
+    })
+    setTimeout(()=>{
+        email.value='';
+        vname.value='';
+        messag.value='';
+        setTimeout(()=>{
+            email.style.border="2px solid var(--orange)";
+            vname.style.border="2px solid var(--orange)";
+            messag.style.border="2px solid var(--orange)";
+            ok.innerHTML="(Your Message is Sent).";
+        },4000);
+    },7000);
+    }
