@@ -88,7 +88,7 @@ var card6 = document.getElementById("card6");
 var card7 = document.getElementById("card7");
 var card8 = document.getElementById("card8");
 var card9 = document.getElementById("card9");
-var card9 = document.getElementById("card10");
+var card10 = document.getElementById("card10");
 
 
 card1.addEventListener('click',()=>{
@@ -116,10 +116,10 @@ card8.addEventListener('click',()=>{
     window.open('https://omarsefo.github.io/music/')
 });
 card9.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/shefra/')
+    window.open('http://omarsefo.github.io/shefra/')
 });
 card10.addEventListener('click',()=>{
-    window.open('http://omarsefo.epizy.com/coder/')
+    window.open('https://omarsefo.github.io/code/')
 });
 
 
@@ -253,15 +253,18 @@ function sendMail() {
     .then(function(res){
         console.log("success", res.status);
     })
+    ok.innerHTML="(Your Message is being sent).";
+    document.body.style.cursor="wait";
     setTimeout(()=>{
         email.value='';
         vname.value='';
         messag.value='';
+        email.style.border="2px solid var(--orange)";
+        vname.style.border="2px solid var(--orange)";
+        messag.style.border="2px solid var(--orange)";
         setTimeout(()=>{
-            email.style.border="2px solid var(--orange)";
-            vname.style.border="2px solid var(--orange)";
-            messag.style.border="2px solid var(--orange)";
             ok.innerHTML="(Your Message is Sent).";
-        },4000);
+            document.body.style.cursor="default";
+        },2000);
     },7000);
     }
