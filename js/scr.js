@@ -67,6 +67,8 @@ function show() {
 }
 function close() {
     menup.style.right ='-200%';
+    document.body.style.overflowY="scroll";
+
 }
 men = document.querySelector('.menu').querySelectorAll('a');
 
