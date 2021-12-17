@@ -63,12 +63,9 @@ closep.addEventListener('click',close);
 function show() {
     menup.style.display ='inline-block';
     menup.style.right ='0px';
-    document.body.style.overflowY="hidden";
 }
 function close() {
     menup.style.right ='-200%';
-    document.body.style.overflowY="scroll";
-
 }
 men = document.querySelector('.menu').querySelectorAll('a');
 
