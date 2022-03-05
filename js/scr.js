@@ -2,76 +2,82 @@ document.addEventListener("DOMContentLoaded", logo);
 document.addEventListener("DOMContentLoaded", imgb);
 document.addEventListener('load', logo);
 
-function logo(){
-    document.getElementById("spinner").style.animation='logo 0.5s 6s forwards ease-in-out';
-    document.body.style.overflowY="hidden";
-    document.getElementById("spinner").style.cursor="wait";
-    setTimeout(()=>{
-        document.getElementById("spinner").style.display='none';
-        document.body.style.overflowY="scroll";
+function logo() {
+    document.getElementById("spinner").style.animation = 'logo 0.5s 6s forwards ease-in-out';
+    document.body.style.overflowY = "hidden";
+    document.getElementById("spinner").style.cursor = "wait";
+    setTimeout(() => {
+        document.getElementById("spinner").style.display = 'none';
+        document.body.style.overflowY = "scroll";
         val = window.scrollY;
         if (val > 0) {
-        window.scrollTo(0,0);
-        document.getElementById("spinner").scrollTo(0,0);
+            window.scrollTo(0, 0);
+            document.getElementById("spinner").scrollTo(0, 0);
         }
-    },7000);
+    }, 7000);
 }
 function imgb() {
-    setTimeout( ()=>{
-        document.getElementById("img").style.display="flex";
-    },14000);
-    setTimeout( ()=>{
-        document.getElementById("img2").style.display="flex";
-    },19000);
+    setTimeout(() => {
+        document.getElementById("img").style.display = "flex";
+    }, 14000);
+    setTimeout(() => {
+        document.getElementById("img2").style.display = "flex";
+    }, 19000);
 }
 
 ///nav
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
     var nav = document.querySelector("nav");
-nav.classList.toggle("sticky", window.scrollY > 24);
-// document.body.style.scrollBehavior="smooth";
+    nav.classList.toggle("sticky", window.scrollY > 24);
+    // document.body.style.scrollBehavior="smooth";
 });
 
 //button top
-window.addEventListener("scroll",()=>{
-sc.classList.toggle("act", window.scrollY > 500);
+window.addEventListener("scroll", () => {
+    sc.classList.toggle("act", window.scrollY > 500);
 });
-var sc =document.querySelector('.scroll-up');
+var sc = document.querySelector('.scroll-up');
 
 
 //menu
+const wolf = document.getElementById("wolf");
+const backmenu = document.getElementById('backmenu');
 const menup = document.getElementById('menu');
 const closep = document.getElementById('close');
 const openp = document.querySelector('.menu-btn');
-var as1 =document.getElementsByTagName('a')[2];
-var as2 =document.getElementsByTagName('a')[3];
-var as3 =document.getElementsByTagName('a')[4];
-var as4 =document.getElementsByTagName('a')[5];
+var as1 = document.getElementsByTagName('a')[2];
+var as2 = document.getElementsByTagName('a')[3];
+var as3 = document.getElementsByTagName('a')[4];
+var as4 = document.getElementsByTagName('a')[5];
 
-document.addEventListener('loadeddata',close);
-document.addEventListener("DOMContentLoaded",close);
-menup.addEventListener('load',close);
-window.addEventListener('load',close);
-sc.addEventListener('click',close);
-openp.addEventListener('click',show);
-closep.addEventListener('click',close);
-    as1.addEventListener('click',close);
-    as2.addEventListener('click',close);
-    as3.addEventListener('click',close);
-    as4.addEventListener('click',close);
+window.addEventListener('load', close);
+document.addEventListener('loadeddata', close);
+document.addEventListener("DOMContentLoaded", close);
+backmenu.addEventListener('click', close);
+menup.addEventListener('load', close);
+openp.addEventListener('click', show);
+closep.addEventListener('click', close);
+as1.addEventListener('click', close);
+as2.addEventListener('click', close);
+as3.addEventListener('click', close);
+as4.addEventListener('click', close);
 
 function show() {
-    menup.style.display ='inline-block';
-    menup.style.right ='0px';
+    menup.style.display = 'inline-block';
+    menup.style.right = '0px';
+    backmenu.style.right = '0px';
+    // document.body.style.overflowY = "hidden";
 }
 function close() {
-    menup.style.right ='-200%';
+    backmenu.style.right = '-200%';
+    menup.style.right = '-200%';
+    // document.body.style.overflowY = "scroll";
 }
 men = document.querySelector('.menu').querySelectorAll('a');
 
 men.forEach(element => {
-    element.addEventListener("click",function(){
-        men.forEach(nav=>nav.classList.remove("activ"));
+    element.addEventListener("click", function () {
+        men.forEach(nav => nav.classList.remove("activ"));
         this.classList.add("activ");
     })
 });
@@ -90,34 +96,34 @@ var card9 = document.getElementById("card9");
 var card10 = document.getElementById("card10");
 
 
-card1.addEventListener('click',()=>{
+card1.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/bird/')
 });
-card2.addEventListener('click',()=>{
+card2.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/starbacks/')
 });
-card3.addEventListener('click',()=>{
+card3.addEventListener('click', () => {
     window.open('http://omarsefo.github.io/be-real/')
 });
-card4.addEventListener('click',()=>{
+card4.addEventListener('click', () => {
     window.open('http://omarsefo.github.io/icecream/')
 });
-card5.addEventListener('click',()=>{
+card5.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/ballspinner/')
 });
-card6.addEventListener('click',()=>{
+card6.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/norway/')
 });
-card7.addEventListener('click',()=>{
+card7.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/moon/moon.html')
 });
-card8.addEventListener('click',()=>{
+card8.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/cream/')
 });
-card9.addEventListener('click',()=>{
+card9.addEventListener('click', () => {
     window.open('http://omarsefo.github.io/shefra/')
 });
-card10.addEventListener('click',()=>{
+card10.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/code/')
 });
 
@@ -126,48 +132,48 @@ card10.addEventListener('click',()=>{
 
 // copy 
 var nu = document.getElementById("ef");
-var small =document.querySelector('small');
-nu.addEventListener('click', ()=>{
+var small = document.querySelector('small');
+nu.addEventListener('click', () => {
     document.execCommand("copy");
-    small.innerHTML="(The Number is Copyed)";
-    setTimeout(()=>{
-    small.innerHTML="(Click To Copy)";
-    },3000)
+    small.innerHTML = "(The Number is Copyed)";
+    setTimeout(() => {
+        small.innerHTML = "(Click To Copy)";
+    }, 3000)
 });
 
 
 // type 
-var typed=new Typed(".typee", {
+var typed = new Typed(".typee", {
     strings: ["Front end", "Developer", "Freelancer"],
-    typeSpeed:100,
-    backSpeed:60,
-    loop:true
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
 });
-var typed=new Typed(".type2", {
+var typed = new Typed(".type2", {
     strings: ["Omar", "Sefo", "Front end", "Developer"],
-    typeSpeed:100,
-    backSpeed:60,
-    loop:true
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
 });
 
 // projectslide
-$(document).ready(function(){
+$(document).ready(function () {
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
         autoplayTimeOut: 2000,
         autoplayHoverPause: true,
         responsive: {
-            0:{
-                items:1,
+            0: {
+                items: 1,
                 nav: false
             },
-            600:{
-                items:2,
+            600: {
+                items: 2,
                 nav: false
             },
-            1000:{
-                items:3,
+            1000: {
+                items: 3,
                 nav: false
             }
         }
@@ -175,16 +181,16 @@ $(document).ready(function(){
 });
 
 
-let dar =localStorage.getItem('darkm')
-var icon =document.getElementById("ico");
+let dar = localStorage.getItem('darkm')
+var icon = document.getElementById("ico");
 
-const enable =()=>{
+const enable = () => {
     document.body.classList.add("darkt");
     localStorage.setItem("darkm", "enabled");
     icon.classList.remove("fa-sun");
     icon.classList.add("fa-moon");
 }
-const disenable =()=>{
+const disenable = () => {
     document.body.classList.remove("darkt");
     localStorage.setItem("darkm", null);
     icon.classList.add("fa-sun");
@@ -193,11 +199,11 @@ const disenable =()=>{
 if (dar === "enabled") {
     enable();
 }
-icon.addEventListener('click',()=>{
+icon.addEventListener('click', () => {
     dar = localStorage.getItem("darkm");
     if (dar !== "enabled") {
         enable();
-    }else{
+    } else {
         disenable();
     }
 });
@@ -209,61 +215,48 @@ VanillaTilt.init(document.getElementById("img1"), {
     speed: 100
 });
 
-var button =document.getElementById('button');
-var email =document.getElementById('email');
-var vname =document.getElementById('name');
-var messag =document.getElementById('message');
+var button = document.getElementById('button');
+var email = document.getElementById('email');
+var vname = document.getElementById('name');
+var messag = document.getElementById('message');
 
-button.addEventListener("click",onmail);
+button.addEventListener("click", onmail);
 
 function onmail() {
     var Vemail = email.value.trim();
     var Vname = vname.value.trim();
     var Vmessage = messag.value.trim();
-
-    if (Vemail === '') {
-        email.style.border="2px solid red";
-    }else{
-        email.style.border="2px solid green";
-    }
-    if (Vname === '') {
-        vname.style.border="2px solid red";
-    }else{
-        vname.style.border="2px solid green";
-    }
     if (Vmessage === '') {
-        messag.style.border="2px solid red";
-    }else{
-        messag.style.border="2px solid green";
+        messag.style.border = "2px solid red";
+    } else {
+        messag.style.border = "2px solid green";
     }
-    if (Vmessage !== '' && Vname !== '' && Vemail !== '') {
+    if (Vmessage !== '' && Vname !== '' && Vemail !== '' && Vemail.includes("@gmail.com")) {
         sendMail();
     }
 }
 var ok = document.getElementById("ok");
 function sendMail() {
-    var tempParms ={
-        from_name:document.getElementById("email").value,
-        ename:document.getElementById("name").value,
-        to_name:"omarsefo7@gmail.com",
-        message:document.getElementById("message").value,
+    var tempParms = {
+        from_name: document.getElementById("email").value,
+        ename: document.getElementById("name").value,
+        to_name: "omarsefo7@gmail.com",
+        message: document.getElementById("message").value,
     }
-    emailjs.send('service_s33uz3j','template_43vqktk',tempParms)
-    .then(function(res){
-        console.log("success", res.status);
-    })
-    ok.innerHTML="(Your Message is being sent).";
-    document.body.style.cursor="wait";
-    setTimeout(()=>{
-        email.value='';
-        vname.value='';
-        messag.value='';
-        email.style.border="2px solid var(--orange)";
-        vname.style.border="2px solid var(--orange)";
-        messag.style.border="2px solid var(--orange)";
-        setTimeout(()=>{
-            ok.innerHTML="(Your Message is Sent).";
-            document.body.style.cursor="default";
-        },2000);
-    },7000);
-    }
+    emailjs.send('service_s33uz3j', 'template_43vqktk', tempParms)
+        .then(function (res) {
+            console.log("success", res.status);
+        })
+    ok.innerHTML = "(Your Message is being sent).";
+    document.body.style.cursor = "wait";
+    setTimeout(() => {
+        email.value = '';
+        vname.value = '';
+        messag.value = '';
+        messag.style.border = "2px solid var(--orange)";
+        setTimeout(() => {
+            ok.innerHTML = "(Your Message is Sent).";
+            document.body.style.cursor = "default";
+        }, 2000);
+    }, 7000);
+}
