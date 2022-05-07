@@ -53,7 +53,7 @@ var as4 = document.getElementsByTagName('a')[5];
 window.addEventListener('load', close);
 document.addEventListener('loadeddata', close);
 document.addEventListener("DOMContentLoaded", close);
-backmenu.addEventListener('click', close);
+// backmenu.addEventListener('click', close);
 menup.addEventListener('load', close);
 openp.addEventListener('click', show);
 closep.addEventListener('click', close);
@@ -69,7 +69,7 @@ function show() {
     // document.body.style.overflowY = "hidden";
 }
 function close() {
-    backmenu.style.right = '-200%';
+    backmenu.style.right = '-300%';
     menup.style.right = '-200%';
     // document.body.style.overflowY = "scroll";
 }

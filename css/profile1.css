@@ -1822,7 +1822,7 @@ footer span a:hover {
     -o-border-radius: 8px;
   }
 
-  .navbars .backmenu::before {
+  /* .navbars .backmenu::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1836,7 +1836,7 @@ footer span a:hover {
     -moz-transition: opacity .3s linear;
     -ms-transition: opacity .3s linear;
     -o-transition: opacity .3s linear;
-  }
+  } */
 
   .navbars.sticky .backmenu .menu li a,
   .navbars .backmenu .menu li a:hover,
@@ -2002,7 +2002,7 @@ footer span a:hover {
     order: 1;
     font-size: 25px;
     padding-bottom: 0px;
-    font-family: "poppins"sans-serif;
+    font-family: "poppins",sans-serif;
   }
 
   .skills .content .left p {
