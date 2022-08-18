@@ -40,7 +40,8 @@ var sc = document.querySelector('.scroll-up');
 
 
 //menu
-const wolf = document.getElementById("wolf");
+var overlay = document.querySelector("[data-overlay]");
+const bee = document.getElementById("bee");
 const backmenu = document.getElementById('backmenu');
 const menup = document.getElementById('menu');
 const closep = document.getElementById('close');
@@ -50,28 +51,28 @@ var as2 = document.getElementsByTagName('a')[3];
 var as3 = document.getElementsByTagName('a')[4];
 var as4 = document.getElementsByTagName('a')[5];
 
+var navElems = [overlay, openp, closep, as1, as2, as3, as4];
+
+for (let i = 0; i < navElems.length; i++) {
+  navElems[i].addEventListener("click", function () {
+    close();
+  });
+}
+
 window.addEventListener('load', close);
 document.addEventListener('loadeddata', close);
 document.addEventListener("DOMContentLoaded", close);
-// backmenu.addEventListener('click', close);
 menup.addEventListener('load', close);
 openp.addEventListener('click', show);
-closep.addEventListener('click', close);
-as1.addEventListener('click', close);
-as2.addEventListener('click', close);
-as3.addEventListener('click', close);
-as4.addEventListener('click', close);
 
 function show() {
     menup.style.display = 'inline-block';
     menup.style.right = '0px';
-    backmenu.style.right = '0px';
-    // document.body.style.overflowY = "hidden";
+    overlay.classList.add("over");
 }
 function close() {
-    backmenu.style.right = '-300%';
     menup.style.right = '-200%';
-    // document.body.style.overflowY = "scroll";
+    overlay.classList.remove("over");
 }
 men = document.querySelector('.menu').querySelectorAll('a');
 
@@ -81,6 +82,8 @@ men.forEach(element => {
         this.classList.add("activ");
     })
 });
+
+
 
 
 //web
@@ -144,13 +147,13 @@ nu.addEventListener('click', () => {
 
 // type 
 var typed = new Typed(".typee", {
-    strings: ["Front end", "Developer", "Freelancer"],
+    strings: ["Front end", "Developer", "Flutter", "Developer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
 });
 var typed = new Typed(".type2", {
-    strings: ["Omar", "Sefo", "Front end", "Developer"],
+    strings: ["Omar", "Sefo", "Front end","Flutter", "Developer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true

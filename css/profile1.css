@@ -79,12 +79,12 @@ body::-webkit-scrollbar-thumb {
 .top_logo {
   position: absolute;
   top: 44%;
-  left: 50%;
+  left: 47%;
   z-index: 2;
   transform: translate(-50%, -50%);
   fill: transparent;
-  width: 400px;
-  height: 321px;
+  width: 450px;
+  height: 350px;
   stroke: #dddddd;
   stroke-width: 16px;
   line-height: 0.2;
@@ -180,6 +180,21 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: hsla(0, 0%, 0%, 0.6);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-1);
+}
+
+.overlay.over {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .navbars .maxw {
   display: flex;
 }
@@ -227,25 +242,18 @@ body::-webkit-scrollbar-thumb {
   color: #5e5e5e;
 }
 
-.navbars .backmenu {
+.navbars .menu {
   display: flex;
   justify-content: right;
   align-items: center;
   flex: 1 1 100%;
 }
 
-.navbars .backmenu .menu {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  flex: 1 1 100%;
-}
-
-.navbars .backmenu .menu li {
+.navbars .menu li {
   list-style: none;
 }
 
-.navbars .backmenu .menu li a {
+.navbars .menu li a {
   color: #fff;
   text-decoration: none;
   font-size: 22px;
@@ -279,11 +287,11 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.navbars .backmenu .menu li a:hover {
+.navbars .menu li a:hover {
   color: var(--orange);
 }
 
-.navbars.sticky .backmenu .menu li a {
+.navbars.sticky .menu li a {
   color: var(--first-color);
   position: relative;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
@@ -292,7 +300,7 @@ body::-webkit-scrollbar-thumb {
 /* .navbars.sticky .menu li a:hover {
   color:  var(--secon-color);
 } */
-.navbars.sticky .backmenu .menu li a::after {
+.navbars.sticky .menu li a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -304,8 +312,8 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s 0.1s ease;
 }
 
-.navbars.sticky .backmenu .menu li a:hover:after,
-.navbars.sticky .backmenu .menu li a.act:after {
+.navbars.sticky .menu li a:hover:after,
+.navbars.sticky .menu li a.act:after {
   width: 100%;
   opacity: 1;
   filter: drop-shadow(1px 2px 0.5px #4b4b4b);
@@ -333,8 +341,8 @@ body::-webkit-scrollbar-thumb {
   color: var(--secon-color);
 }
 
-.wolf {
-  width: 130px;
+.bee {
+  width: 140px;
   margin-left: 74px;
 }
 
@@ -542,21 +550,26 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes imgin {
   0% {
+    transform: rotate(120deg);
     opacity: 0;
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
   }
 
   50% {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   100% {
-    transform: translateX(70px), translateY(70px);
+    transform: translate(60px,60px);
     opacity: 0.1;
-    -webkit-transform: translateX(70px), translateY(70px);
-    -moz-transform: translateX(70px), translateY(70px);
-    -ms-transform: translateX(70px), translateY(70px);
-    -o-transform: translateX(70px), translateY(70px);
-  }
+    -webkit-transform: translate(60px,60px);
+    -moz-transform: translate(60px,60px);
+    -ms-transform: translate(60px,60px);
+    -o-transform: translate(60px,60px);
+}
 }
 
 @keyframes imgout2 {
@@ -1773,7 +1786,7 @@ footer span a:hover {
   }
 
   .top_logo {
-    width: 200px;
+    width: 240px;
   }
 
   .top_name {
@@ -1793,16 +1806,16 @@ footer span a:hover {
     padding: 0 40px;
   }
 
-  .navbars .backmenu {
+  /* .navbars {
     position: fixed;
     width: 100vh;
     height: 100vh;
     top: 0;
     right: 0;
     z-index: 9;
-  }
+  } */
 
-  .navbars .backmenu .menu {
+  .navbars .menu {
     position: fixed;
     background: var(--first-color);
     height: 100vh;
@@ -1822,34 +1835,18 @@ footer span a:hover {
     -o-border-radius: 8px;
   }
 
-  /* .navbars .backmenu::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.356);
-    transition: opacity .3s linear;
-    -webkit-transition: opacity .3s linear;
-    -moz-transition: opacity .3s linear;
-    -ms-transition: opacity .3s linear;
-    -o-transition: opacity .3s linear;
-  } */
-
-  .navbars.sticky .backmenu .menu li a,
-  .navbars .backmenu .menu li a:hover,
-  .navbars .backmenu .menu li a.activ,
-  .navbars .backmenu .menu li a {
+  .navbars.sticky .menu li a,
+  .navbars .menu li a:hover,
+  .navbars .menu li a.activ,
+  .navbars .menu li a {
     color: var(--secon-color);
     padding: 15px 0;
   }
 
-  .navbars.sticky .backmenu .menu li a:hover,
-  .navbars.sticky .backmenu .menu li a.activ,
-  .navbars .backmenu .menu li a:hover,
-  .navbars .backmenu .menu li a.activ {
+  .navbars.sticky .menu li a:hover,
+  .navbars.sticky .menu li a.activ,
+  .navbars .menu li a:hover,
+  .navbars .menu li a.activ {
     color: #fff;
     background-color: #646464;
     padding: 15px 0;
@@ -1860,14 +1857,14 @@ footer span a:hover {
     height: 15px;
   }
 
-  .navbars .backmenu .menu li {
+  .navbars .menu li {
     align-items: center;
     display: flex;
     flex: 1 1 100%;
     letter-spacing: normal;
   }
 
-  .navbars .backmenu .menu li a {
+  .navbars .menu li a {
     display: inline-block;
     text-decoration: none;
     margin: 0;
@@ -1879,7 +1876,7 @@ footer span a:hover {
     opacity: 1;
   }
 
-  .navbars.sticky .backmenu .menu li a::after {
+  .navbars.sticky .menu li a::after {
     position: absolute;
     width: 0;
     height: 0;
