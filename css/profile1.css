@@ -1826,14 +1826,18 @@ footer span a:hover {
     text-align: center;
     padding-left: 0;
     border-radius: 8px;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.39s ease-in-out;
     z-index: 99;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 1px 1px 10px rgba(0, 0, 0, 0.5);
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-  }
+    -webkit-transition: all 0.39s ease-in-out;
+    -moz-transition: all 0.39s ease-in-out;
+    -ms-transition: all 0.39s ease-in-out;
+    -o-transition: all 0.39s ease-in-out;
+}
 
   .navbars.sticky .menu li a,
   .navbars .menu li a:hover,
