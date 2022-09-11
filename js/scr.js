@@ -4,17 +4,19 @@ document.addEventListener('load', logo);
 
 function logo() {
     document.getElementById("spinner").style.animation = 'logo 0.5s 6s forwards ease-in-out';
+    document.getElementById("spinner").style.transition = 'all 0.5s ease-in-out';
     document.body.style.overflowY = "hidden";
     document.getElementById("spinner").style.cursor = "wait";
     setTimeout(() => {
         document.getElementById("spinner").style.display = 'none';
+        document.getElementById("spinner").style.transition = 'all 0.5s ease-in-out';
         document.body.style.overflowY = "scroll";
         val = window.scrollY;
         if (val > 0) {
             window.scrollTo(0, 0);
             document.getElementById("spinner").scrollTo(0, 0);
         }
-    }, 7000);
+    }, 4700);
 }
 function imgb() {
     setTimeout(() => {
@@ -39,42 +41,17 @@ window.addEventListener("scroll", () => {
 var sc = document.querySelector('.scroll-up');
 
 
-//menu
-var overlay = document.querySelector("[data-overlay]");
-const bee = document.getElementById("bee");
-const backmenu = document.getElementById('backmenu');
-const menup = document.getElementById('menu');
-const closep = document.getElementById('close');
-const openp = document.querySelector('.menu-btn');
-var as1 = document.getElementsByTagName('a')[2];
-var as2 = document.getElementsByTagName('a')[3];
-var as3 = document.getElementsByTagName('a')[4];
-var as4 = document.getElementsByTagName('a')[5];
+const men = document.querySelector('.menu').querySelectorAll('a');
+const section = document.querySelectorAll('section');
 
-var navElems = [overlay, openp, closep, as1, as2, as3, as4];
-
-for (let i = 0; i < navElems.length; i++) {
-  navElems[i].addEventListener("click", function () {
-    close();
-  });
+function activenav() {
+    let len = section.length;
+    while(--len && window.scrollY +100 < section[len].offsetTop){}
+    men.forEach(itx => itx.classList.remove("activ"));
+    men[len].classList.add("activ");
 }
-
-window.addEventListener('load', close);
-document.addEventListener('loadeddata', close);
-document.addEventListener("DOMContentLoaded", close);
-menup.addEventListener('load', close);
-openp.addEventListener('click', show);
-
-function show() {
-    menup.style.display = 'inline-block';
-    menup.style.right = '0px';
-    overlay.classList.add("over");
-}
-function close() {
-    menup.style.right = '-200%';
-    overlay.classList.remove("over");
-}
-men = document.querySelector('.menu').querySelectorAll('a');
+activenav();
+window.addEventListener("scroll",activenav)
 
 men.forEach(element => {
     element.addEventListener("click", function () {
@@ -246,20 +223,30 @@ function sendMail() {
         to_name: "omarsefo7@gmail.com",
         message: document.getElementById("message").value,
     }
-    emailjs.send('service_s33uz3j', 'template_43vqktk', tempParms)
+    emailjs.send('service_npd1noe', 'template_43vqktk', tempParms)
         .then(function (res) {
             console.log("success", res.status);
+            ok.innerHTML = "(Your Message is being sent).";
+            document.body.style.cursor = "wait";
+            setTimeout(() => {
+                email.value = '';
+                vname.value = '';
+                messag.value = '';
+                messag.style.border = "2px solid var(--orange)";
+                setTimeout(() => {
+                    ok.innerHTML = "(Your Message is Sent).";
+                    document.body.style.cursor = "default";
+                }, 2000);
+            }, 7000);
         })
-    ok.innerHTML = "(Your Message is being sent).";
-    document.body.style.cursor = "wait";
-    setTimeout(() => {
-        email.value = '';
-        vname.value = '';
-        messag.value = '';
-        messag.style.border = "2px solid var(--orange)";
-        setTimeout(() => {
-            ok.innerHTML = "(Your Message is Sent).";
-            document.body.style.cursor = "default";
-        }, 2000);
-    }, 7000);
+        ok.innerHTML = "(Your Message is being sent).";
+            document.body.style.cursor = "wait";
+            setTimeout(() => {
+                email.value = '';
+                vname.value = '';
+                messag.value = '';
+                messag.style.border = "2px solid var(--orange)";
+                ok.innerHTML = "(Sorry Your Message is not Sent).";
+                document.body.style.cursor = "default";
+            }, 2000);
 }
