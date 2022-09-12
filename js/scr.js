@@ -3,28 +3,29 @@ document.addEventListener("DOMContentLoaded", imgb);
 document.addEventListener('load', logo);
 
 function logo() {
-    document.getElementById("spinner").style.animation = 'logo 0.5s 6s forwards ease-in-out';
-    document.getElementById("spinner").style.transition = 'all 0.5s ease-in-out';
-    document.body.style.overflowY = "hidden";
-    document.getElementById("spinner").style.cursor = "wait";
     setTimeout(() => {
-        document.getElementById("spinner").style.display = 'none';
-        document.getElementById("spinner").style.transition = 'all 0.5s ease-in-out';
+        document.getElementById("spinner").style.animation = 'logo 0.5s 6s forwards ease-in-out';
         document.body.style.overflowY = "scroll";
         val = window.scrollY;
         if (val > 0) {
             window.scrollTo(0, 0);
             document.getElementById("spinner").scrollTo(0, 0);
         }
+    }, 1000);
+    document.getElementById("spinner").style.animation = 'logo 0.5s 6s forwards ease-in-out';
+    document.body.style.overflowY = "hidden";
+    document.getElementById("spinner").style.cursor = "wait";
+    setTimeout(() => {
+        document.getElementById("spinner").style.display = 'none';
     }, 4700);
 }
 function imgb() {
     setTimeout(() => {
         document.getElementById("img").style.display = "flex";
-    }, 14000);
+    }, 10000);
     setTimeout(() => {
         document.getElementById("img2").style.display = "flex";
-    }, 19000);
+    }, 15000);
 }
 
 ///nav
@@ -44,21 +45,21 @@ var sc = document.querySelector('.scroll-up');
 const men = document.querySelector('.menu').querySelectorAll('a');
 const section = document.querySelectorAll('section');
 
-function activenav() {
-    let len = section.length;
-    while(--len && window.scrollY +100 < section[len].offsetTop){}
-    men.forEach(itx => itx.classList.remove("activ"));
-    men[len].classList.add("activ");
-}
-activenav();
-window.addEventListener("scroll",activenav)
-
 men.forEach(element => {
     element.addEventListener("click", function () {
         men.forEach(nav => nav.classList.remove("activ"));
         this.classList.add("activ");
     })
 });
+
+function activenav() {
+    let len = section.length;
+    while(--len && window.scrollY +90 < section[len].offsetTop){}
+    men.forEach(itx => itx.classList.remove("activ"));
+    men[len].classList.add("activ");
+}
+window.addEventListener("scroll",activenav)
+
 
 
 
