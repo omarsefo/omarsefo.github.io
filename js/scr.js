@@ -46,11 +46,7 @@ const men = document.querySelector('.menu').querySelectorAll('a');
 const section = document.querySelectorAll('section');
 
 men.forEach(element => {
-    element.addEventListener("click", function () {
-        men.forEach(nav => nav.classList.remove("activ"));
-        this.classList.add("activ");
-    })
-});
+    element.addEventListener("click", activenav)});
 
 function activenav() {
     let len = section.length;
