@@ -1,24 +1,30 @@
-document.addEventListener("DOMContentLoaded", logo);
 document.addEventListener("DOMContentLoaded", imgb);
+document.addEventListener("DOMContentLoaded", logo);
 document.addEventListener('load', logo);
+var spinner = document.getElementById("spinner");
 
 function logo() {
     setTimeout(() => {
-        document.getElementById("spinner").style.animation = 'logo 0.5s 6s forwards ease-in-out';
         document.body.style.overflowY = "scroll";
         val = window.scrollY;
         if (val > 0) {
             window.scrollTo(0, 0);
             document.getElementById("spinner").scrollTo(0, 0);
         }
-    }, 1000);
-    document.getElementById("spinner").style.animation = 'logo 0.5s 6s forwards ease-in-out';
-    document.body.style.overflowY = "hidden";
-    document.getElementById("spinner").style.cursor = "wait";
+    }, 500);
     setTimeout(() => {
-        document.getElementById("spinner").style.display = 'none';
-    }, 4700);
+        document.body.style.overflowY = "hidden";
+    }, 1500);
+    spinner.classList.add("active");
+    spinner.style.cursor = "wait";
+    setTimeout(() => {
+        spinner.style.cursor = "default";
+        document.body.style.overflowY = "scroll";
+        spinner.classList.remove("active");
+    }, 6000)
 }
+
+
 function imgb() {
     setTimeout(() => {
         document.getElementById("img").style.display = "flex";
@@ -46,15 +52,16 @@ const men = document.querySelector('.menu').querySelectorAll('a');
 const section = document.querySelectorAll('section');
 
 men.forEach(element => {
-    element.addEventListener("click", activenav)});
+    element.addEventListener("click", activenav)
+});
 
 function activenav() {
     let len = section.length;
-    while(--len && window.scrollY +90 < section[len].offsetTop){}
+    while (--len && window.scrollY + 90 < section[len].offsetTop) { }
     men.forEach(itx => itx.classList.remove("activ"));
     men[len].classList.add("activ");
 }
-window.addEventListener("scroll",activenav)
+window.addEventListener("scroll", activenav)
 
 
 
@@ -127,7 +134,7 @@ var typed = new Typed(".typee", {
     loop: true
 });
 var typed = new Typed(".type2", {
-    strings: ["Omar", "Sefo", "Front end","Flutter", "Developer"],
+    strings: ["Omar", "Sefo", "Front end", "Flutter", "Developer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
@@ -213,6 +220,7 @@ function onmail() {
     }
 }
 var ok = document.getElementById("ok");
+let overlayform = document.querySelector(".overlay-form");
 function sendMail() {
     var tempParms = {
         from_name: document.getElementById("email").value,
@@ -220,10 +228,11 @@ function sendMail() {
         to_name: "omarsefo7@gmail.com",
         message: document.getElementById("message").value,
     }
-    emailjs.send('service_npd1noe', 'template_43vqktk', tempParms)
+    emailjs.send('service_enze2af', 'template_43vqktk', tempParms)
         .then(function (res) {
             console.log("success", res.status);
-            ok.innerHTML = "(Your Message is being sent).";
+            overlayform.classList.add("active");
+            ok.innerHTML = "Your Message will sent soon.";
             document.body.style.cursor = "wait";
             setTimeout(() => {
                 email.value = '';
@@ -231,19 +240,24 @@ function sendMail() {
                 messag.value = '';
                 messag.style.border = "2px solid var(--orange)";
                 setTimeout(() => {
-                    ok.innerHTML = "(Your Message is Sent).";
+                    ok.innerHTML = "Your Message is Sent.";
                     document.body.style.cursor = "default";
-                }, 2000);
+                }, 3000);
             }, 7000);
+            overlayform.classList.remove("active");
         })
-        ok.innerHTML = "(Your Message is being sent).";
-            document.body.style.cursor = "wait";
-            setTimeout(() => {
-                email.value = '';
-                vname.value = '';
-                messag.value = '';
-                messag.style.border = "2px solid var(--orange)";
-                ok.innerHTML = "(Sorry Your Message is not Sent).";
-                document.body.style.cursor = "default";
-            }, 2000);
+    overlayform.classList.add("active");
+    ok.innerHTML = "Your Message will sent soon.";
+    document.body.style.cursor = "wait";
+    setTimeout(() => {
+        email.value = '';
+        vname.value = '';
+        messag.value = '';
+        messag.style.border = "2px solid var(--orange)";
+        ok.innerHTML = "Sorry Your Message is not Sent.";
+        document.body.style.cursor = "default";
+        setTimeout(() => {
+            overlayform.classList.remove("active");
+        }, 3000)
+    }, 3000);
 }
