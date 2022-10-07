@@ -80,35 +80,38 @@ var card9 = document.getElementById("card9");
 var card10 = document.getElementById("card10");
 
 
-card1.addEventListener('click', () => {
-    window.open('https://omarsefo.github.io/bird/')
+// card1.addEventListener('click', () => {
+//     window.open('https://omarsefo.github.io/bird/')
+// });
+card1.addEventListener('mouseover', () => {
+    card1.style.cursor="not-allowed";
 });
 card2.addEventListener('click', () => {
-    window.open('https://omarsefo.github.io/starbacks/')
+    window.open('https://omarsefo.github.io/foot-cup/')
 });
 card3.addEventListener('click', () => {
-    window.open('http://omarsefo.github.io/be-real/')
+    window.open('https://omarsefo.github.io/Globe_Agency/')
 });
 card4.addEventListener('click', () => {
-    window.open('http://omarsefo.github.io/icecream/')
+    window.open('https://omarsefo.github.io/sign-in-up/')
 });
 card5.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/ballspinner/')
 });
 card6.addEventListener('click', () => {
-    window.open('https://omarsefo.github.io/norway/')
+    window.open('https://omarsefo.github.io/starbacks/')
 });
 card7.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/moon/moon.html')
 });
 card8.addEventListener('click', () => {
-    window.open('https://omarsefo.github.io/cream/')
+    window.open('http://omarsefo.github.io/be-real/')
 });
 card9.addEventListener('click', () => {
-    window.open('http://omarsefo.github.io/shefra/')
+    window.open('https://omarsefo.github.io/norway/')
 });
 card10.addEventListener('click', () => {
-    window.open('https://omarsefo.github.io/code/')
+    window.open('http://omarsefo.github.io/icecream/')
 });
 
 
