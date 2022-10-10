@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", imgb);
 document.addEventListener("DOMContentLoaded", logo);
 document.addEventListener('load', logo);
 var spinner = document.getElementById("spinner");
@@ -24,21 +23,10 @@ function logo() {
     }, 6000)
 }
 
-
-function imgb() {
-    setTimeout(() => {
-        document.getElementById("img").style.display = "flex";
-    }, 10000);
-    setTimeout(() => {
-        document.getElementById("img2").style.display = "flex";
-    }, 15000);
-}
-
 ///nav
 window.addEventListener("scroll", function () {
     var nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 24);
-    // document.body.style.scrollBehavior="smooth";
 });
 
 //button top
@@ -62,10 +50,6 @@ function activenav() {
     men[len].classList.add("activ");
 }
 window.addEventListener("scroll", activenav)
-
-
-
-
 
 //web
 var card1 = document.getElementById("card1");
@@ -113,8 +97,6 @@ card9.addEventListener('click', () => {
 card10.addEventListener('click', () => {
     window.open('http://omarsefo.github.io/icecream/')
 });
-
-
 
 
 // copy 

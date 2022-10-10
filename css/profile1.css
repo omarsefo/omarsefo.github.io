@@ -371,7 +371,7 @@ body::-webkit-scrollbar-thumb {
 /* home */
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url(../img/image1.jpg) no-repeat center center fixed;
+  url(../img/main.jpg) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   display: flex;
@@ -415,8 +415,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   opacity: 0;
   cursor: pointer;
-  /* box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6),
-              1px 1px 20px rgba(0, 0, 0, 0.6); */
   animation: ins 0.5s linear forwards, at-ripple 0.6s linear infinite;
   animation-delay: 7.5s;
   transition-property: transform;
@@ -902,17 +900,17 @@ body::-webkit-scrollbar-thumb {
 /* project */
 .img,
 .img2 {
-  background: url(../img/back1.jpg) no-repeat center center fixed;
+  background: url(../img/laptop.jpg) no-repeat center center fixed;
   background-size: cover;
+  display: flex;
   width: 100%;
-  display: none;
   height: 450px;
   max-height: 520px;
   position: relative;
 }
 
 .img2 {
-  background: url(../img/back2.jpg) no-repeat center center fixed;
+  background: url(../img/phonecontact.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -2020,7 +2018,7 @@ footer span a:hover {
     text-align: center;
     justify-content: center;
     padding-top: 0px;
-    padding-bottom: 28px;
+    padding-bottom: 35px;
   }
 
   .home .maxw {
