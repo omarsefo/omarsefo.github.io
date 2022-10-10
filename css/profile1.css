@@ -371,7 +371,7 @@ body::-webkit-scrollbar-thumb {
 /* home */
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-  url(../img/main.jpg) no-repeat center center fixed;
+  url(../image/main.jpg) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   display: flex;
@@ -900,7 +900,7 @@ body::-webkit-scrollbar-thumb {
 /* project */
 .img,
 .img2 {
-  background: url(../img/laptop.jpg) no-repeat center center fixed;
+  background: url(../image/laptop.jpg) no-repeat center center fixed;
   background-size: cover;
   display: flex;
   width: 100%;
@@ -910,7 +910,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .img2 {
-  background: url(../img/phonecontact.jpg) no-repeat center center fixed;
+  background: url(../image/phonecontact.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
