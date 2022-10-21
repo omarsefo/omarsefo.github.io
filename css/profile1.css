@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .spinner {
-  background: radial-gradient(#000, rgba(0, 0, 0, 0.23));
+  background: radial-gradient(rgba(0, 0, 0, 0.715), rgba(0, 0, 0, 0.23));
   color: #eee;
   position: fixed;
   touch-action: none;
@@ -167,11 +167,15 @@ body::-webkit-scrollbar-thumb {
 .overlay {
   position: fixed;
   inset: 0;
-  background: hsla(0, 0%, 0%, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
   opacity: 0;
   pointer-events: none;
-  transition: var(--transition-1);
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }
 
 .overlay.over {
@@ -289,14 +293,16 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--first-color);
   bottom: 0;
   left: 0;
-  opacity: 0;
-  transition: all 0.3s 0.1s ease;
+  transition: all 0.3s 0.1s ease-out;
+  -webkit-transition: all 0.3s 0.1s ease-out;
+  -moz-transition: all 0.3s 0.1s ease-out;
+  -ms-transition: all 0.3s 0.1s ease-out;
+  -o-transition: all 0.3s 0.1s ease-out;
 }
 
 .navbars.sticky .menu li a:hover:after,
 .navbars.sticky .menu li a.activ:after {
   width: 100%;
-  opacity: 1;
   filter: drop-shadow(1px 2px 0.5px #4b4b4b);
 }
 
@@ -332,7 +338,8 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none;
   transition: all 0.3s ease;
   touch-action: manipulation;
-  filter: drop-shadow(1px 3px 2px #4b4b4b);
+  filter: drop-shadow(1px 3px 5px #4b4b4b);
+  -webkit-filter: drop-shadow(1px 3px 5px #4b4b4b);
 }
 
 .act {
@@ -1439,7 +1446,7 @@ body::-webkit-scrollbar-thumb {
   width: 300px;
   height: 190px;
   position: fixed;
-  background: radial-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.23));
+  background: radial-gradient(rgba(0, 0, 0, 0.641), rgba(0, 0, 0, 0.23));
   z-index: 5558;
   backdrop-filter: blur(10px);
   display: flex;
@@ -1833,8 +1840,8 @@ footer span a:hover {
 
   .navbars .menu {
     position: fixed;
-    /*box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 1px 1px 10px rgba(0, 0, 0, 0.5);
-    */background: var(--first-color);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 1px 1px 10px rgba(0, 0, 0, 0.5);
+    background: var(--first-color);
     height: 60px;
     width: 100%;
     bottom: 0;
@@ -1940,6 +1947,7 @@ footer span a:hover {
 .navbars.sticky .menu li a.activ .icon{
   background-color: var(--orange);
   border: 2px solid var(--first-color);
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5), 1px 1px 10px rgba(0, 0, 0, 0.5);
   color: var(--first-color);
   transition: all 0.3s ease;
   transform: translateY(-27px);
@@ -2018,7 +2026,7 @@ footer span a:hover {
     text-align: center;
     justify-content: center;
     padding-top: 0px;
-    padding-bottom: 35px;
+    padding-bottom: 45px;
   }
 
   .home .maxw {
