@@ -20,7 +20,7 @@ function logo() {
         spinner.style.cursor = "default";
         document.body.style.overflowY = "scroll";
         spinner.classList.remove("active");
-    }, 6000)
+    }, 5000)
 }
 
 ///nav
@@ -68,7 +68,7 @@ var card10 = document.getElementById("card10");
 //     window.open('https://omarsefo.github.io/bird/')
 // });
 card1.addEventListener('mouseover', () => {
-    card1.style.cursor="not-allowed";
+    card1.style.cursor = "not-allowed";
 });
 card2.addEventListener('click', () => {
     window.open('https://omarsefo.github.io/foot-cup/')
@@ -97,6 +97,9 @@ card9.addEventListener('click', () => {
 card10.addEventListener('click', () => {
     window.open('http://omarsefo.github.io/icecream/')
 });
+
+// Right Click disable
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 // copy 
@@ -200,7 +203,7 @@ function onmail() {
     } else {
         messag.style.border = "2px solid green";
     }
-    if (Vmessage !== '' && Vname !== '' && Vemail !== '' && Vemail.includes("@gmail.com")) {
+    if (Vmessage !== '' && Vname !== '' && Vemail !== '') {
         sendMail();
     }
 }
@@ -216,9 +219,11 @@ function sendMail() {
     emailjs.send('service_enze2af', 'template_43vqktk', tempParms)
         .then(function (res) {
             console.log("success", res.status);
-            overlayform.classList.add("active");
-            ok.innerHTML = "Your Message will sent soon.";
-            document.body.style.cursor = "wait";
+            setTimeout(() => {
+                overlayform.classList.add("active");
+                ok.innerHTML = "sending...";
+                document.body.style.cursor = "wait";
+            }, 200)
             setTimeout(() => {
                 email.value = '';
                 vname.value = '';
@@ -227,22 +232,24 @@ function sendMail() {
                 setTimeout(() => {
                     ok.innerHTML = "Your Message is Sent.";
                     document.body.style.cursor = "default";
+                    setTimeout(() => {
+                    overlayform.classList.remove("active");
+                    },1000)
                 }, 3000);
             }, 7000);
-            overlayform.classList.remove("active");
         })
-    overlayform.classList.add("active");
-    ok.innerHTML = "Your Message will sent soon.";
-    document.body.style.cursor = "wait";
-    setTimeout(() => {
-        email.value = '';
-        vname.value = '';
-        messag.value = '';
-        messag.style.border = "2px solid var(--orange)";
-        ok.innerHTML = "Sorry Your Message is not Sent.";
-        document.body.style.cursor = "default";
-        setTimeout(() => {
-            overlayform.classList.remove("active");
-        }, 3000)
-    }, 3000);
+    // overlayform.classList.add("active");
+    // ok.innerHTML = "sending2...";
+    // document.body.style.cursor = "wait";
+    // setTimeout(() => {
+    //     email.value = '';
+    //     vname.value = '';
+    //     messag.value = '';
+    //     messag.style.border = "2px solid var(--orange)";
+    //     ok.innerHTML = "Sorry Your Message is not Sent.";
+    //     document.body.style.cursor = "default";
+    //     setTimeout(() => {
+    //         overlayform.classList.remove("active");
+    //     }, 3000)
+    // }, 3000);
 }
