@@ -383,7 +383,7 @@ body::-webkit-scrollbar-thumb {
 
 /* home */
 .home {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),  url(../image/leaf.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../image/leaf.jpg) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
   display: flex;
@@ -665,6 +665,10 @@ body::-webkit-scrollbar-thumb {
 .skills .content .rigth {
   width: 55%;
   font-family: "poppins", sans-serif;
+  display: grid;
+  min-height: 650px;
+  place-content: center;
+  overflow: hidden;
 }
 
 .skills .content .left .texts {
@@ -675,22 +679,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 35px;
   filter: drop-shadow(0.5px 1px 0.5px #000);
 }
-
-.progress-bar-striped {
-  background-image: linear-gradient(45deg,
-      rgba(0, 0, 0, 0.13) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(0, 0, 0, 0.13) 50%,
-      rgba(0, 0, 0, 0.13) 75%,
-      transparent 75%,
-      transparent) !important;
-}
-
-.progress {
-  filter: drop-shadow(1px 3px 3px #4b4b4b);
-}
-
 .skills .content .left .spa {
   color: var(--orange);
   font-size: 30px;
@@ -701,6 +689,143 @@ body::-webkit-scrollbar-thumb {
   color: var(--orange);
   font-weight: 600;
   font-size: 40px;
+}
+.orbit ul {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  list-style: none;
+  transform-origin: center;
+  animation: orbit 100s linear infinite;
+}
+
+.orbit ul:hover {
+  animation-play-state: paused;
+  --orbit-play-state: paused;
+}
+
+.orbit ul li img {
+  width: 70%;
+}
+
+.orbit li {
+  position: absolute;
+  width: 8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.orbit li:hover {
+  --throb-play-state: paused;
+}
+
+.orbit li:nth-child(1) {
+  --throb-delay: 0ms;
+  transform: translate(15rem, 0rem);
+  -webkit-transform: translate(15rem, 0rem);
+  -moz-transform: translate(15rem, 0rem);
+  -ms-transform: translate(15rem, 0rem);
+  -o-transform: translate(15rem, 0rem);
+}
+
+.orbit li:nth-child(2) {
+  --throb-delay: 500ms;
+  transform: translate(10rem, 10rem);
+  -webkit-transform: translate(10rem, 10rem);
+  -moz-transform: translate(10rem, 10rem);
+  -ms-transform: translate(10rem, 10rem);
+  -o-transform: translate(10rem, 10rem);
+}
+
+.orbit li:nth-child(3) {
+  --throb-delay: 1000ms;
+  transform: translate(0, 15rem);
+  -webkit-transform: translate(0, 15rem);
+  -moz-transform: translate(0, 15rem);
+  -ms-transform: translate(0, 15rem);
+  -o-transform: translate(0, 15rem);
+}
+
+.orbit li:nth-child(4) {
+  --throb-delay: 1500ms;
+  transform: translate(-10rem, 10rem);
+  -webkit-transform: translate(-10rem, 10rem);
+  -moz-transform: translate(-10rem, 10rem);
+  -ms-transform: translate(-10rem, 10rem);
+  -o-transform: translate(-10rem, 10rem);
+}
+
+.orbit li:nth-child(5) {
+  --throb-delay: 2000ms;
+  transform: translate(-15rem, 0rem);
+  -webkit-transform: translate(-15rem, 0rem);
+  -moz-transform: translate(-15rem, 0rem);
+  -ms-transform: translate(-15rem, 0rem);
+  -o-transform: translate(-15rem, 0rem);
+}
+
+.orbit li:nth-child(6) {
+  --throb-delay: 2500ms;
+  transform: translate(-10rem, -10rem);
+  -webkit-transform: translate(-10rem, -10rem);
+  -moz-transform: translate(-10rem, -10rem);
+  -ms-transform: translate(-10rem, -10rem);
+  -o-transform: translate(-10rem, -10rem);
+}
+
+.orbit li:nth-child(7) {
+  --throb-delay: 3000ms;
+  transform: translate(0, -15rem);
+  -webkit-transform: translate(0, -15rem);
+  -moz-transform: translate(0, -15rem);
+  -ms-transform: translate(0, -15rem);
+  -o-transform: translate(0, -15rem);
+}
+
+.orbit li:nth-child(8) {
+  --throb-delay: 3500ms;
+  transform: translate(10rem, -10rem);
+  -webkit-transform: translate(10rem, -10rem);
+  -moz-transform: translate(10rem, -10rem);
+  -ms-transform: translate(10rem, -10rem);
+  -o-transform: translate(10rem, -10rem);
+}
+
+.orbit li>* {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: inherit;
+  position: absolute;
+  animation: orbit 120s linear reverse infinite, throb 1s var(--throb-delay) ease-in-out infinite alternate;
+  animation-play-state: var(--orbit-play-state, running), var(--throb-play-state, running);
+  -webkit-animation: orbit 120s linear reverse infinite, throb 1s var(--throb-delay) ease-in-out infinite alternate;
+}
+
+@keyframes orbit {
+  100% {
+    rotate: 1turn;
+  }
+}
+
+@keyframes hold-position {
+  100% {
+    rotate: -1turn;
+  }
+}
+
+@keyframes throb {
+  100% {
+    scale: 1.05;
+  }
 }
 
 .skills .content .rigth .bars {
@@ -1811,22 +1936,54 @@ footer span a:hover {
 }
 
 @media (max-width: 1240px) {
+  .navbars .menu li a .icon {
+    display: none;
+  }
   .home .maxw .home-container .text-1 {
     font-size: 27px;
   }
-
   .home .maxw .home-container .text-2 {
     font-size: 70px;
     font-weight: 600;
   }
-
   .home .maxw .home-container .text-3 {
     font-size: 40px;
     margin: 5px 0;
   }
-
   .maxw {
     padding: 0 10px;
+  }
+  .skills .colume {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .skills .content .left {
+    width: 100%;
+    order: 1;
+    font-size: 25px;
+    padding-bottom: 0px;
+    font-family: "poppins", sans-serif;
+  }
+
+  .skills .content .left p {
+    margin-bottom: 15px;
+  }
+
+  .skills .content .rigth {
+    font-family: "poppins", sans-serif;
+    width: 100%;
+    order: 2;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .effect-2 {
+    left: 30%;
+    top: 90%;
+  }
+  .effect-7 {
+    top: 5%;
+    left: 10%;
   }
 }
 
@@ -2152,7 +2309,7 @@ footer span a:hover {
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -2165,7 +2322,7 @@ footer span a:hover {
   }
 
   .skills .content .left {
-    width: 80%;
+    width: 100%;
     order: 1;
     font-size: 25px;
     padding-bottom: 0px;
@@ -2178,7 +2335,7 @@ footer span a:hover {
 
   .skills .content .rigth {
     font-family: "poppins", sans-serif;
-    width: 80%;
+    width: 100%;
     order: 2;
     text-align: center;
     padding-top: 10px;
@@ -2214,6 +2371,83 @@ footer span a:hover {
     left: 3%;
     bottom: 40%;
   }
+  .skills .content .rigth {
+    min-height: 500px;
+}
+  .orbit ul li img{
+    width: 40%;
+  }
+  .orbit li:nth-child(1) {
+    --throb-delay: 0ms;
+    transform: translate(9rem, 0rem);
+    -webkit-transform: translate(9rem, 0rem);
+    -moz-transform: translate(9rem, 0rem);
+    -ms-transform: translate(9rem, 0rem);
+    -o-transform: translate(9rem, 0rem);
+}
+  
+  .orbit li:nth-child(2) {
+    --throb-delay: 500ms;
+    transform: translate(7rem, 6rem);
+    -webkit-transform: translate(7rem, 6rem);
+    -moz-transform: translate(7rem, 6rem);
+    -ms-transform: translate(7rem, 6rem);
+    -o-transform: translate(7rem, 6rem);
+}
+  
+  .orbit li:nth-child(3) {
+    --throb-delay: 1000ms;
+    transform: translate(1rem, 9rem);
+    -webkit-transform: translate(1rem, 9rem);
+    -moz-transform: translate(1rem, 9rem);
+    -ms-transform: translate(1rem, 9rem);
+    -o-transform: translate(1rem, 9rem);
+}
+  
+  .orbit li:nth-child(4) {
+    --throb-delay: 1500ms;
+    transform: translate(-6rem, 6rem);
+    -webkit-transform: translate(-6rem, 6rem);
+    -moz-transform: translate(-6rem, 6rem);
+    -ms-transform: translate(-6rem, 6rem);
+    -o-transform: translate(-6rem, 6rem);
+}
+  
+  .orbit li:nth-child(5) {
+    --throb-delay: 2000ms;
+    transform: translate(-9rem, 0rem);
+    -webkit-transform: translate(-9rem, 0rem);
+    -moz-transform: translate(-9rem, 0rem);
+    -ms-transform: translate(-9rem, 0rem);
+    -o-transform: translate(-9rem, 0rem);
+}
+  
+  .orbit li:nth-child(6) {
+    --throb-delay: 2500ms;
+    transform: translate(-6rem, -6rem);
+    -webkit-transform: translate(-6rem, -6rem);
+    -moz-transform: translate(-6rem, -6rem);
+    -ms-transform: translate(-6rem, -6rem);
+    -o-transform: translate(-6rem, -6rem);
+}
+  
+  .orbit li:nth-child(7) {
+    --throb-delay: 3000ms;
+    transform: translate(0, -9rem);
+    -webkit-transform: translate(0, -9rem);
+    -moz-transform: translate(0, -9rem);
+    -ms-transform: translate(0, -9rem);
+    -o-transform: translate(0, -9rem);
+}
+  
+  .orbit li:nth-child(8) {
+    --throb-delay: 3500ms;
+    transform: translate(6rem, -6rem);
+    -webkit-transform: translate(6rem, -6rem);
+    -moz-transform: translate(6rem, -6rem);
+    -ms-transform: translate(6rem, -6rem);
+    -o-transform: translate(6rem, -6rem);
+}
 }
 
 @media (max-width: 538px) {

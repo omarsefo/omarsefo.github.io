@@ -101,6 +101,7 @@ card10.addEventListener('click', () => {
 // Right Click disable
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+
 // copy 
 var nu = document.getElementById("ef");
 var small = document.querySelector('small');
