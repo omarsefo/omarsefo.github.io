@@ -493,6 +493,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--orange);
   font-size: 500;
 }
+
 .home .maxw .home-container .button {
 margin-top: 20px;
 padding: 16px 29px;
@@ -500,6 +501,9 @@ user-select: none;
 font-size: 16px;
 font-family: "poppins", sans-serif;
 border: 0;
+animation: lefts 0.5s linear forwards;
+animation-delay: 7.2s;
+opacity: 0;
 background: transparent;
 color: #fff;
 position: relative;
