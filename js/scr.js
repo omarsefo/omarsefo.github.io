@@ -203,10 +203,11 @@ function onmail() {
     } else {
         messag.style.border = "2px solid green";
     }
-    if (Vmessage !== '' && Vname !== '' && Vemail !== '') {
+    if (Vmessage !== '' && Vname !== '' && Vemail !== '' && Vemail.includes("@gmail.com")) {
         sendMail();
     }
 }
+
 var ok = document.getElementById("ok");
 let overlayform = document.querySelector(".overlay-form");
 function sendMail() {
