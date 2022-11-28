@@ -109,7 +109,7 @@ nu.addEventListener('click', () => {
     document.execCommand("copy");
     small.innerHTML = "(The Number is Copyed)";
     setTimeout(() => {
-        small.innerHTML = "(Click To Copy)";
+        small.innerHTML = "(Click To Copy & Call)";
     }, 3000)
 });
 
