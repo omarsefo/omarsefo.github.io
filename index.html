@@ -524,13 +524,13 @@ c17 -5 43 8 102 50 l80 56 17 -55 18 -55 -29 -30 c-16 -17 -53 -42 -82 -57
                 <div class="head">
                   Email
                 </div>
-                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="w sub-title">omarsefo7@gmail.com</a>
+                <a href="mailto:omarsefo7@gmail.com" class="w sub-title">omarsefo7@gmail.com</a>
               </div>
             </div>
           </div>
           <div class="ico">
             <a target="_blank" href="https://github.com/omarsefo" class="shake f6 fab fa-github"></a>
-            <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox" class="shake f1 fab fa-google"></a>
+            <a href="mailto:omarsefo7@gmail.com" class="shake f1 fab fa-google"></a>
             <a target="_blank" href="https://www.facebook.com/profile.php?id=100003924693705"
               class="shake f2 fab fa-facebook"></a>
             <a target="_blank" href="https://www.instagram.com/omar_sefo/" class="shake f3 fab fa-instagram"></a>
@@ -541,21 +541,21 @@ c17 -5 43 8 102 50 l80 56 17 -55 18 -55 -29 -30 c-16 -17 -53 -42 -82 -57
         <div data-aos="fade-up" data-aos-delay="400" data-aos-offset="190" class="colume rigth" id="form">
           <div class="text1">Message Me
           </div>
-          <form id="formemail">
+          <form id="formemail" data-form>
             <div class="field name">
-              <input type="text" id="name" name="name" placeholder="Name" required />
+              <input type="text" id="name" name="name" placeholder="Name" required  data-form-input/>
               <div class="validation">*Required</div>
             </div>
             <div class="field email">
-              <input type="email" id="email" placeholder="Email" required />
+              <input type="email" id="email" placeholder="Email" required  data-form-input/>
               <div class="validation">*Required</div>
             </div>
             <div class="field textaria">
-              <textarea cols="30" rows="10" id="message" required placeholder="type something"></textarea>
+              <textarea   id="message" required placeholder="type something" data-form-input></textarea>
               <div class="validation">Required</div>
             </div>
             <div class="buttons">
-              <button type="button" aria-label="send message" class="button" id="button">
+              <button type="button" aria-label="send message" class="button" disabled data-form-btn>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -572,7 +572,7 @@ c17 -5 43 8 102 50 l80 56 17 -55 18 -55 -29 -30 c-16 -17 -53 -42 -82 -57
   <!-- footer  -->
   <footer>
     <span>Created By
-      <a href="https://mail.google.com/mail/u/0/#inbox">OmarSefo</a>|
+      <a href="mailto:omarsefo7@gmail.com">OmarSefo</a>|
       <span class="far fa-copyright"></span> 2022 All rights reseved.</span>
   </footer>
 

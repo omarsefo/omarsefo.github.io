@@ -1685,15 +1685,15 @@ transition: all 0.2s ease;
 }
 
 .contact .rigth .field input:valid {
-  border-color: green;
-}
-
-.contact .rigth .field input:invalid {
   border-color: var(--orange);
 }
 
 .contact .rigth .field input:invalid~.validation {
   opacity: 1;
+}
+
+.contact .rigth .field input:focus:invalid {
+  border-color: #b84c4c;
 }
 
 .contact .rigth .field input:invalid, .contact .rigth .field input:invalid~.validation {
@@ -1772,6 +1772,11 @@ transition: all 0.2s ease;
 
 .contact .rigth .buttons .button:hover {
   color: #e9b200;
+}
+
+.contact .rigth .buttons .button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .contact .rigth .buttons button span:nth-child(1),

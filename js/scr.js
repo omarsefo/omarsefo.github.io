@@ -187,26 +187,23 @@ VanillaTilt.init(document.getElementById("img1"), {
     speed: 100
 });
 
-var button = document.getElementById('button');
-var email = document.getElementById('email');
-var vname = document.getElementById('name');
-var messag = document.getElementById('message');
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
 
-button.addEventListener("click", onmail);
-
-function onmail() {
-    var Vemail = email.value.trim();
-    var Vname = vname.value.trim();
-    var Vmessage = messag.value.trim();
-    if (Vmessage === '') {
-        messag.style.border = "2px solid red";
-    } else {
-        messag.style.border = "2px solid green";
-    }
-    if (Vmessage !== '' && Vname !== '' && Vemail !== '' && Vemail.includes("@gmail.com")) {
-        sendMail();
-    }
+// add event to all form input field
+for (let i = 0; i < formInputs.length; i++) {
+    formInputs[i].addEventListener("input", function () {
+        // check form validation
+        if (form.checkValidity()) {
+            formBtn.removeAttribute("disabled");
+        } else {
+            formBtn.setAttribute("disabled", "");
+        }
+    });
 }
+
+formBtn.addEventListener("click",sendMail);
 
 var ok = document.getElementById("ok");
 let overlayform = document.querySelector(".overlay-form");
