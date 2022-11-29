@@ -8,7 +8,7 @@
 }
 
 :root {
-  --orange: #ffcd28;
+  --orange: #ffd558;
   --first-color: #fff;
   --secon-color: #4b4b4b;
   --menu: #000000;
@@ -42,6 +42,15 @@
   --wav3: rgba(51, 51, 51, 0.3);
 }
 
+::selection {
+  background: var(--orange);
+  color: #333;
+}
+
+:focus {
+  outline-color: var(--orange-yellow-crayola);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -65,8 +74,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #ffcd28e7;
-  box-shadow: 0px 0px 30px 30px #ffcd28e7;
+  background-color: #ffd558e7;
+  box-shadow: 0px 0px 30px 30px #ffd558e7;
 }
 
 .spinner {
@@ -258,6 +267,7 @@ body::-webkit-scrollbar-thumb {
   animation: ups 0.5s ease-in-out forwards;
   animation-delay: 6.1s;
   opacity: 0;
+  user-select: none;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
 }
 
@@ -289,6 +299,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--first-color);
   position: relative;
   filter: drop-shadow(1px 3px 0.5px #4b4b4b);
+  user-select: none;
 }
 
 .navbars.sticky .menu li a::after {
@@ -1770,7 +1781,7 @@ transition: all 0.2s ease;
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, transparent, #ffcd28);
+  background: linear-gradient(to right, transparent, #ffd558);
   animation: input1 2s linear infinite;
 }
 
@@ -1799,7 +1810,7 @@ transition: all 0.2s ease;
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, #ffcd28);
+  background: linear-gradient(to bottom, transparent, #ffd558);
   animation: input2 2s linear infinite;
   animation-delay: 1s;
 }
@@ -1829,7 +1840,7 @@ transition: all 0.2s ease;
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to left, transparent, #ffcd28);
+  background: linear-gradient(to left, transparent, #ffd558);
   animation: input3 2s linear infinite;
 }
 
@@ -1858,7 +1869,7 @@ transition: all 0.2s ease;
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(to top, transparent, #ffcd28);
+  background: linear-gradient(to top, transparent, #ffd558);
   animation: input4 2s linear infinite;
   animation-delay: 1s;
 }
