@@ -66,7 +66,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 15px;
+  width: 12px;
 }
 
 body::-webkit-scrollbar-track {
@@ -74,8 +74,10 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #ffd558e7;
-  box-shadow: 0px 0px 30px 30px #ffd558e7;
+  background: var(--orange);
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+      inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
 }
 
 .spinner {
@@ -1495,11 +1497,6 @@ transition: all 0.2s ease;
   -webkit-animation: shake2 0.1635s 0s 3;
 }
 
-/* .contact .content .left .ico .f5:hover {
-  color: var(--f5-color);
-  animation: shake2 0.1635s 0s 3;
-  -webkit-animation: shake2 0.1635s 0s 3;
-} */
 .contact .content .left .ico .f6:hover {
   color: var(--f6-color);
   animation: shake2 0.1635s 0s 3;
