@@ -3,6 +3,7 @@ document.addEventListener('load', logo);
 var spinner = document.getElementById("spinner");
 
 function logo() {
+    // window.location.href('https://omarsefo.github.io');
     setTimeout(() => {
         document.body.style.overflowY = "scroll";
         val = window.scrollY;
@@ -22,6 +23,8 @@ function logo() {
         spinner.classList.remove("active");
     }, 5000)
 }
+//scroll up
+document.getElementById("scroll").addEventListener("click",()=>{window.scrollTo(0, 0)});
 
 ///nav
 window.addEventListener("scroll", function () {
