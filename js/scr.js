@@ -24,7 +24,7 @@ function logo() {
     }, 5000)
 }
 //scroll up
-document.getElementById("scroll").addEventListener("click",()=>{window.scrollTo(0, 0)});
+document.getElementById("scroll").addEventListener("click", () => { window.scrollTo(0, 0) });
 
 ///nav
 window.addEventListener("scroll", function () {
@@ -102,7 +102,7 @@ card10.addEventListener('click', () => {
 });
 
 // Right Click disable
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 // copy 
@@ -205,10 +205,12 @@ for (let i = 0; i < formInputs.length; i++) {
         }
     });
 }
+var vname = document.getElementById("name");
+var email = document.getElementById("email");
+var messag = document.getElementById("message");
 
-formBtn.addEventListener("click",sendMail);
+formBtn.addEventListener("click", sendMail);
 
-var ok = document.getElementById("ok");
 let overlayform = document.querySelector(".overlay-form");
 function sendMail() {
     var tempParms = {
@@ -220,23 +222,16 @@ function sendMail() {
     emailjs.send('service_enze2af', 'template_43vqktk', tempParms)
         .then(function (res) {
             console.log("success", res.status);
-            setTimeout(() => {
-                overlayform.classList.add("active");
-                ok.innerHTML = "sending...";
-                document.body.style.cursor = "wait";
-            }, 200)
+            document.body.style.cursor = "wait";
+            overlayform.classList.add("active");
             setTimeout(() => {
                 email.value = '';
                 vname.value = '';
                 messag.value = '';
-                messag.style.border = "2px solid var(--orange)";
                 setTimeout(() => {
-                    ok.innerHTML = "Your Message is Sent.";
                     document.body.style.cursor = "default";
-                    setTimeout(() => {
-                        overlayform.classList.remove("active");
-                    }, 1000)
-                }, 3000);
+                    overlayform.classList.remove("active");
+                }, 2000);
             }, 7000);
         })
     // overlayform.classList.add("active");
