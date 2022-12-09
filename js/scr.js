@@ -39,7 +39,7 @@ window.addEventListener("scroll", () => {
 var sc = document.querySelector('.scroll-up');
 
 
-const men = document.querySelector('.menu').querySelectorAll('a');
+const men = document.querySelectorAll("[nav-a]");
 const section = document.querySelectorAll('section');
 
 men.forEach(element => {
@@ -52,7 +52,7 @@ function activenav() {
     men.forEach(itx => itx.classList.remove("activ"));
     men[len].classList.add("activ");
 }
-window.addEventListener("scroll", activenav)
+window.addEventListener("scroll", activenav);
 
 //web
 var card1 = document.getElementById("card1");
