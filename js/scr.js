@@ -26,12 +26,6 @@ function logo() {
 //scroll up
 document.getElementById("scroll").addEventListener("click", () => { window.scrollTo(0, 0) });
 
-///nav
-window.addEventListener("scroll", function () {
-    var nav = document.querySelector("nav");
-    nav.classList.toggle("sticky", window.scrollY > 24);
-});
-
 //button top
 window.addEventListener("scroll", () => {
     sc.classList.toggle("act", window.scrollY > 500);
@@ -39,70 +33,219 @@ window.addEventListener("scroll", () => {
 var sc = document.querySelector('.scroll-up');
 
 
-const men = document.querySelectorAll("[nav-a]");
-const section = document.querySelectorAll('section');
-
-men.forEach(element => {
-    element.addEventListener("click", activenav)
+///nav
+window.addEventListener("scroll", function () {
+    var nav = document.querySelector("nav");
+    nav.classList.toggle("sticky", window.scrollY > 24);
 });
 
-function activenav() {
-    let len = section.length;
-    while (--len && window.scrollY + 90 < section[len].offsetTop) { }
-    men.forEach(itx => itx.classList.remove("activ"));
-    men[len].classList.add("activ");
+class ArrowPointer {
+    constructor() {
+        this.root = document.body
+        this.cursor = document.querySelector(".curzr")
+
+        this.position = {
+            distanceX: 0,
+            distanceY: 0,
+            distance: 0,
+            pointerX: 0,
+            pointerY: 0,
+        },
+            this.previousPointerX = 0
+        this.previousPointerY = 0
+        this.angle = 0
+        this.previousAngle = 0
+        this.angleDisplace = 0
+        this.degrees = 57.296
+        this.cursorSize = 20
+
+        this.cursorStyle = {
+            boxSizing: 'border-box',
+            position: 'fixed',
+            top: '0px',
+            left: `${-this.cursorSize / 2}px`,
+            zIndex: '2147483647',
+            width: `${this.cursorSize}px`,
+            height: `${this.cursorSize}px`,
+            transition: '250ms, transform 100ms',
+            userSelect: 'none',
+            pointerEvents: 'none'
+        }
+
+        this.init(this.cursor, this.cursorStyle)
+    }
+
+    init(el, style) {
+        Object.assign(el.style, style)
+        this.cursor.removeAttribute("hidden")
+
+    }
+
+    move(event) {
+        this.previousPointerX = this.position.pointerX
+        this.previousPointerY = this.position.pointerY
+        this.position.pointerX = event.pageX + this.root.getBoundingClientRect().x
+        this.position.pointerY = event.pageY + this.root.getBoundingClientRect().y
+        this.position.distanceX = this.previousPointerX - this.position.pointerX
+        this.position.distanceY = this.previousPointerY - this.position.pointerY
+        this.distance = Math.sqrt(this.position.distanceY ** 2 + this.position.distanceX ** 2)
+
+        this.cursor.style.transform = `translate3d(${this.position.pointerX}px, ${this.position.pointerY}px, 0)`
+
+        if (this.distance > 1) {
+            this.rotate(this.position)
+        } else {
+            this.cursor.style.transform += ` rotate(${this.angleDisplace}deg)`
+        }
+    }
+
+    rotate(position) {
+        let unsortedAngle = Math.atan(Math.abs(position.distanceY) / Math.abs(position.distanceX)) * this.degrees
+        let modAngle
+        const style = this.cursor.style
+        this.previousAngle = this.angle
+
+        if (position.distanceX <= 0 && position.distanceY >= 0) {
+            this.angle = 90 - unsortedAngle + 0
+        } else if (position.distanceX < 0 && position.distanceY < 0) {
+            this.angle = unsortedAngle + 90
+        } else if (position.distanceX >= 0 && position.distanceY <= 0) {
+            this.angle = 90 - unsortedAngle + 180
+        } else if (position.distanceX > 0 && position.distanceY > 0) {
+            this.angle = unsortedAngle + 270
+        }
+
+        if (isNaN(this.angle)) {
+            this.angle = this.previousAngle
+        } else {
+            if (this.angle - this.previousAngle <= -270) {
+                this.angleDisplace += 360 + this.angle - this.previousAngle
+            } else if (this.angle - this.previousAngle >= 270) {
+                this.angleDisplace += this.angle - this.previousAngle - 360
+            } else {
+                this.angleDisplace += this.angle - this.previousAngle
+            }
+        }
+        style.transform += ` rotate(${this.angleDisplace}deg)`
+
+        setTimeout(() => {
+            modAngle = this.angleDisplace >= 0 ? this.angleDisplace % 360 : 360 + this.angleDisplace % 360
+            if (modAngle >= 45 && modAngle < 135) {
+                style.left = `${-this.cursorSize}px`
+                style.top = `${-this.cursorSize / 2}px`
+            } else if (modAngle >= 135 && modAngle < 225) {
+                style.left = `${-this.cursorSize / 2}px`
+                style.top = `${-this.cursorSize}px`
+            } else if (modAngle >= 225 && modAngle < 315) {
+                style.left = '0px'
+                style.top = `${-this.cursorSize / 2}px`
+            } else {
+                style.left = `${-this.cursorSize / 2}px`
+                style.top = '0px'
+            }
+        }, 0)
+    }
+
+    remove() {
+        this.cursor.remove()
+    }
 }
-window.addEventListener("scroll", activenav);
+
+(() => {
+    const cursor = new ArrowPointer()
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        document.onmousemove = function (event) {
+            cursor.move(event)
+        }
+    } else {
+        cursor.remove()
+    }
+})()
+
+var sections = document.querySelectorAll("section");
+
+onscroll = function () {
+    var scrollPosition = document.documentElement.scrollTop;
+
+    sections.forEach((section) => {
+        if (
+            scrollPosition >= section.offsetTop - section.offsetHeight * 0.10 &&
+            scrollPosition <
+            section.offsetTop + section.offsetHeight - section.offsetHeight * 0.10
+        ) {
+            var currentId = section.attributes.id.value;
+            removeAllActiveClasses();
+            addActiveClass(currentId);
+        }
+    });
+};
+
+var removeAllActiveClasses = function () {
+    document.querySelectorAll("[nav-a]").forEach((el) => {
+        el.classList.remove("activ");
+    });
+};
+
+var addActiveClass = function (id) {
+    var selector = `ul li a[href="#${id}"]`;
+    document.querySelector(selector).classList.add("activ");
+};
+
+var navLinks = document.querySelectorAll("[nav-a]");
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        onscroll();
+        // e.preventDefault();
+        // var currentId = e.target.attributes.href.value;
+        // var section = document.querySelector(currentId);
+        // var sectionPos = section.offsetTop;
+        // window.scroll({
+        //     top: sectionPos,
+        //     behavior: "smooth",
+        // });
+    });
+});
+
 
 //web
-var card1 = document.getElementById("card1");
-var card2 = document.getElementById("card2");
-var card3 = document.getElementById("card3");
-var card4 = document.getElementById("card4");
-var card5 = document.getElementById("card5");
-var card6 = document.getElementById("card6");
-var card7 = document.getElementById("card7");
-var card8 = document.getElementById("card8");
-var card9 = document.getElementById("card9");
-var card10 = document.getElementById("card10");
-
 
 // card1.addEventListener('click', () => {
 //     window.open('https://omarsefo.github.io/bird/')
 // });
-card1.addEventListener('mouseover', () => {
+document.getElementById("card1").addEventListener('mouseover', () => {
     card1.style.cursor = "not-allowed";
 });
-card2.addEventListener('click', () => {
+document.getElementById("card2").addEventListener('click', () => {
     window.open('https://omarsefo.github.io/foot-cup/')
 });
-card3.addEventListener('click', () => {
+document.getElementById("card3").addEventListener('click', () => {
     window.open('https://omarsefo.github.io/Globe_Agency/')
 });
-card4.addEventListener('click', () => {
+document.getElementById("card4").addEventListener('click', () => {
     window.open('https://omarsefo.github.io/sign-in-up/')
 });
-card5.addEventListener('click', () => {
-    window.open('https://omarsefo.github.io/ballspinner/')
+document.getElementById("card5").addEventListener('click', () => {
+    window.open('https://omarsefo.github.io/Khaled/')
 });
-card6.addEventListener('click', () => {
+document.getElementById("card6").addEventListener('click', () => {
     window.open('https://omarsefo.github.io/starbacks/')
 });
-card7.addEventListener('click', () => {
+document.getElementById("card7").addEventListener('click', () => {
     window.open('https://omarsefo.github.io/moon/moon.html')
 });
-card8.addEventListener('click', () => {
+document.getElementById("card8").addEventListener('click', () => {
     window.open('http://omarsefo.github.io/be-real/')
 });
-card9.addEventListener('click', () => {
+document.getElementById("card9").addEventListener('click', () => {
     window.open('https://omarsefo.github.io/norway/')
 });
-card10.addEventListener('click', () => {
-    window.open('http://omarsefo.github.io/icecream/')
+document.getElementById("card10").addEventListener('click', () => {
+    window.open('https://omarsefo.github.io/ballspinner/')
 });
 
 // Right Click disable
-// document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 // copy 
@@ -251,125 +394,3 @@ function sendMail() {
 }
 
 
-class ArrowPointer {
-    constructor() {
-        this.root = document.body
-        this.cursor = document.querySelector(".curzr")
-
-        this.position = {
-            distanceX: 0,
-            distanceY: 0,
-            distance: 0,
-            pointerX: 0,
-            pointerY: 0,
-        },
-            this.previousPointerX = 0
-        this.previousPointerY = 0
-        this.angle = 0
-        this.previousAngle = 0
-        this.angleDisplace = 0
-        this.degrees = 57.296
-        this.cursorSize = 20
-
-        this.cursorStyle = {
-            boxSizing: 'border-box',
-            position: 'fixed',
-            top: '0px',
-            left: `${-this.cursorSize / 2}px`,
-            zIndex: '2147483647',
-            width: `${this.cursorSize}px`,
-            height: `${this.cursorSize}px`,
-            transition: '250ms, transform 100ms',
-            userSelect: 'none',
-            pointerEvents: 'none'
-        }
-
-        this.init(this.cursor, this.cursorStyle)
-    }
-
-    init(el, style) {
-        Object.assign(el.style, style)
-        this.cursor.removeAttribute("hidden")
-
-    }
-
-    move(event) {
-        this.previousPointerX = this.position.pointerX
-        this.previousPointerY = this.position.pointerY
-        this.position.pointerX = event.pageX + this.root.getBoundingClientRect().x
-        this.position.pointerY = event.pageY + this.root.getBoundingClientRect().y
-        this.position.distanceX = this.previousPointerX - this.position.pointerX
-        this.position.distanceY = this.previousPointerY - this.position.pointerY
-        this.distance = Math.sqrt(this.position.distanceY ** 2 + this.position.distanceX ** 2)
-
-        this.cursor.style.transform = `translate3d(${this.position.pointerX}px, ${this.position.pointerY}px, 0)`
-
-        if (this.distance > 1) {
-            this.rotate(this.position)
-        } else {
-            this.cursor.style.transform += ` rotate(${this.angleDisplace}deg)`
-        }
-    }
-
-    rotate(position) {
-        let unsortedAngle = Math.atan(Math.abs(position.distanceY) / Math.abs(position.distanceX)) * this.degrees
-        let modAngle
-        const style = this.cursor.style
-        this.previousAngle = this.angle
-
-        if (position.distanceX <= 0 && position.distanceY >= 0) {
-            this.angle = 90 - unsortedAngle + 0
-        } else if (position.distanceX < 0 && position.distanceY < 0) {
-            this.angle = unsortedAngle + 90
-        } else if (position.distanceX >= 0 && position.distanceY <= 0) {
-            this.angle = 90 - unsortedAngle + 180
-        } else if (position.distanceX > 0 && position.distanceY > 0) {
-            this.angle = unsortedAngle + 270
-        }
-
-        if (isNaN(this.angle)) {
-            this.angle = this.previousAngle
-        } else {
-            if (this.angle - this.previousAngle <= -270) {
-                this.angleDisplace += 360 + this.angle - this.previousAngle
-            } else if (this.angle - this.previousAngle >= 270) {
-                this.angleDisplace += this.angle - this.previousAngle - 360
-            } else {
-                this.angleDisplace += this.angle - this.previousAngle
-            }
-        }
-        style.transform += ` rotate(${this.angleDisplace}deg)`
-
-        setTimeout(() => {
-            modAngle = this.angleDisplace >= 0 ? this.angleDisplace % 360 : 360 + this.angleDisplace % 360
-            if (modAngle >= 45 && modAngle < 135) {
-                style.left = `${-this.cursorSize}px`
-                style.top = `${-this.cursorSize / 2}px`
-            } else if (modAngle >= 135 && modAngle < 225) {
-                style.left = `${-this.cursorSize / 2}px`
-                style.top = `${-this.cursorSize}px`
-            } else if (modAngle >= 225 && modAngle < 315) {
-                style.left = '0px'
-                style.top = `${-this.cursorSize / 2}px`
-            } else {
-                style.left = `${-this.cursorSize / 2}px`
-                style.top = '0px'
-            }
-        }, 0)
-    }
-
-    remove() {
-        this.cursor.remove()
-    }
-}
-
-(() => {
-    const cursor = new ArrowPointer()
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.onmousemove = function (event) {
-            cursor.move(event)
-        }
-    } else {
-        cursor.remove()
-    }
-})()

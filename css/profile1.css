@@ -131,8 +131,8 @@ body::-webkit-scrollbar-thumb {
   stroke-width: 16px;
   line-height: 0.2;
   opacity: 0;
-  stroke-dasharray: 3200;
-  stroke-dashoffset: 3200;
+  stroke-dasharray: 3250;
+  stroke-dashoffset: 3250;
   filter: drop-shadow(1px 2px 4px #000);
   animation: logoStroke 2s forwards, logoFill 2s 2s forwards;
 }
@@ -145,7 +145,7 @@ body::-webkit-scrollbar-thumb {
 }
 @keyframes logoStroke {
   to {
-    stroke-dashoffset: 6300;
+    stroke-dashoffset: 6500;
     opacity: 1;
   }
 }
