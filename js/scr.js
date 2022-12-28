@@ -3,7 +3,6 @@ document.addEventListener('load', logo);
 var spinner = document.getElementById("spinner");
 
 function logo() {
-    // window.location.href('https://omarsefo.github.io');
     setTimeout(() => {
         document.body.style.overflowY = "scroll";
         val = window.scrollY;
@@ -245,7 +244,7 @@ document.getElementById("card10").addEventListener('click', () => {
 });
 
 // Right Click disable
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 // copy 
