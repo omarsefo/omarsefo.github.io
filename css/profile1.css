@@ -58,11 +58,6 @@ html {
 body {
   overflow-x: hidden;
   overflow-y: scroll;
-  transition: all 0.3s ease-in-out !important;
-  -webkit-transition: all 0.3s ease-in-out !important;
-  -moz-transition: all 0.3s ease-in-out !important;
-  -ms-transition: all 0.3s ease-in-out !important;
-  -o-transition: all 0.3s ease-in-out !important;
 }
 
 body::-webkit-scrollbar {
@@ -1582,6 +1577,10 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   height: 65px;
   align-items: center;
+}
+.contact .content .rows .animcon{
+  cursor: pointer;
+  padding-right: 20px;
 }
 
 .contact .content .rows .info {
