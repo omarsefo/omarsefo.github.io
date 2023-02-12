@@ -58,6 +58,7 @@ html {
 body {
   overflow-x: hidden;
   overflow-y: scroll;
+  background-color: var(--first-color) !important;
 }
 
 body::-webkit-scrollbar {
@@ -89,11 +90,11 @@ body::-webkit-scrollbar-thumb {
   z-index: 999999999999999;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
 }
 
 .spinner.active {
@@ -123,6 +124,7 @@ body::-webkit-scrollbar-thumb {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+
 .center span {
   position: absolute;
   width: 30px;
@@ -130,24 +132,28 @@ body::-webkit-scrollbar-thumb {
   background: #262626;
   animation: quadrado 4s infinite ease-in-out;
 }
+
 .center span:nth-child(1) {
   background: var(--first-color);
   left: -34px;
   top: -34px;
   animation-delay: .4s;
 }
+
 .center span:nth-child(2) {
   background: var(--orange);
   left: 5px;
   top: -34px;
   animation-delay: .8s;
 }
+
 .center span:nth-child(3) {
   background: var(--orange);
   left: -34px;
   top: 5px;
   animation-delay: .2s;
 }
+
 .center span:nth-child(4) {
   background: var(--first-color);
   left: 5px;
@@ -159,22 +165,27 @@ body::-webkit-scrollbar-thumb {
   0% {
     transform: rotateY(0deg);
   }
+
   20% {
     transform: rotateY(360deg);
   }
+
   40% {
     transform: rotateY(180deg);
   }
+
   60% {
     transform: rotateY(0deg);
   }
+
   80% {
     transform: rotateY(360deg);
   }
+
   100% {
     transform: rotateY(180deg);
   }
-  
+
 }
 
 .top_logo {
@@ -202,6 +213,7 @@ body::-webkit-scrollbar-thumb {
     stroke: transparent;
   }
 }
+
 @keyframes logoStroke {
   to {
     stroke-dashoffset: 6500;
@@ -1304,6 +1316,10 @@ body::-webkit-scrollbar-thumb {
   color: var(--orange);
 }
 
+.vuecolor {
+  color: #1ea662;
+}
+
 .projects .countainer .card .content i {
   font-size: 19px;
   animation: rot 2.5s linear infinite;
@@ -1578,7 +1594,8 @@ body::-webkit-scrollbar-thumb {
   height: 65px;
   align-items: center;
 }
-.contact .content .rows .animcon{
+
+.contact .content .rows .animcon {
   cursor: pointer;
   padding-right: 20px;
 }
@@ -1640,7 +1657,7 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 
-#formemail{
+#formemail {
   position: relative;
 }
 
@@ -1677,11 +1694,11 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes rotation {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 

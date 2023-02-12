@@ -209,12 +209,12 @@ navLinks.forEach((link) => {
 
 //web
 
-// card1.addEventListener('click', () => {
-//     window.open('https://omarsefo.github.io/bird/')
-// });
-document.getElementById("card1").addEventListener('mouseover', () => {
-    card1.style.cursor = "not-allowed";
-});
+// document.getElementById("card1").addEventListener('mouseover', () => {
+    //     card1.style.cursor = "not-allowed";
+    // });
+document.getElementById("card1").addEventListener("click", () => {
+    window.open("https://omarsefo.github.io/Dentelo/");
+    });
 document.getElementById("card2").addEventListener('click', () => {
     window.open('https://omarsefo.github.io/foot-cup/')
 });
