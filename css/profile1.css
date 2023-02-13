@@ -1294,8 +1294,15 @@ body::-webkit-scrollbar-thumb {
   color: var(--orange);
 }
 
+.vuecolor {
+  color: #1ea662 !important;
+  animation: 0 !important;
+  -webkit-animation: 0 !important;
+  font-size: 25px !important;
+}
+
 .projects .countainer .card i {
-  font-size: 50px;
+  font-size: 45px;
   color: var(--orange);
 }
 
@@ -1314,10 +1321,6 @@ body::-webkit-scrollbar-thumb {
 
 .b {
   color: var(--orange);
-}
-
-.vuecolor {
-  color: #1ea662;
 }
 
 .projects .countainer .card .content i {
