@@ -44,16 +44,16 @@
         <a href="#">portf<span id="s">olio</span></a>
       </div>
       <ul class="menu" id="menu">
-        <li><a class="activ" nav-a href="#Home"><span class="icon">
+        <li><a id="Home" class="activ" nav-a><span class="icon">
               <ion-icon name="home-outline"></ion-icon>
             </span><span class="texticon"> Home</span></a></li>
-        <li><a href="#skills" nav-a><span class="icon">
+        <li><a id="skills" nav-a><span class="icon">
               <ion-icon name="stats-chart-outline"></ion-icon>
             </span><span class="texticon"> Skills</span></a></li>
-        <li><a href="#project" nav-a><span class="icon">
+        <li><a id="project" nav-a><span class="icon">
               <ion-icon name="code-slash-outline"></ion-icon>
             </span><span class="texticon"> Projects</span></a></li>
-        <li><a href="#contact" nav-a><span class="icon">
+        <li><a id="contact" nav-a><span class="icon">
               <ion-icon name="call-outline"></ion-icon>
             </span><span class="texticon"> Contact</span></a></li>
       </ul>
@@ -62,7 +62,7 @@
   </nav>
 
   <!-- home  -->
-  <section class="home" id="Home">
+  <section class="home" data-page="Home">
     <div class="maxw">
       <div class="home-container">
         <div>
@@ -97,40 +97,10 @@
   </section>
 
   <!-- skills  -->
-  <section id="skills" class="skills">
+  <section class="skills" data-page="skills">
     <div class="effect-wrap">
       <div class="effect effect-1"></div>
       <div class="effect effect-7"></div>
-      <div class="effect effect-2">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
     </div>
     <div class="maxw">
       <h2 class="text"><i class="fas fa-list-ol"></i>Skills</h2>
@@ -156,7 +126,7 @@
                   <div class="tooltips">HTML5</div>
 
                   <div class="card-icon">
-                    <img src="./image/html5.png" alt="HTML5 logo">
+                    <img src="./image/html5.png" loading="lazy" alt="HTML5 logo">
                   </div>
                 </div>
               </li>
@@ -166,7 +136,7 @@
                   <div class="tooltips">CSS3</div>
 
                   <div class="card-icon">
-                    <img src="./image/css3.png" alt="CSS3 logo">
+                    <img src="./image/css3.png" loading="lazy" alt="CSS3 logo">
                   </div>
                 </div>
               </li>
@@ -176,7 +146,7 @@
                   <div class="tooltips">JavaScript</div>
 
                   <div class="card-icon">
-                    <img src="./image/javascript.png" alt="JavaScript logo">
+                    <img src="./image/javascript.png" loading="lazy" alt="JavaScript logo">
                   </div>
                 </div>
               </li>
@@ -186,7 +156,7 @@
                   <div class="tooltips">Bootstrap</div>
 
                   <div class="card-icon">
-                    <img src="./image/bootstrap.png" alt="Bootstrap logo">
+                    <img src="./image/bootstrap.png" loading="lazy" alt="Bootstrap logo">
                   </div>
                 </div>
               </li>
@@ -196,7 +166,7 @@
                   <div class="tooltips">Tailwind</div>
 
                   <div class="card-icon">
-                    <img src="./image/tailwind2.png" alt="tailwind logo">
+                    <img src="./image/tailwind2.png" loading="lazy" alt="tailwind logo">
                   </div>
                 </div>
               </li>
@@ -206,7 +176,7 @@
                   <div class="tooltips">Sass</div>
 
                   <div class="card-icon">
-                    <img src="./image/sass.png" alt="sass logo">
+                    <img src="./image/sass.png" loading="lazy" alt="sass logo">
                   </div>
                 </div>
               </li>
@@ -216,7 +186,7 @@
                   <div class="tooltips">Vue</div>
 
                   <div class="card-icon">
-                    <img src="./image/vue.png" alt="Vue logo">
+                    <img src="./image/vue.png" loading="lazy" alt="Vue logo">
                   </div>
                 </div>
               </li>
@@ -226,7 +196,7 @@
                   <div class="tooltips">Flutter</div>
 
                   <div class="card-icon">
-                    <img src="./image/flutter.png" alt="Flutter logo">
+                    <img src="./image/flutter.png" loading="lazy" alt="Flutter logo">
                   </div>
                 </div>
               </li>
@@ -236,7 +206,7 @@
                   <div class="tooltips">Dart</div>
 
                   <div class="card-icon">
-                    <img src="./image/dart.png" alt="dart logo">
+                    <img src="./image/dart.png" loading="lazy" alt="dart logo">
                   </div>
                 </div>
               </li>
@@ -246,7 +216,7 @@
                   <div class="tooltips">vs_code</div>
 
                   <div class="card-icon">
-                    <img src="./image/vs-code.png" alt="vs-code logo">
+                    <img src="./image/vs-code.png" loading="lazy" alt="vs-code logo">
                   </div>
                 </div>
               </li>
@@ -277,7 +247,7 @@
   </article>
 
   <!-- project  -->
-  <section class="projects" id="project">
+  <section class="projects" data-page="project">
     <div class="effect-wrap">
       <div class="effect effect-5"></div>
       <div class="effect effect-4"></div>
@@ -287,7 +257,7 @@
       <div class="countainer">
         <div data-aos="zoom-in-right" data-aos-delay="300" data-aos-offset="300" class="card" id="card1">
           <div class="img-div">
-            <img src="image/Dentelo.png" alt="Dentelo" loading="lazy" />
+            <img src="image/Dentelo.jpg" alt="Dentelo" loading="lazy" />
           </div>
           <div class="imgbx">
             <i class="fa-solid fa-tooth"></i>
@@ -447,7 +417,7 @@
 
 
   <!-- contact  -->
-  <section id="contact" class="contact">
+  <section class="contact" data-page="contact">
     <div class="effect-wrap">
       <div class="effect effect-3"></div>
       <div class="effect effect-6"></div>

@@ -315,6 +315,7 @@ body::-webkit-scrollbar-thumb {
   animation: ups 0.5s ease-in-out forwards;
   animation-delay: 6.1s;
   opacity: 0;
+  cursor: pointer;
   user-select: none;
   filter: drop-shadow(1px 2px 0.5px #4b4b4b);
 }
@@ -902,16 +903,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.effect-2 {
-  left: 30%;
-  top: 23%;
-  width: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  animation: topb 3s ease-in-out infinite;
-}
-
 @keyframes topb {
 
   0%,
@@ -930,14 +921,6 @@ body::-webkit-scrollbar-thumb {
     -ms-transform: translateY(25px);
     -o-transform: translateY(25px);
   }
-}
-
-.effect-2 div {
-  height: 3px;
-  width: 3px;
-  background: var(--orange);
-  margin: 0 3px 8px;
-  filter: drop-shadow(1px 3px 0.5px #4b4b4b);
 }
 
 .effect-3,
@@ -2243,11 +2226,6 @@ footer span a:hover {
 
   .effect-1 {
     top: 20%;
-  }
-
-  .effect-2 {
-    left: 30%;
-    top: 90%;
   }
 
   .effect-4 {
