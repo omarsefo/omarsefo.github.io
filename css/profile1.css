@@ -347,8 +347,9 @@ body::-webkit-scrollbar-thumb {
 .navbars.sticky .menu li a {
   color: var(--first-color);
   position: relative;
-  filter: drop-shadow(1px 3px 0.5px #4b4b4b);
+  filter: drop-shadow(1px 2px 0.5px #4b4b4b);
   user-select: none;
+  -webkit-filter: drop-shadow(1px 2px 0.5px #4b4b4b);
 }
 
 .navbars.sticky .menu li a::after {
@@ -369,7 +370,8 @@ body::-webkit-scrollbar-thumb {
 .navbars.sticky .menu li a:hover:after,
 .navbars.sticky .menu li a.activ:after {
   width: 100%;
-  filter: drop-shadow(1px 2px 0.5px #4b4b4b);
+  filter: drop-shadow(1px 1px 0.5px #4b4b4b);
+  -webkit-filter: drop-shadow(1px 1px 0.5px #4b4b4b);
 }
 
 .bee {
