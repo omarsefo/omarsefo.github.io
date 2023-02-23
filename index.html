@@ -7,9 +7,9 @@
   <meta name="description" content="Welcome To My Portfolio" />
   <meta name="keywords" content="omarsefo,portfolio" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./image/slogo.jpg" />
+  <link rel="shortcut icon" href="./image/slogo.jpg" />
   <link rel="stylesheet" href="css/all.css" />
-  <link rel="stylesheet" href="css/profile1.css" />
+  <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -34,7 +34,7 @@
   </div>
 
   <button id="scroll" class="scroll-up">
-    <i class="cross fas fa-angle-up"></i>
+    <ion-icon name="chevron-up-outline" class="cross"></ion-icon>
   </button>
 
   <!-- nav  -->
@@ -57,7 +57,7 @@
               <ion-icon name="call-outline"></ion-icon>
             </span><span class="texticon"> Contact</span></a></li>
       </ul>
-      <i class="i"><i id="ico" class="ic fas fa-sun"></i></i>
+      <i class="i"><div class="con"><ion-icon name="sunny-outline" class="ic" id="ico"></ion-icon></div></i>
     </div>
   </nav>
 
@@ -260,14 +260,18 @@
             <img src="image/Dentelo.jpg" alt="Dentelo" loading="lazy" />
           </div>
           <div class="imgbx">
-            <i class="fa-solid fa-tooth"></i>
+            <div class="imgframework">
+              <i class="fa-solid fa-tooth"></i>
+              <ion-icon name="add-outline" class="add"></ion-icon>
+              <ion-icon name="logo-vue" class="ionicon vuecolor"></ion-icon>
+            </div>
             <div class="content">
               <div class="tex">
-                <i class="fab fa-vuejs vuecolor"></i> Dentelo
-                <i class="fab fa-vuejs vuecolor"></i>
+                <i class="far fa-star"></i> Dentelo
+                <i class="far fa-star"></i>
               </div>
               <p>
-                This is a website for dentists where you can book an appointment and ask any questions. 
+                This is a website for dentists where you can book an appointment.
                 <br>
                 <b class="b"> Click To Show.</b>
                 <!-- <b class="err"> Under update.</b> -->
@@ -280,7 +284,7 @@
             <img src="image/footcup.png" height="580px" alt="Footcup" loading="lazy" />
           </div>
           <div class="imgbx">
-            <i class="fas fa-shoe-prints"></i>
+            <ion-icon name="footsteps-outline" class="ionicon"></ion-icon>
             <div class="content">
               <div class="tex">
                 <i class="far fa-star"></i> Footcup
@@ -333,9 +337,9 @@
         <div data-aos="zoom-in-up" data-aos-delay="350" data-aos-offset="220" class="cardb" id="card5">
           <div class="box">
             <i class="fas fa-k"></i>
-            <div class="textn">My Friends Portfolio</div>
+            <div class="textn">Portfolio</div>
             <p>
-              this Portfolio was Created by me<b class="b">
+              this Portfolio has Created by me<b class="b">
                 <br> Click To Show.</b>
             </p>
           </div>
@@ -353,7 +357,7 @@
         </div>
         <div data-aos="zoom-in-up" data-aos-delay="350" data-aos-offset="220" class="cardb" id="card7">
           <div class="box">
-            <i class="far fa-moon"></i>
+            <ion-icon name="moon-outline"></ion-icon>
             <div class="textn">My moon page</div>
             <p>
               this page show anmation of moon and stars<span class="err">
@@ -384,10 +388,10 @@
         </div>
         <div data-aos="zoom-in-up" data-aos-delay="350" data-aos-offset="220" class="cardb" id="card10">
           <div class="box">
-            <i class="fas fa-spinner"></i>
+            <ion-icon name="basketball-outline"></ion-icon>
             <div class="textn">My ball spinner</div>
             <p>
-              this my ball jumping to put in spinner page
+              this jumping ball loader, to put it in any page
               <b class="b">Click To Show.</b>
             </p>
           </div>
@@ -543,7 +547,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="js/vanilla-tilt.js"></script>
-  <script src="js/scr.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -37,6 +37,7 @@ var sc = document.querySelector(".scroll-up");
 window.addEventListener("scroll", function () {
   var nav = document.querySelector("nav");
   nav.classList.toggle("sticky", window.scrollY > 24);
+  icon.classList.toggle("sticky", window.scrollY > 24);
 });
 
 class ArrowPointer {
@@ -180,10 +181,9 @@ onscroll = function () {
   sections.forEach((section) => {
     if (
       scrollPosition >= section.offsetTop - section.offsetHeight * 0.1 &&
-      scrollPosition <
-        section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
+      scrollPosition <= section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
     ) {
-        var currentId = section.dataset.page;
+      var currentId = section.dataset.page;
       removeAllActiveClasses();
       addActiveClass(currentId);
     }
@@ -312,14 +312,16 @@ var icon = document.getElementById("ico");
 const enable = () => {
   document.body.classList.add("darkt");
   localStorage.setItem("darkm", "enabled");
-  icon.classList.remove("fa-sun");
-  icon.classList.add("fa-moon");
+  icon.style.transform = "rotate(50deg)";
+  // icon.classList.remove("fa-sun");
+  // icon.classList.add("fa-moon");
 };
 const disenable = () => {
   document.body.classList.remove("darkt");
   localStorage.setItem("darkm", null);
-  icon.classList.add("fa-sun");
-  icon.classList.remove("fa-moon");
+  icon.style.transform = "rotate(0deg)";
+  // icon.classList.add("fa-sun");
+  // icon.classList.remove("fa-moon");
 };
 if (dar === "enabled") {
   enable();
