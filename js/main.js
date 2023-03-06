@@ -181,7 +181,8 @@ onscroll = function () {
   sections.forEach((section) => {
     if (
       scrollPosition >= section.offsetTop - section.offsetHeight * 0.1 &&
-      scrollPosition <= section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
+      scrollPosition <=
+        section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
     ) {
       var currentId = section.dataset.page;
       removeAllActiveClasses();
@@ -220,23 +221,26 @@ navLinks.forEach((link) => {
 
 //web
 
-// document.getElementById("card1").addEventListener('mouseover', () => {
-//     card1.style.cursor = "not-allowed";
+document.getElementById("card1").addEventListener("mouseover", () => {
+  card1.style.cursor = "not-allowed";
+});
+// document.getElementById("card1").addEventListener("click", () => {
+//   window.open("https://omarsefo.github.io/Grilli/");
 // });
-document.getElementById("card1").addEventListener("click", () => {
+document.getElementById("card2").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/Dentelo/");
 });
-document.getElementById("card2").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/foot-cup/");
-});
 document.getElementById("card3").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Globe_Agency/");
+  window.open("https://omarsefo.github.io/foot-cup/");
 });
 document.getElementById("card4").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/sign-in-up/");
 });
 document.getElementById("card5").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/Khaled/");
+});
+document.getElementById("card11").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/Globe_Agency/");
 });
 document.getElementById("card6").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/starbacks/");
@@ -255,7 +259,9 @@ document.getElementById("card10").addEventListener("click", () => {
 });
 
 // Right Click disable
-document.addEventListener("contextmenu", (event) => event.preventDefault());
+https: document.addEventListener("contextmenu", (event) =>
+  event.preventDefault()
+);
 
 // copy
 var nu = document.getElementById("ef");
