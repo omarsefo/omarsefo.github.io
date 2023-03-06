@@ -313,21 +313,21 @@ $(document).ready(function () {
 });
 
 let dar = localStorage.getItem("darkm");
-var icon = document.getElementById("ico");
+var icon = document.getElementById("icondark");
+var sun = document.getElementById("sun");
+var cloudy = document.getElementById("cloudy");
 
 const enable = () => {
   document.body.classList.add("darkt");
   localStorage.setItem("darkm", "enabled");
-  icon.style.transform = "rotate(50deg)";
-  // icon.classList.remove("fa-sun");
-  // icon.classList.add("fa-moon");
+  sun.style.transform = "rotate(100deg) scale(0)";
+  cloudy.style.transform = "scale(1.5)";
 };
 const disenable = () => {
   document.body.classList.remove("darkt");
   localStorage.setItem("darkm", null);
-  icon.style.transform = "rotate(0deg)";
-  // icon.classList.add("fa-sun");
-  // icon.classList.remove("fa-moon");
+  sun.style.transform = "rotate(0deg) scale(1)";
+  cloudy.style.transform = "scale(1)";
 };
 if (dar === "enabled") {
   enable();
