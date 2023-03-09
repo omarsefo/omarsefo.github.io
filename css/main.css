@@ -42,13 +42,13 @@ to{stroke-dashoffset:6500;opacity:1}
 .menu{margin:0}
 .navbars .maxw{display:flex}
 .navbars .logo{animation:lefts .5s linear forwards;animation-delay:5.8s;opacity:0}
-.navbars .logo a{color:#fff;font-size:40px;font-weight:600;text-decoration:none;filter:drop-shadow(1px 3px 1px #4b4b4b);-webkit-filter:drop-shadow(1px 3px 1px #4b4b4b)}
+.navbars .logo .loge{user-select: none;cursor: pointer;color:#fff;font-size:40px;font-weight:600;text-decoration:none;filter:drop-shadow(1px 3px 1px #4b4b4b);-webkit-filter:drop-shadow(1px 3px 1px #4b4b4b)}
 @keyframes lefts{
 0%{transform:translateX(-100px);opacity:0;-webkit-transform:translateX(-100px);-moz-transform:translateX(-100px);-ms-transform:translateX(-100px);-o-transform:translateX(-100px)}
 100%{transform:translateX(0);opacity:1;-webkit-transform:translateX(0);-moz-transform:translateX(0);-ms-transform:translateX(0);-o-transform:translateX(0)}
 }
-.navbars .logo a span{color:var(--orange)}
-.navbars.sticky .logo a span{color:#5e5e5e}
+.navbars .logo .loge span{color:var(--orange)}
+.navbars.sticky .logo .loge span{color:#5e5e5e}
 .navbars .menu{display:flex;justify-content:right;align-items:center;flex:1 1 100%}
 .navbars .menu li{list-style:none}
 .navbars .menu li a{color:#fff;text-decoration:none;font-size:22px;font-weight:500;padding:5px 3px;margin:5px 25px;transition:all .3s ease;animation:ups .5s ease-in-out forwards;animation-delay:6.1s;opacity:0;cursor:pointer;user-select:none;filter:drop-shadow(1px 2px .5px #4b4b4b)}
