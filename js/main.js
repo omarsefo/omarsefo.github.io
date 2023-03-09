@@ -40,6 +40,15 @@ window.addEventListener("scroll", function () {
   icon.classList.toggle("sticky", window.scrollY > 24);
 });
 
+//title
+let docTitle = document.title;
+window.addEventListener("blur", () =>{
+  document.title = "come back  ;(";
+})
+window.addEventListener("focus", () =>{
+  document.title = docTitle;
+})
+
 class ArrowPointer {
   constructor() {
     this.root = document.body;
@@ -258,6 +267,7 @@ document.getElementById("card10").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/ballspinner/");
 });
 
+
 // Right Click disable
 https: document.addEventListener("contextmenu", (event) =>
   event.preventDefault()
@@ -315,22 +325,25 @@ $(document).ready(function () {
 let dar = localStorage.getItem("darkm");
 var icon = document.getElementById("icondark");
 var sun = document.getElementById("sun");
-var cloudy = document.getElementById("cloudy");
+var moon = document.getElementById("moon");
 
 const enable = () => {
   document.body.classList.add("darkt");
   localStorage.setItem("darkm", "enabled");
   sun.style.transform = "rotate(100deg) scale(0)";
-  cloudy.style.transform = "scale(1.5)";
+  moon.style.transform = " rotate(0deg) scale(1)";
 };
 const disenable = () => {
   document.body.classList.remove("darkt");
   localStorage.setItem("darkm", null);
   sun.style.transform = "rotate(0deg) scale(1)";
-  cloudy.style.transform = "scale(1)";
+  moon.style.transform = "rotate(150deg) scale(0)";
 };
 if (dar === "enabled") {
   enable();
+}
+if (dar !== "enabled") {
+  disenable();
 }
 icon.addEventListener("click", () => {
   dar = localStorage.getItem("darkm");
