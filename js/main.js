@@ -230,12 +230,12 @@ navLinks.forEach((link) => {
 
 //web
 
-document.getElementById("card1").addEventListener("mouseover", () => {
-  card1.style.cursor = "not-allowed";
-});
-// document.getElementById("card1").addEventListener("click", () => {
-//   window.open("https://omarsefo.github.io/Grilli/");
+// document.getElementById("card1").addEventListener("mouseover", () => {
+//   card1.style.cursor = "not-allowed";
 // });
+document.getElementById("card1").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/Grilli/");
+});
 document.getElementById("card2").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/Dentelo/");
 });
