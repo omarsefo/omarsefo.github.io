@@ -244,8 +244,8 @@ to{transform:rotate(360deg);-webkit-transform:rotate(360deg);-moz-transform:rota
 .contact .content .textx,.text1{font-size:20px;font-weight:600;margin-bottom:10px;color:var(--secon-color);filter:drop-shadow(.5px 1px .5px #000);-webkit-filter:drop-shadow(.5px 1px .5px #000)}
 .contact .content .left{flex-wrap:wrap}
 .contact .content .left .icons{margin:10px 0}
-.contact .content .left .ico{margin-left:50px}
-.contact .content .left .ico a{margin-top:10px;margin-left:4px;font-size:33px;text-decoration:none}
+.contact .content .left .ico{margin-left:50px;user-select: none;}
+.contact .content .left .ico a{margin-top:10px;margin-left:4px;font-size:33px;text-decoration:none;}
 .contact .content .left .ico a:hover{color:var(--orange);transform:rotate(-4deg);transition:all .2s ease;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;-webkit-transform:rotate(-4deg);-moz-transform:rotate(-4deg);-ms-transform:rotate(-4deg);-o-transform:rotate(-4deg)}
 .contact .content .left .ico .f2:hover{color:var(--f2-color)}
 .contact .content .left .ico .f3:hover{color:var(--f3-color)}
@@ -289,7 +289,7 @@ to{transform:rotate(360deg);-webkit-transform:rotate(360deg);-moz-transform:rota
 .contact .rigth .textaria textarea{padding-top:10px;resize:none;height:100px}
 .contact .rigth .buttons{height:47px;width:170px}
 .contact .rigth .buttons .button{width:100%;height:100%;outline:0;user-select:none;font-size:15px;font-family:poppins,sans-serif;border:0;background:var(--first-color);color:var(--secon-color);position:relative;overflow:hidden;transition:all .2s ease;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease}
-.contact .rigth .buttons .button:hover,.home .maxw .home-container .button:hover{color:#e9b200;transform:translate(1px,1px);-webkit-transform:translate(1px,1px);-moz-transform:translate(1px,1px);-ms-transform:translate(1px,1px);-o-transform:translate(1px,1px)}
+.contact .rigth .buttons .button:active,.home .maxw .home-container .button:active{color:#e9b200;transform:translate(1px,1px);-webkit-transform:translate(1px,1px);-moz-transform:translate(1px,1px);-ms-transform:translate(1px,1px);-o-transform:translate(1px,1px)}
 .contact .rigth .buttons .button:disabled{opacity:.7;cursor:not-allowed}
 .contact .rigth .buttons button span:nth-child(1),.home .maxw .home-container .button span:nth-child(1){position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(to right,transparent,#ffd558);animation:input1 2s linear infinite}
 @keyframes input1{
