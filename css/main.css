@@ -127,7 +127,7 @@ to{stroke-dashoffset:6500;opacity:1}
 0%{opacity:0}
 100%{opacity:1}
 }
-.skill-card{position:relative;background:var(--secon-color);width:80px;height:80px;display:grid;user-select:none;place-items:center;border-radius:12px;cursor:pointer;vertical-align:middle;-webkit-border-radius:12px;-moz-border-radius:12px;-ms-border-radius:12px;-o-border-radius:12px}
+.skill-card{position:relative;background:var(--secon-color);width:80px;height:80px;display:grid;user-select:none;place-items:center;border-radius:12px;cursor:pointer;filter:drop-shadow(2px 2px 1px #4b4b4b);vertical-align:middle;-webkit-border-radius:12px;-moz-border-radius:12px;-ms-border-radius:12px;-o-border-radius:12px;-webkit-filter:drop-shadow(2px 2px 1px #4b4b4b)}
 .tooltips{position:absolute;top:-40px;background:var(--orange);min-width:max-content;font-size:15px;font-weight:700;padding:5px 10px;border-radius:4px;box-shadow:var(--shadow-1);transform:translateY(-10px);opacity:0;pointer-events:none;transition:.25s ease-in-out;z-index:1;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;-webkit-transition:.25s ease-in-out;-moz-transition:.25s ease-in-out;-ms-transition:.25s ease-in-out;-o-transition:.25s ease-in-out}
 .hero-social-link .tooltips{--trans-x:10px;left:calc(100% + 10px);top:50%;transform:translateY(-50%) translateX(var(--trans-x))}
 .hero-social-link:is(:hover,:focus) .tooltips{--trans-x:0;opacity:1}
@@ -197,7 +197,7 @@ to{stroke-dashoffset:6500;opacity:1}
 .projects .countainer .card .img-div::after{content:"";position:absolute;background:linear-gradient(350deg,#000000fb,#00000069);top:0;left:0;width:100%;height:100%;opacity:1;transition:all .5s;backdrop-filter:blur(1px);-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s}
 .projects .countainer .card:hover .img-div::after{opacity:0}
 .projects .countainer .card:hover img{transform:scale(1.2) rotate(5deg);-webkit-transform:scale(1.2) rotate(5deg);-moz-transform:scale(1.2) rotate(5deg);-ms-transform:scale(1.2) rotate(5deg);-o-transform:scale(1.2) rotate(5deg)}
-.projects .countainer .card .imgbx{transition:all .5s;position:absolute;left:0;top:15%;z-index:20;text-align:center;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s}
+.projects .countainer .card .imgbx{transition:all .5s;position:absolute;left:0;top:15%;z-index:20;filter:drop-shadow(1px 1px 2px #4b4b4b);text-align:center;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;-webkit-filter:drop-shadow(1px 1px 2px #4b4b4b)}
 .projects .countainer .imgbx .imgframework{position:relative;display:flex;align-items:center;justify-content:center}
 .projects .countainer .imgbx .imgframework .framework{position:absolute;bottom:0;right:0}
 .projects .countainer .card:hover .imgbx{opacity:0}
@@ -214,7 +214,7 @@ to{stroke-dashoffset:6500;opacity:1}
 to{transform:rotate(360deg);-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-o-transform:rotate(360deg)}
 }
 .projects .countainer .card .tex{font-size:25px;font-weight:500;margin:10px 0 0 0}
-.tex2{position:relative;text-align:center;font-weight:500;font-family:poppins,sans-serif;font-size:20px;padding:5px 0;border-radius:55px;color:#111;background-image:linear-gradient(45deg,rgba(0,0,0,.219) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.219) 50%,rgba(0,0,0,.219) 75%,transparent 75%,transparent)!important;margin-bottom:20px;margin-top:10px;cursor:pointer;animation:light 4s linear infinite;-webkit-animation:light 4s linear infinite}
+.tex2{position:relative;text-align:center;font-weight:500;font-family:poppins,sans-serif;font-size:20px;padding:5px 0;border-radius:55px;color:#111!important;background-image:linear-gradient(45deg,rgba(0,0,0,.219) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.219) 50%,rgba(0,0,0,.219) 75%,transparent 75%,transparent)!important;margin-bottom:20px;margin-top:10px;cursor:pointer;filter:drop-shadow(1px 1px 2px #4b4b4b);animation:light 4s linear infinite;-webkit-animation:light 4s linear infinite;-webkit-filter:drop-shadow(1px 1px 2px #4b4b4b)}
 @keyframes light{
 0%{opacity:1}
 50%{opacity:.6}
@@ -223,7 +223,7 @@ to{transform:rotate(360deg);-webkit-transform:rotate(360deg);-moz-transform:rota
 .projects .carousel .cardb{background-color:#333;text-align:center;border-radius:6px;padding:20px 25px;cursor:grab;-webkit-border-radius:6px;-moz-border-radius:6px;-ms-border-radius:6px;-o-border-radius:6px}
 .projects .carousel .cardb:active{cursor:grabbing}
 .projects .carousel .cardb:hover{background-color:var(--orange);color:#333}
-.projects .carousel .cardb .box{display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-ms-transition:all .3s ease;-o-transition:all .3s ease}
+.projects .carousel .cardb .box{display:flex;flex-direction:column;align-items:center;justify-content:center;filter:drop-shadow(1px 1px 1px #4b4b4b);transition:all .3s ease;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-ms-transition:all .3s ease;-o-transition:all .3s ease;-webkit-filter:drop-shadow(1px 1px 1px #4b4b4b)}
 .projects .carousel .cardb:hover .box{transform:scale(1.05);-webkit-transform:scale(1.05);-moz-transform:scale(1.05);-ms-transform:scale(1.05);-o-transform:scale(1.05)}
 .projects .carousel .cardb:hover .b{color:#262626}
 .b{color:var(--orange)}
@@ -244,8 +244,8 @@ to{transform:rotate(360deg);-webkit-transform:rotate(360deg);-moz-transform:rota
 .contact .content .textx,.text1{font-size:20px;font-weight:600;margin-bottom:10px;color:var(--secon-color);filter:drop-shadow(.5px 1px .5px #000);-webkit-filter:drop-shadow(.5px 1px .5px #000)}
 .contact .content .left{flex-wrap:wrap}
 .contact .content .left .icons{margin:10px 0}
-.contact .content .left .ico{margin-left:50px;user-select: none;}
-.contact .content .left .ico a{margin-top:10px;margin-left:4px;font-size:33px;text-decoration:none;}
+.contact .content .left .ico{margin-left:50px;user-select:none}
+.contact .content .left .ico a{margin-top:10px;margin-left:4px;font-size:33px;text-decoration:none}
 .contact .content .left .ico a:hover{color:var(--orange);transform:rotate(-4deg);transition:all .2s ease;-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-ms-transition:all .2s ease;-o-transition:all .2s ease;-webkit-transform:rotate(-4deg);-moz-transform:rotate(-4deg);-ms-transform:rotate(-4deg);-o-transform:rotate(-4deg)}
 .contact .content .left .ico .f2:hover{color:var(--f2-color)}
 .contact .content .left .ico .f3:hover{color:var(--f3-color)}
