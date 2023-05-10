@@ -49,17 +49,6 @@ window.addEventListener("focus", () =>{
   document.title = docTitle;
 })
 
-window.onload = function () {
-Particles.init({
-  selector: ".background",
-  connectParticles: false,
-  maxParticles: 170,
-  color: "#ffd558",
-  speed: 1,
-  sizeVariations: 4,
-});
-}
-
 class ArrowPointer {
   constructor() {
     this.root = document.body;

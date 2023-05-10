@@ -37,8 +37,8 @@ to{fill:var(--orange);stroke:transparent}
 to{stroke-dashoffset:6500;opacity:1}
 }
 .maxw{padding:0 30px;margin:0 60px}
-.navbars{width:100%;padding:30px 0;font-family:Poppins,sans-serif;position:fixed;z-index:10;transition:all .3s ease;border-radius:0 0 15px 15px}
-.navbars.sticky{padding:10px 0;background:var(--orange);box-shadow:2px 2px 5px rgba(0,0,0,.5),1px 1px 5px rgba(0,0,0,.5)}
+.navbars{ width:100%; padding:30px 0; font-family:Poppins,sans-serif; position:fixed; z-index:10; transition:all .3s ease; border-radius:0 0 7px 7px; -webkit-border-radius:0 0 7px 7px; -moz-border-radius:0 0 7px 7px; -ms-border-radius:0 0 7px 7px; -o-border-radius:0 0 7px 7px; }
+.navbars.sticky{padding:10px 0;background:var(--orange);box-shadow:1px 1px 3px rgba(0,0,0,.5),1px 1px 5px rgba(0,0,0,.5)}
 .menu{margin:0}
 .navbars .maxw{display:flex}
 .navbars .logo{animation:lefts .5s linear forwards;animation-delay:5.8s;opacity:0}
