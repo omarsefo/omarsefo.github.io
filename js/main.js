@@ -22,7 +22,7 @@ function logo() {
     spinner.classList.remove("active");
   }, 5000);
 }
-//scroll up
+// scroll up
 document.getElementById("scroll").addEventListener("click", () => {
   window.scrollTo(0, 0);
 });
@@ -248,24 +248,54 @@ document.getElementById("card4").addEventListener("click", () => {
 document.getElementById("card5").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/Khaled/");
 });
-document.getElementById("card11").addEventListener("click", () => {
+document.getElementById("card6").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/Globe_Agency/");
 });
-document.getElementById("card6").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/starbacks/");
-});
 document.getElementById("card7").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/moon/moon.html");
+  if (window.innerWidth >= 1300) {
+  window.open("https://omarsefo.github.io/icecream/");
+} else {
+  const modal = document.getElementById("myModal");
+  modal.style.display = "block";
+
+  const closeBtn = document.querySelector(".closea");
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
 });
 document.getElementById("card8").addEventListener("click", () => {
-  window.open("http://omarsefo.github.io/be-real/");
+  if (window.innerWidth >= 1300) {
+    window.open("https://omarsefo.github.io/moon/moon.html");
+  } else {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+    const closeBtn = document.querySelector(".closea");
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
 });
 document.getElementById("card9").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/norway/");
+  window.open("http://omarsefo.github.io/be-real/");
 });
 document.getElementById("card10").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/ballspinner/");
 });
+
 
 
 // Right Click disable
@@ -390,7 +420,7 @@ function sendMail() {
     message: document.getElementById("message").value,
   };
   emailjs
-    .send("service_enze2af", "template_43vqktk", tempParms)
+    .send("service_zgjlb27", "template_43vqktk", tempParms)
     .then(function (res) {
       console.log("success", res.status);
       document.body.style.cursor = "wait";
