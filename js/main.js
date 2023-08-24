@@ -290,7 +290,23 @@ document.getElementById("card8").addEventListener("click", () => {
   }
 });
 document.getElementById("card9").addEventListener("click", () => {
-  window.open("http://omarsefo.github.io/be-real/");
+  if (window.innerWidth >= 1300) {
+    window.open("http://omarsefo.github.io/be-real/");
+  } else {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+
+    const closeBtn = document.querySelector(".closea");
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
 });
 document.getElementById("card10").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/ballspinner/");
