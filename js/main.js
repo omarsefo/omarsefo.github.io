@@ -230,31 +230,58 @@ navLinks.forEach((link) => {
 
 //web
 
+document.addEventListener("DOMContentLoaded", function() {
+  const cards = document.querySelectorAll(".projects .countainer .card");
+
+  cards.forEach(card => {
+    const loadingOverlay = card.querySelector(".loading-overlay");
+    const image = card.querySelector("img");
+
+    loadingOverlay.style.display = "flex"; // Show the loading overlay when the image starts loading
+
+    image.onload = function() {
+      loadingOverlay.style.display = "none"; // Hide the loading overlay when image loads
+    };
+
+    image.onerror = function() {
+      // Handle image loading error if needed
+      loadingOverlay.style.display = "flex"; // Hide the loading overlay on image loading error
+    };
+  });
+});
+
 // document.getElementById("card1").addEventListener("mouseover", () => {
 //   card1.style.cursor = "not-allowed";
 // });
-document.getElementById("card1").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Grilli/");
-});
-document.getElementById("card2").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Dentelo/");
-});
-document.getElementById("card3").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/foot-cup/");
-});
-document.getElementById("card4").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/sign-in-up/");
-});
-document.getElementById("card5").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Khaled/");
-});
-document.getElementById("card6").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Globe_Agency/");
-});
-document.getElementById("card7").addEventListener("click", () => {
-  if (window.innerWidth >= 1300) {
-  window.open("https://omarsefo.github.io/icecream/");
-} else {
+const projects = [
+  "https://omarsefo.github.io/Grilli/",
+  "https://omarsefo.github.io/Dentelo/",
+  "https://omarsefo.github.io/foot-cup/",
+  "https://omarsefo.github.io/sign-in-up/",
+  "https://omarsefo.github.io/Khaled/",
+  "https://omarsefo.github.io/Globe_Agency/",
+];
+
+const modalTriggerProjects = [
+  {
+    link: "https://omarsefo.github.io/icecream/",
+    minWidth: 1300
+  },
+  {
+    link: "https://omarsefo.github.io/moon/moon.html",
+    minWidth: 1300
+  },
+  {
+    link: "http://omarsefo.github.io/be-real/",
+    minWidth: 1300
+  },
+];
+
+function openLink(link) {
+  window.open(link);
+}
+
+function displayModal() {
   const modal = document.getElementById("myModal");
   modal.style.display = "block";
 
@@ -269,48 +296,42 @@ document.getElementById("card7").addEventListener("click", () => {
     }
   });
 }
-});
-document.getElementById("card8").addEventListener("click", () => {
-  if (window.innerWidth >= 1300) {
-    window.open("https://omarsefo.github.io/moon/moon.html");
-  } else {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "block";
 
-    const closeBtn = document.querySelector(".closea");
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
+for (let i = 0; i < projects.length; i++) {
+  const cardId = `card${i + 1}`;
+  const projectLink = projects[i];
 
-    window.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  }
-});
-document.getElementById("card9").addEventListener("click", () => {
-  if (window.innerWidth >= 1300) {
-    window.open("http://omarsefo.github.io/be-real/");
-  } else {
-    const modal = document.getElementById("myModal");
-    modal.style.display = "block";
+  document.getElementById(cardId).addEventListener("click", () => {
+    openLink(projectLink);
+  });
+}
 
-    const closeBtn = document.querySelector(".closea");
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
+for (const projectConfig of modalTriggerProjects) {
+  const cardId = `card${modalTriggerProjects.indexOf(projectConfig) + 7}`;
+  const { link, minWidth } = projectConfig;
 
-    window.addEventListener("click", (event) => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  }
-});
-document.getElementById("card10").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/ballspinner/");
-});
+  document.getElementById(cardId).addEventListener("click", () => {
+    if (window.innerWidth >= minWidth) {
+      openLink(link);
+    } else {
+      displayModal();
+    }
+  });
+}
+// remove animation
+function adjustAnimations() {
+  const screenWidth = window.innerWidth;
+  const effect1 = document.querySelector(".effect-1");
+
+    if (screenWidth < 900) {
+      effect1.classList.remove("effect-1");
+    } else {
+      effect1.classList.add("effect-1");
+    }
+}
+adjustAnimations();
+window.addEventListener("resize", adjustAnimations);
+
 
 
 
