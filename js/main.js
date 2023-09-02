@@ -237,18 +237,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const loadingOverlay = card.querySelector(".loading-overlay");
     const image = card.querySelector("img");
 
-    loadingOverlay.style.display = "flex"; // Show the loading overlay when the image starts loading
+    loadingOverlay.style.display = "flex";
+
+    image.src = addRandomQueryParam(image.src);
 
     image.onload = function() {
-      loadingOverlay.style.display = "none"; // Hide the loading overlay when image loads
+      loadingOverlay.style.display = "none";
     };
 
     image.onerror = function() {
-      // Handle image loading error if needed
-      loadingOverlay.style.display = "flex"; // Hide the loading overlay on image loading error
+      loadingOverlay.style.display = "flex";
     };
   });
+
+  function addRandomQueryParam(url) {
+    const randomParam = "cache=" + Math.random().toString(36).substring(7);
+    if (url.includes("?")) {
+      return url + "&" + randomParam;
+    } else {
+      return url + "?" + randomParam;
+    }
+  }
 });
+
 
 // document.getElementById("card1").addEventListener("mouseover", () => {
 //   card1.style.cursor = "not-allowed";
@@ -281,21 +292,22 @@ function openLink(link) {
   window.open(link);
 }
 
+const modal = document.getElementById("myModal");
 function displayModal() {
-  const modal = document.getElementById("myModal");
   modal.style.display = "block";
-
-  const closeBtn = document.querySelector(".closea");
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+  updateModalMessage("Sorry, this page is not supported in mobile and small screens.");
 }
+const closeBtn = document.querySelector(".closea");
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 
 for (let i = 0; i < projects.length; i++) {
   const cardId = `card${i + 1}`;
@@ -318,19 +330,12 @@ for (const projectConfig of modalTriggerProjects) {
     }
   });
 }
-// remove animation
-function adjustAnimations() {
-  const screenWidth = window.innerWidth;
-  const effect1 = document.querySelector(".effect-1");
 
-    if (screenWidth < 900) {
-      effect1.classList.remove("effect-1");
-    } else {
-      effect1.classList.add("effect-1");
-    }
+// modal message
+const modalMessage = document.getElementById("modalMessage");
+function updateModalMessage(message) {
+  modalMessage.textContent = message;
 }
-adjustAnimations();
-window.addEventListener("resize", adjustAnimations);
 
 
 
@@ -431,10 +436,8 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-    // check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
@@ -449,6 +452,7 @@ var messag = document.getElementById("message");
 formBtn.addEventListener("click", sendMail);
 
 let overlayform = document.querySelector(".overlay-form");
+
 function sendMail() {
   var tempParms = {
     from_name: document.getElementById("email").value,
@@ -456,12 +460,14 @@ function sendMail() {
     to_name: "omarsefo7@gmail.com",
     message: document.getElementById("message").value,
   };
+  document.body.style.cursor = "wait";
+  overlayform.classList.add("active");
   emailjs
     .send("service_zgjlb27", "template_43vqktk", tempParms)
     .then(function (res) {
       console.log("success", res.status);
-      document.body.style.cursor = "wait";
-      overlayform.classList.add("active");
+      modal.style.display = "block";
+      updateModalMessage("thanks for sending us a message, We will reply to you as soon as possible");
       setTimeout(() => {
         email.value = "";
         vname.value = "";
@@ -471,19 +477,21 @@ function sendMail() {
           overlayform.classList.remove("active");
         }, 2000);
       }, 7000);
+    })
+    .catch(function (error) {
+      console.error("error", error);
+      modal.style.display = "block";
+      updateModalMessage("Sorry, there's a problem try again later, we will fix it.");
+      setTimeout(() => {
+        email.value = "";
+        vname.value = "";
+        messag.value = "";
+        setTimeout(() => {
+          document.body.style.cursor = "default";
+          overlayform.classList.remove("active");
+        }, 1000);
+      }, 4000);
     });
-  // overlayform.classList.add("active");
-  // ok.innerHTML = "sending2...";
-  // document.body.style.cursor = "wait";
-  // setTimeout(() => {
-  //     email.value = '';
-  //     vname.value = '';
-  //     messag.value = '';
-  //     messag.style.border = "2px solid var(--orange)";
-  //     ok.innerHTML = "Sorry Your Message is not Sent.";
-  //     document.body.style.cursor = "default";
-  //     setTimeout(() => {
-  //         overlayform.classList.remove("active");
-  //     }, 3000)
-  // }, 3000);
 }
+
+
