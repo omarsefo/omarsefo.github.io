@@ -3,6 +3,8 @@ document.addEventListener("load", logo);
 var spinner = document.getElementById("spinner");
 
 function logo() {
+  spinner.classList.add("active");
+  spinner.style.cursor = "wait";
   setTimeout(() => {
     document.body.style.overflowY = "scroll";
     val = window.scrollY;
@@ -13,9 +15,7 @@ function logo() {
   }, 500);
   setTimeout(() => {
     document.body.style.overflowY = "hidden";
-  }, 1500);
-  spinner.classList.add("active");
-  spinner.style.cursor = "wait";
+  }, 2000);
   setTimeout(() => {
     spinner.style.cursor = "default";
     document.body.style.overflowY = "scroll";
@@ -338,8 +338,6 @@ function updateModalMessage(message) {
 }
 
 
-
-
 // Right Click disable
 https: document.addEventListener("contextmenu", (event) =>
   event.preventDefault()
@@ -358,13 +356,13 @@ nu.addEventListener("click", () => {
 
 // type
 var typed = new Typed(".typee", {
-  strings: ["Front end", "Developer", "Flutter", "Developer"],
+  strings: ["Flutter", "Developer","IT","Front end", "Developer" ],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
 });
 var typed = new Typed(".type2", {
-  strings: ["Omar", "Sefo", "Front end", "Flutter", "Developer"],
+  strings: ["Omar Sefo", "IT", "Front end", "Flutter", "Developer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
