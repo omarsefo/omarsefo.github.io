@@ -490,6 +490,13 @@ function sendMail() {
         }, 1000);
       }, 4000);
     });
+};
+// dynamic date
+const currentYear = new Date().getFullYear();
+const copyrightYearElement = document.getElementById("copyright-year");
+if (copyrightYearElement) {
+  copyrightYearElement.textContent = currentYear;
 }
+
 
 
