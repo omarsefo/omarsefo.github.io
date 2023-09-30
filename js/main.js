@@ -41,13 +41,13 @@ window.addEventListener("scroll", function () {
 });
 
 //title
-let docTitle = document.title;
-window.addEventListener("blur", () =>{
-  document.title = "come back  ;(";
-})
-window.addEventListener("focus", () =>{
-  document.title = docTitle;
-})
+// let docTitle = document.title;
+// window.addEventListener("blur", () => {
+//   document.title = "come back  ;(";
+// })
+// window.addEventListener("focus", () => {
+//   document.title = docTitle;
+// })
 
 class ArrowPointer {
   constructor() {
@@ -191,7 +191,7 @@ onscroll = function () {
     if (
       scrollPosition >= section.offsetTop - section.offsetHeight * 0.1 &&
       scrollPosition <=
-        section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
+      section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
     ) {
       var currentId = section.dataset.page;
       removeAllActiveClasses();
@@ -230,7 +230,7 @@ navLinks.forEach((link) => {
 
 //web
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".projects .countainer .card");
 
   cards.forEach(card => {
@@ -241,11 +241,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     image.src = addRandomQueryParam(image.src);
 
-    image.onload = function() {
+    image.onload = function () {
       loadingOverlay.style.display = "none";
     };
 
-    image.onerror = function() {
+    image.onerror = function () {
       loadingOverlay.style.display = "flex";
     };
   });
@@ -260,33 +260,47 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
 // document.getElementById("card1").addEventListener("mouseover", () => {
 //   card1.style.cursor = "not-allowed";
 // });
-const projects = [
-  "https://omarsefo.github.io/Grilli/",
-  "https://omarsefo.github.io/Dentelo/",
-  "https://omarsefo.github.io/foot-cup/",
-  "https://omarsefo.github.io/sign-in-up/",
-  "https://omarsefo.github.io/Khaled/",
-  "https://omarsefo.github.io/Globe_Agency/",
-];
-
-const modalTriggerProjects = [
-  {
-    link: "https://omarsefo.github.io/icecream/",
-    minWidth: 1300
-  },
-  {
-    link: "https://omarsefo.github.io/moon/moon.html",
-    minWidth: 1300
-  },
-  {
-    link: "http://omarsefo.github.io/be-real/",
-    minWidth: 1300
-  },
-];
+document.getElementById("card1").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/foodie/");
+});
+document.getElementById("card2").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/Grilli/");
+});
+document.getElementById("card3").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/Dentelo/");
+});
+document.getElementById("card4").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/foot-cup/");
+});
+document.getElementById("card5").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/sign-in-up/");
+});
+document.getElementById("card6").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/Khaled/");
+});
+document.getElementById("card7").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/Globe_Agency/");
+});
+document.getElementById("card8").addEventListener("click", () => {
+  if (window.innerWidth >= 1300) {
+    openLink("http://omarsefo.github.io/be-real/");
+  } else {
+    displayModal();
+  }
+});
+document.getElementById("card9").addEventListener("click", () => {
+  if (window.innerWidth >= 1300) {
+    openLink("http://omarsefo.github.io/icecream/");
+  } else {
+    displayModal();
+  }
+});
+document.getElementById("card10").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/ballspinner/");
+});
 
 function openLink(link) {
   window.open(link);
@@ -297,6 +311,13 @@ function displayModal() {
   modal.style.display = "block";
   updateModalMessage("Sorry, this page is not supported in mobile and small screens.");
 }
+
+// modal message
+const modalMessage = document.getElementById("modalMessage");
+function updateModalMessage(message) {
+  modalMessage.textContent = message;
+}
+
 const closeBtn = document.querySelector(".closea");
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
@@ -307,35 +328,6 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
-
-
-for (let i = 0; i < projects.length; i++) {
-  const cardId = `card${i + 1}`;
-  const projectLink = projects[i];
-
-  document.getElementById(cardId).addEventListener("click", () => {
-    openLink(projectLink);
-  });
-}
-
-for (const projectConfig of modalTriggerProjects) {
-  const cardId = `card${modalTriggerProjects.indexOf(projectConfig) + 7}`;
-  const { link, minWidth } = projectConfig;
-
-  document.getElementById(cardId).addEventListener("click", () => {
-    if (window.innerWidth >= minWidth) {
-      openLink(link);
-    } else {
-      displayModal();
-    }
-  });
-}
-
-// modal message
-const modalMessage = document.getElementById("modalMessage");
-function updateModalMessage(message) {
-  modalMessage.textContent = message;
-}
 
 
 // Right Click disable
@@ -356,7 +348,7 @@ nu.addEventListener("click", () => {
 
 // type
 var typed = new Typed(".typee", {
-  strings: ["Flutter", "Developer","IT","Front end", "Developer" ],
+  strings: ["Flutter", "Developer", "IT", "Front end", "Developer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,

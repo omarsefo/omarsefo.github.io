@@ -101,7 +101,7 @@ to{stroke-dashoffset:6500;opacity:1}
 .skills .content .left .spa{color:var(--orange);font-size:30px;filter:drop-shadow(1px 1px .5px #000)}
 .skills .content .left .texts span{color:var(--orange);font-weight:600;font-size:40px}
 .skills-list>li{list-style:none}
-.skills-box .skills-list,.skills-box.active .tools-list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding-left:2rem;gap:15px;margin-top:100px;animation:fadeIn .5s ease-out forwards}
+.skills-box .skills-list,.skills-box.active .tools-list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding-left:2rem;gap:15px;animation:fadeIn .5s ease-out forwards}
 @keyframes fadeIn{
 0%{opacity:0}
 100%{opacity:1}
@@ -176,18 +176,19 @@ to{stroke-dashoffset:6500;opacity:1}
 .projects .countainer .card .spinnercard{border:4px solid rgba(255,255,255,.3);border-top:4px solid #fff;border-radius:50%;width:40px;height:40px;animation:spin 1s linear infinite}
 .projects .countainer .card .img-div{width:100%;height:100%;position:relative;transition:all .3s;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s}
 .projects .countainer .card img{width:100%;height:100%;object-fit:cover;cursor:pointer;position:relative;transition:all .4s;-webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;-o-transition:all .4s}
-.projects .countainer .card .img-div::after{content:"";position:absolute;background:linear-gradient(350deg,#000000fb,#00000069);top:0;left:0;width:100%;height:100%;opacity:1;transition:all .5s;backdrop-filter:blur(1px);-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s}
+.projects .countainer .card .img-div::after{content:"";position:absolute;background:#000000c0;top:0;left:0;width:100%;height:100%;opacity:1;transition:all .5s;backdrop-filter:blur(1px);-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s}
 .projects .countainer .card:hover .img-div::after{opacity:0}
 .projects .countainer .card:hover img{transform:scale(1.2) rotate(5deg);-webkit-transform:scale(1.2) rotate(5deg);-moz-transform:scale(1.2) rotate(5deg);-ms-transform:scale(1.2) rotate(5deg);-o-transform:scale(1.2) rotate(5deg)}
 .projects .countainer .card .imgbx{transition:all .5s;position:absolute;width:100%;height:100%;top:0;left:0;display:grid;place-content:center;z-index:20;filter:drop-shadow(1px 1px 2px #4b4b4b);text-align:center;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;-webkit-filter:drop-shadow(1px 1px 2px #4b4b4b)}
 .projects .countainer .imgbx .imgframework{position:relative;display:flex;align-items:center;justify-content:center}
-.projects .countainer .imgbx .imgframework .framework{position:absolute;bottom:0;right:0}
+.projects .countainer .imgbx .framework{position:absolute;width:100px;aspect-ratio:1/1;top:-50px;left:-50px;display:flex;align-items:flex-end;justify-content:center;background-color:#000;transform:rotate(-44deg);-webkit-transform:rotate(-44deg);-moz-transform:rotate(-44deg);-ms-transform:rotate(-44deg);-o-transform:rotate(-44deg)}
 .projects .countainer .card:hover .imgbx{opacity:0}
 .projects .countainer .card:hover p{color:#fff}
 .projects .countainer .card:hover .b{color:var(--orange)}
-.add{color:var(--orange);font-size:25px!important;padding:0!important}
 .cent{width:100%}
-.vuecolor{font-size:30px!important}
+.size{font-size:55px!important}
+.vuecolor{font-size:30px!important;color:#41b883!important;transform:rotate(44deg)}
+.reactcolor{font-size:30px!important;color:#61dbfb!important;margin-bottom:5px;transform:rotate(44deg)}
 .projects .countainer .card i,.projects .countainer .card ion-icon{font-size:45px;color:var(--orange)}
 .projects .countainer .card:hover i{color:var(--orange);transition:all .8s ease;-webkit-transition:all .8s ease;-moz-transition:all .8s ease;-ms-transition:all .8s ease;-o-transition:all .8s ease}
 .projects .countainer .card:active{color:#000;background-color:#ffca2c;border-color:#ffc720;box-shadow:0 0 0 .25rem rgba(217,164,6,.5)}
