@@ -353,6 +353,8 @@ footer{margin-bottom:50px}
 .home .maxw .home-container .text-2{font-size:50px;font-weight:600;margin:0}
 .home .maxw .home-container .text-3{font-size:30px;margin:0}
 .home .home-container{margin:0}
+.skills .content .left p{font-size:23px}
+.skills .content .left .spa{font-size:23px}
 }
 @media (max-width:400px){
 #card2{bottom:5%!important}

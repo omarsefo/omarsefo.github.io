@@ -348,13 +348,13 @@ nu.addEventListener("click", () => {
 
 // type
 var typed = new Typed(".typee", {
-  strings: ["Flutter", "Developer", "IT", "Front end", "Developer"],
+  strings: ["Information", "Technology", "Engineer", "Front end", "Developer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
 });
 var typed = new Typed(".type2", {
-  strings: ["Omar Sefo", "IT", "Front end", "Flutter", "Developer"],
+  strings: ["Omar Sefo", "Front end", "Developer", "Information", "Technology", "Engineer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
