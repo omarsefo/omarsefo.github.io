@@ -99,7 +99,7 @@ to{stroke-dashoffset:6500;opacity:1}
 .skills .content .rigth{width:50%;font-family:poppins,sans-serif}
 .skills .content .left .texts{font-size:25px;font-weight:600;margin-bottom:30px;color:var(--secon-color);font-size:35px;filter:drop-shadow(.5px 1px .5px #000)}
 .skills .content .left .spa{color:var(--orange);font-size:30px;filter:drop-shadow(1px 1px .5px #000)}
-.skills .content .left .texts span{color:var(--orange);font-weight:600;font-size:40px}
+.skills .content .left .texts span{color:var(--orange);font-weight:600}
 .skills-list>li{list-style:none}
 .skills-box .skills-list,.skills-box.active .tools-list{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;padding-left:2rem;gap:15px;animation:fadeIn .5s ease-out forwards}
 @keyframes fadeIn{
@@ -285,6 +285,13 @@ footer span a:hover{color:#eee;text-decoration:underline;transition:all .5s ease
 .home .maxw .home-container .text-3{font-size:40px;margin:5px 0}
 .maxw{padding:0 10px}
 }
+@media (max-width:900px) and (orientation:landscape){
+.home .home-container{margin-top:6px}
+.home .maxw .home-container .text-1{font-size:24px;margin:0}
+.home .maxw .home-container .text-2{font-size:50px;font-weight:600;margin:0}
+.home .maxw .home-container .text-3{font-size:32px;margin:3px 0;margin:0}
+.home .image-container img{width:200px;height:200px}
+}
 @media (max-width:900px){
 body{overflow-x:hidden;overflow-y:scroll}
 .scroll-up{bottom:80px}
@@ -340,13 +347,6 @@ footer{margin-bottom:50px}
 .alart{width:100%;font-size:60px;color:var(--orange);padding:5px 0 20px 0}
 .skills-box .skills-list,.skills-box.active .tools-list{margin-top:50px;padding:0}
 }
-@media (max-width:900px) and (orientation:landscape){
-.home .home-container{margin-top:6px}
-.home .maxw .home-container .text-1{font-size:24px;margin:0}
-.home .maxw .home-container .text-2{font-size:50px;font-weight:600;margin:0}
-.home .maxw .home-container .text-3{font-size:32px;margin:3px 0;margin:0}
-.home .image-container img{width:200px;height:200px}
-}
 @media (max-width:538px){
 .maxw{margin:auto}
 .home .maxw .home-container .text-1{font-size:23px;margin:0}
@@ -358,6 +358,8 @@ footer{margin-bottom:50px}
 }
 @media (max-width:400px){
 #card2{bottom:5%!important}
+.skills .content .left .texts{font-size:30px}
+.skills .content .left .texts span{font-size:30px}
 }
 @media (max-width:359px){
 .maxw{margin:auto}

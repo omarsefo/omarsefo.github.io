@@ -288,14 +288,14 @@ document.getElementById("card8").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/be-real/");
   } else {
-    displayModal();
+    displayModal("Sorry, this page is not supported in mobile and small screens.","alert-circle-outline");
   }
 });
 document.getElementById("card9").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/icecream/");
   } else {
-    displayModal();
+    displayModal("Sorry, this page is not supported in mobile and small screens.","alert-circle-outline");
   }
 });
 document.getElementById("card10").addEventListener("click", () => {
@@ -307,9 +307,11 @@ function openLink(link) {
 }
 
 const modal = document.getElementById("myModal");
-function displayModal() {
+const Alart = document.getElementById("alart");
+function displayModal(message, icon) {
   modal.style.display = "block";
-  updateModalMessage("Sorry, this page is not supported in mobile and small screens.");
+  updateModalMessage(message);
+  Alart.setAttribute("name", icon);
 }
 
 // modal message
@@ -456,8 +458,7 @@ function sendMail() {
     .send("service_zgjlb27", "template_43vqktk", tempParms)
     .then(function (res) {
       console.log("success", res.status);
-      modal.style.display = "block";
-      updateModalMessage("thanks for sending us a message, We will reply to you as soon as possible");
+      displayModal("thanks for sending us a message, We will reply to you as soon as possible","checkmark-circle-outline");
       setTimeout(() => {
         email.value = "";
         vname.value = "";
@@ -470,8 +471,7 @@ function sendMail() {
     })
     .catch(function (error) {
       console.error("error", error);
-      modal.style.display = "block";
-      updateModalMessage("Sorry, there's a problem try again later, we will fix it.");
+      displayModal("Sorry, there's a problem try again later, we will fix it.","checkmark-circle-outline");
       setTimeout(() => {
         email.value = "";
         vname.value = "";
