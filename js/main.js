@@ -264,42 +264,33 @@ document.addEventListener("DOMContentLoaded", function () {
 //   card1.style.cursor = "not-allowed";
 // });
 document.getElementById("card1").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/foodie/");
+  window.open("https://omarsefo.github.io/fastfood/");
 });
 document.getElementById("card2").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Grilli/");
+  window.open("https://omarsefo.github.io/dental/");
 });
 document.getElementById("card3").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Dentelo/");
-});
-document.getElementById("card4").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/foot-cup/");
-});
-document.getElementById("card5").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/sign-in-up/");
-});
-document.getElementById("card6").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Khaled/");
-});
-document.getElementById("card7").addEventListener("click", () => {
   window.open("https://omarsefo.github.io/Globe_Agency/");
 });
-document.getElementById("card8").addEventListener("click", () => {
+document.getElementById("card4").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/sign-in-up/");
+});
+document.getElementById("card5").addEventListener("click", () => {
+  window.open("https://omarsefo.github.io/Khaled/");
+});
+document.getElementById("card6").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/be-real/");
   } else {
     displayModal("Sorry, this page is not supported in mobile and small screens.","alert-circle-outline");
   }
 });
-document.getElementById("card9").addEventListener("click", () => {
+document.getElementById("card7").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/icecream/");
   } else {
     displayModal("Sorry, this page is not supported in mobile and small screens.","alert-circle-outline");
   }
-});
-document.getElementById("card10").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/ballspinner/");
 });
 
 function openLink(link) {
