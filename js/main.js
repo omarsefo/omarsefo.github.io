@@ -282,14 +282,14 @@ document.getElementById("card6").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/be-real/");
   } else {
-    displayModal("Sorry, this page is not supported in mobile and small screens.","alert-circle-outline");
+    displayModal("Sorry, this page is not supported in mobile and small screens.", "alert-circle-outline");
   }
 });
 document.getElementById("card7").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/icecream/");
   } else {
-    displayModal("Sorry, this page is not supported in mobile and small screens.","alert-circle-outline");
+    displayModal("Sorry, this page is not supported in mobile and small screens.", "alert-circle-outline");
   }
 });
 
@@ -341,13 +341,13 @@ nu.addEventListener("click", () => {
 
 // type
 var typed = new Typed(".typee", {
-  strings: ["Information", "Technology", "Engineer", "Front end", "Developer"],
+  strings: ["software", "Engineer", "Front end", "Developer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
 });
 var typed = new Typed(".type2", {
-  strings: ["Omar Sefo", "Front end", "Developer", "Information", "Technology", "Engineer"],
+  strings: ["Omar Sefo", "Front end", "Developer", "software", "Engineer"],
   typeSpeed: 100,
   backSpeed: 60,
   loop: true,
@@ -449,7 +449,7 @@ function sendMail() {
     .send("service_zgjlb27", "template_43vqktk", tempParms)
     .then(function (res) {
       console.log("success", res.status);
-      displayModal("thanks for sending us a message, We will reply to you as soon as possible","checkmark-circle-outline");
+      displayModal("thanks for sending us a message, We will reply to you as soon as possible", "checkmark-circle-outline");
       setTimeout(() => {
         email.value = "";
         vname.value = "";
@@ -462,7 +462,7 @@ function sendMail() {
     })
     .catch(function (error) {
       console.error("error", error);
-      displayModal("Sorry, there's a problem try again later, we will fix it.","checkmark-circle-outline");
+      displayModal("Sorry, there's a problem try again later, we will fix it.", "checkmark-circle-outline");
       setTimeout(() => {
         email.value = "";
         vname.value = "";
