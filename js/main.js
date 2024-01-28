@@ -449,7 +449,7 @@ function sendMail() {
     .send("service_zgjlb27", "template_43vqktk", tempParms)
     .then(function (res) {
       console.log("success", res.status);
-      displayModal("thanks for sending us a message, We will reply to you as soon as possible", "checkmark-circle-outline");
+      displayModal("thanks for sending a message, We will reply to you as soon as possible", "checkmark-circle-outline");
       setTimeout(() => {
         email.value = "";
         vname.value = "";
