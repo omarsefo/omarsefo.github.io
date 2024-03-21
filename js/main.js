@@ -15,12 +15,12 @@ function logo() {
   }, 500);
   setTimeout(() => {
     document.body.style.overflowY = "hidden";
-  }, 2000);
+  }, 1000);
   setTimeout(() => {
     spinner.style.cursor = "default";
     document.body.style.overflowY = "scroll";
     spinner.classList.remove("active");
-  }, 5000);
+  }, 3500);
 }
 // scroll up
 document.getElementById("scroll").addEventListener("click", () => {
@@ -191,7 +191,7 @@ onscroll = function () {
     if (
       scrollPosition >= section.offsetTop - section.offsetHeight * 0.1 &&
       scrollPosition <=
-      section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
+        section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
     ) {
       var currentId = section.dataset.page;
       removeAllActiveClasses();
@@ -203,21 +203,35 @@ onscroll = function () {
 var addActiveClass = function (id) {
   var selector = `ul li a[id="${id}"]`;
   document.querySelector(selector).classList.add("activ");
+  if (id === "Home") {
+    indicator.style.setProperty("--position", 0);
+  } else if (id === "skills") {
+    indicator.style.setProperty("--position", 1);
+  } else if (id === "project") {
+    indicator.style.setProperty("--position", 2);
+  } else if (id === "contact") {
+    indicator.style.setProperty("--position", 3);
+  } else {
+    indicator.style.setProperty("--position", 0);
+  }
 };
 
 var removeAllActiveClasses = function () {
   document.querySelectorAll("[nav-a]").forEach((el) => {
     el.classList.remove("activ");
+    indicator.style.setProperty("--position", null);
   });
 };
 
 // var currentId = section.attributes.id.value;
 var navLinks = document.querySelectorAll("[nav-a]");
+const indicator = document.querySelector("[data-indicator]");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     for (let i = 0; i < sections.length; i++) {
       if (link.attributes.id.value === sections[i].dataset.page) {
+        indicator.style.setProperty("--position", i);
         var sectionPos = sections[i].offsetTop;
         window.scroll({
           top: sectionPos,
@@ -233,7 +247,7 @@ navLinks.forEach((link) => {
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".projects .countainer .card");
 
-  cards.forEach(card => {
+  cards.forEach((card) => {
     const loadingOverlay = card.querySelector(".loading-overlay");
     const image = card.querySelector("img");
 
@@ -282,14 +296,20 @@ document.getElementById("card6").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/be-real/");
   } else {
-    displayModal("Sorry, this page is not supported in mobile and small screens.", "alert-circle-outline");
+    displayModal(
+      "Sorry, this page is not supported in mobile and small screens.",
+      "alert-circle-outline"
+    );
   }
 });
 document.getElementById("card7").addEventListener("click", () => {
   if (window.innerWidth >= 1300) {
     openLink("http://omarsefo.github.io/icecream/");
   } else {
-    displayModal("Sorry, this page is not supported in mobile and small screens.", "alert-circle-outline");
+    displayModal(
+      "Sorry, this page is not supported in mobile and small screens.",
+      "alert-circle-outline"
+    );
   }
 });
 
@@ -321,7 +341,6 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
-
 
 // Right Click disable
 https: document.addEventListener("contextmenu", (event) =>
@@ -449,7 +468,10 @@ function sendMail() {
     .send("service_zgjlb27", "template_43vqktk", tempParms)
     .then(function (res) {
       console.log("success", res.status);
-      displayModal("thanks for sending a message, We will reply to you as soon as possible", "checkmark-circle-outline");
+      displayModal(
+        "thanks for sending a message, We will reply to you as soon as possible",
+        "checkmark-circle-outline"
+      );
       setTimeout(() => {
         email.value = "";
         vname.value = "";
@@ -462,7 +484,10 @@ function sendMail() {
     })
     .catch(function (error) {
       console.error("error", error);
-      displayModal("Sorry, there's a problem try again later, we will fix it.", "checkmark-circle-outline");
+      displayModal(
+        "Sorry, there's a problem try again later, we will fix it.",
+        "checkmark-circle-outline"
+      );
       setTimeout(() => {
         email.value = "";
         vname.value = "";
@@ -473,13 +498,10 @@ function sendMail() {
         }, 1000);
       }, 4000);
     });
-};
+}
 // dynamic date
 const currentYear = new Date().getFullYear();
 const copyrightYearElement = document.getElementById("copyright-year");
 if (copyrightYearElement) {
   copyrightYearElement.textContent = currentYear;
 }
-
-
-
