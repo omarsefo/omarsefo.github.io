@@ -101,6 +101,7 @@ to{stroke-dashoffset:6500;opacity:1}
 .skills .text{margin-bottom:25px!important}
 .skills .content .left{width:50%;color:var(--secon-color);font-size:25px;font-family:poppins,sans-serif}
 .skills .content .left p{text-wrap:balance}
+.skills .content .left li::marker{color:var(--orange)}
 .skills .content .rigth{width:50%;font-family:poppins,sans-serif}
 .skills .content .left .texts{font-size:25px;font-weight:600;margin-bottom:30px;color:var(--secon-color);font-size:35px;filter:drop-shadow(.5px 1px .5px #000);-webkit-filter:drop-shadow(.5px 1px .5px #000)}
 .skills .content .left .spa{color:var(--orange);font-size:30px;filter:drop-shadow(1px 1px .5px #000)}
@@ -177,8 +178,8 @@ to{stroke-dashoffset:6500;opacity:1}
 .projects .text{color:#fff}
 .projects .text::after{content:"MY JOB";background:#111}
 .projects .text::before{background:#fff}
-.projects .countainer{display:grid;grid-template-columns:2fr 2fr;grid-template-rows:1fr 1fr 1fr;gap:5px 20px;grid-template-areas:". ." ". ." ". ."}
-.projects .countainer .card{position:relative;width:100%;text-align:center;user-select:none;background-color:#333;cursor:pointer;overflow:hidden;border-radius:9px;margin-bottom:12px;border:0;-webkit-border-radius:9px;-moz-border-radius:9px;-ms-border-radius:9px;-o-border-radius:9px;aspect-ratio:3/2}
+.projects .countainer{height:100%;width:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;will-change:transform;gap:20px}
+.projects .countainer .card{position:sticky;top:6rem;width:65%;text-align:center;user-select:none;background-color:#333;cursor:pointer;overflow:hidden;margin-bottom:20px;border-radius:9px;border:0;-webkit-border-radius:9px;-moz-border-radius:9px;-ms-border-radius:9px;-o-border-radius:9px;aspect-ratio:3/2}
 .projects .countainer .card .loading-overlay{position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,.6);display:none;justify-content:center;align-items:center;z-index:100}
 .projects .countainer .card.loading .loading-overlay{display:flex}
 .projects .countainer .card .spinnercard{border:4px solid rgba(255,255,255,.3);border-top:4px solid #fff;border-radius:50%;width:40px;height:40px;animation:spin 1s linear infinite}
@@ -358,7 +359,6 @@ footer{margin-bottom:50px}
 .skills .content .rigth{font-family:poppins,sans-serif;width:100%;order:2;text-align:center;padding-top:0}
 .bars{margin-bottom:7px!important}
 .skills .content .left .text{margin-bottom:15px}
-.projects .countainer{grid-template-columns:2fr;grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr;grid-template-areas:"." "." "." "." "." "." "."}
 .contact .content .left .ico{display:flex;align-items:center;justify-content:center;margin:0}
 }
 @media (max-width:690px){
@@ -367,6 +367,7 @@ footer{margin-bottom:50px}
 .modal-contenta{padding:15px;margin:30% auto;width:70%;height:30%}
 .alart{width:100%;font-size:60px;color:var(--orange);padding:5px 0 20px 0}
 .skills-box .skills-list,.skills-box.active .tools-list{margin-top:50px;padding:0}
+.projects .countainer .card{width:100%}
 }
 @media (max-width:538px){
 .maxw{margin:auto}
@@ -378,7 +379,6 @@ footer{margin-bottom:50px}
 .skills .content .left .spa{font-size:23px}
 }
 @media (max-width:400px){
-#card2{bottom:5%!important}
 .skills .content .left .texts{font-size:30px}
 .skills .content .left .texts span{font-size:30px}
 .projects .countainer .imgbx .icon_project,.projects .countainer .imgbx .imgframework{display:none}

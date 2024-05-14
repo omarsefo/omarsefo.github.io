@@ -191,7 +191,7 @@ onscroll = function () {
     if (
       scrollPosition >= section.offsetTop - section.offsetHeight * 0.1 &&
       scrollPosition <=
-        section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
+      section.offsetTop + section.offsetHeight - section.offsetHeight * 0.1
     ) {
       var currentId = section.dataset.page;
       removeAllActiveClasses();
@@ -273,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
 
 // document.getElementById("card1").addEventListener("mouseover", () => {
 //   card1.style.cursor = "not-allowed";
