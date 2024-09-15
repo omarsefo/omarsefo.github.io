@@ -423,7 +423,7 @@ function sendMail() {
   document.body.style.cursor = "wait";
   overlayform.classList.add("active");
   emailjs
-    .send("service_zgjlb27", "template_43vqktk", tempParms)
+    .send("service_atlkrd5", "template_43vqktk", tempParms)
     .then(function (res) {
       console.log("success", res.status);
       displayModal(
