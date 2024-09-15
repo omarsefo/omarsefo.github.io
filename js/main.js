@@ -275,49 +275,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// document.getElementById("card1").addEventListener("mouseover", () => {
-//   card1.style.cursor = "not-allowed";
-// });
-document.getElementById("card1").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/fastfood/");
-});
-document.getElementById("card2").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/dental/");
-});
-document.getElementById("card3").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Globe_Agency/");
-});
-document.getElementById("card4").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/sign-in-up/");
-});
-document.getElementById("card5").addEventListener("click", () => {
-  window.open("https://omarsefo.github.io/Khaled/");
-});
-document.getElementById("card6").addEventListener("click", () => {
-  if (window.innerWidth >= 1300) {
-    openLink("http://omarsefo.github.io/be-real/");
-  } else {
-    displayModal(
-      "Sorry, this page is not supported in mobile and small screens.",
-      "alert-circle-outline"
-    );
-  }
-});
-document.getElementById("card7").addEventListener("click", () => {
-  if (window.innerWidth >= 1300) {
-    openLink("http://omarsefo.github.io/icecream/");
-  } else {
-    displayModal(
-      "Sorry, this page is not supported in mobile and small screens.",
-      "alert-circle-outline"
-    );
-  }
-});
-
-function openLink(link) {
-  window.open(link);
-}
-
 const modal = document.getElementById("myModal");
 const Alart = document.getElementById("alart");
 function displayModal(message, icon) {
@@ -353,7 +310,7 @@ var nu = document.getElementById("ef");
 var small = document.querySelector("small");
 nu.addEventListener("click", () => {
   document.execCommand("copy");
-  small.innerHTML = "(The Number is Copyed)";
+  small.innerHTML = "(The Number was Copied)";
   setTimeout(() => {
     small.innerHTML = "(Click To Copy & Call)";
   }, 3000);
