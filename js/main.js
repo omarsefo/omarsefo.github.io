@@ -274,6 +274,40 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.getElementById("card6").addEventListener("click", () => {
+  if (window.innerWidth >= 1300) {
+    openLink("http://omarsefo.github.io/be-real/");
+  } else {
+    displayModal(
+      "Sorry, this page is not supported in mobile and small screens.",
+      "alert-circle-outline"
+    );
+  }
+});
+document.getElementById("card7").addEventListener("click", () => {
+  if (window.innerWidth >= 1300) {
+    openLink("http://omarsefo.github.io/icecream/");
+  } else {
+    displayModal(
+      "Sorry, this page is not supported in mobile and small screens.",
+      "alert-circle-outline"
+    );
+  }
+});
+document.getElementById("card8").addEventListener("click", () => {
+  if (window.innerWidth >= 1300) {
+    openLink("http://omarsefo.github.io/starbacks/");
+  } else {
+    displayModal(
+      "Sorry, this page is not supported in mobile and small screens.",
+      "alert-circle-outline"
+    );
+  }
+});
+
+function openLink(link) {
+  window.open(link);
+}
 
 const modal = document.getElementById("myModal");
 const Alart = document.getElementById("alart");
@@ -444,7 +478,7 @@ function sendMail() {
       console.error("error", error);
       displayModal(
         "Sorry, there's a problem try again later, we will fix it.",
-        "checkmark-circle-outline"
+        "alert-circle-outline"
       );
       setTimeout(() => {
         email.value = "";
