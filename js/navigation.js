@@ -5,7 +5,6 @@ const navLinks = document.querySelectorAll("[nav-a]");
 var sc = document.querySelector(".scroll-up");
 
 window.addEventListener("scroll", handleScroll);
-
 function handleScroll() {
   nav.classList.toggle("sticky", window.scrollY > 24);
   //dark icon
@@ -22,7 +21,6 @@ function onscroll() {
     const isCurrent =
       scrollPosition >= sectionTop - sectionHeight * 0.1 &&
       scrollPosition <= sectionTop + sectionHeight - sectionHeight * 0.1;
-
     if (isCurrent) {
       const currentId = section.dataset.page;
       removeAllActiveClasses();
@@ -30,7 +28,6 @@ function onscroll() {
     }
   });
 }
-
 function setActiveClass(id) {
   document
     .querySelectorAll("[nav-a]")
@@ -41,14 +38,12 @@ function setActiveClass(id) {
   const positions = { Home: 0, skills: 1, project: 2, contact: 3 };
   indicator.style.setProperty("--position", positions[id] || 0);
 }
-
 function removeAllActiveClasses() {
   document.querySelectorAll("[nav-a]").forEach((el) => {
     el.classList.remove("activ");
     indicator.style.setProperty("--position", null);
   });
 }
-
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     for (let i = 0; i < sections.length; i++) {
