@@ -135,7 +135,7 @@ body::-webkit-scrollbar-thumb{background:var(--orange);border-radius:20px;box-sh
 .projects .text::after{content:"MY JOB";background:#111}
 .projects .text::before{background:#fff}
 .projects .countainer{height:100%;width:100%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1fr 1fr;grid-template-areas:". ." ". ." ". ." ". .";gap:10px}
-.projects .countainer .card{width:100%;user-select:none;background-color:#292929;overflow:hidden;padding:5px;border-radius:9px;border:0;-webkit-border-radius:9px;-moz-border-radius:9px;-ms-border-radius:9px;-o-border-radius:9px}
+.projects .countainer .card{width:100%;background-color:#292929;overflow:hidden;padding:5px;border-radius:9px;border:0;-webkit-border-radius:9px;-moz-border-radius:9px;-ms-border-radius:9px;-o-border-radius:9px}
 .projects .countainer .card .img-div{position:relative;width:100%;min-height:200px;height:50%;transition:all .3s;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s}
 .projects .countainer .card img{width:100%;height:100%;border-radius:5px;object-fit:cover;position:relative;transition:all .4s;-webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;-o-transition:all .4s;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px}
 .projects .countainer .card .loading-overlay{position:absolute;width:100%;height:100%;background-color:rgba(0,0,0,.6);display:none;justify-content:center;align-items:center;z-index:1}
@@ -143,9 +143,14 @@ body::-webkit-scrollbar-thumb{background:var(--orange);border-radius:20px;box-sh
 .projects .countainer .card .spinnercard{border:4px solid rgba(255,255,255,.3);border-top:4px solid #fff;border-radius:50%;width:40px;height:40px;animation:spin 1s linear infinite}
 .projects .countainer .card .sub-countainer{padding:0 12px}
 .projects .countainer .card .imgbx{transition:all .5s;width:100%;display:flex;justify-content:space-around;align-items:flex-start;flex-direction:column;filter:drop-shadow(1px 1px 2px #4b4b4b);-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;-webkit-filter:drop-shadow(1px 1px 2px #4b4b4b)}
-.projects .countainer .card .info{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;margin:28px 0 15px 0}
+.projects .countainer .card .info{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;user-select:none;margin:28px 0 15px 0}
 .projects .countainer .card .info .logos{display:flex}
 .projects .countainer .card .info .icon-logo{display:flex;justify-content:center;align-items:center;cursor:pointer;border:1px solid #111;background-color:#eee;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%}
+.projects .countainer .card .info .icon-logo:nth-child(1){transform:translateX(-2px);-webkit-transform:translateX(-2px);-moz-transform:translateX(-2px);-ms-transform:translateX(-2px);-o-transform:translateX(-2px)}
+.projects .countainer .card .info .icon-logo:nth-child(2){transform:translateX(-7px);-webkit-transform:translateX(-7px);-moz-transform:translateX(-7px);-ms-transform:translateX(-7px);-o-transform:translateX(-7px)}
+.projects .countainer .card .info .icon-logo:nth-child(3){transform:translateX(-12px);-webkit-transform:translateX(-12px);-moz-transform:translateX(-12px);-ms-transform:translateX(-12px);-o-transform:translateX(-12px)}
+.projects .countainer .card .info .icon-logo:nth-child(4){transform:translateX(-17px);-webkit-transform:translateX(-17px);-moz-transform:translateX(-17px);-ms-transform:translateX(-17px);-o-transform:translateX(-17px)}
+.projects .countainer .card .info .icon-logo:nth-child(5){transform:translateX(-22px);-webkit-transform:translateX(-22px);-moz-transform:translateX(-22px);-ms-transform:translateX(-22px);-o-transform:translateX(-22px)}
 .projects .countainer .card .info .icon-logo .sub-logo{padding:6px;width:35px}
 .projects .countainer .card .info .link-group{display:flex}
 .projects .countainer .card .info .card-link{background-color:var(--orange);color:#111;padding:7px 12px;border-radius:5px;cursor:pointer;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px}
